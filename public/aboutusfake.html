@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link rel="shortcut icon" href="ourgroupfavicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="nav.css" />
+    <link rel="stylesheet" href="about.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <ul>
+        <a
+          href="https://chat.whatsapp.com/FCBHvEh2gUJ5D8WcNYs5kk"
+          target="__blank"
+        >
+          <img src="logo.jfif" alt="" id="logo"
+        /></a>
+        <li><a href="/" class="navbarthings">Home</a></li>
+        <li><a href="/public/classwork" class="navbarthings">ClassWork</a></li>
+        <li><a href="/public/homework" class="navbarthings">HomeWork</a></li>
+        <li><a href="/public/timetable" class="navbarthings">Time Table</a></li>
+        <li><a href="/public/contactus" class="navbarthings">Contact Us</a></li>
+        <li><a href="/public/aboutus" class="navbarthings" id="right">About Us</a></li>
+      </ul>
+    </nav>
+    <img src="about_us.gif" alt="" />
+    <p>
+      We are a group of children who want to make your life easier by helping
+      you to cope up with your problem of not being able to attend classes and
+      pending work. This site will help you solve these problems. If you want
+      this site to expand then please feel free to tell us where we went wrong.
+      Now, you will find the work for all the dates, subjects and topics on this
+      website but only of DIS. We wish you all a very good luck for the rest of
+      your school, and a word of caution -
+    </p>
+    <p id="note">
+      Note:<b id="warning"
+        >Please don't misuse or overuse this website or we might have to shut it
+        down</b
+      >
+    </p>
+  </body>
+  <script>
+    // Initialize the agent at application startup.
+    const fpPromise = new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.onload = resolve;
+      script.onerror = reject;
+      script.async = true;
+      script.src =
+        "https://cdn.jsdelivr.net/npm/" +
+        "@fingerprintjs/fingerprintjs-pro@3/dist/fp.min.js";
+      document.head.appendChild(script);
+    }).then(() =>
+      FingerprintJS.load({
+        token: "dHT4c7DUuUeJHqZ5CaaB",
+        region: "ap",
+      })
+    );
+
+    // Get the visitor identifier when you need it.
+    fpPromise
+      .then((fp) => fp.get())
+      .then((result) => console.log(result.visitorId));
+  </script>  <script src="../index.js"></script>
+
+</html>

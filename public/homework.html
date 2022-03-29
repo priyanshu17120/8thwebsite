@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home work</title>
+    <link rel="shortcut icon" href="/public/ourgroupfavicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="nav.css">
+    <meta name="theme-color" content="#6957E7">
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+      body {
+        background-color: #d7f2f2;
+        overflow-x: hidden;
+      }
+      h1 {
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 3rem;
+      }
+      #buttonsforhomerowork {
+        display: flex;
+        flex-direction: column;
+        width: 15%;
+        justify-content: center;
+      }
+      .button {
+        margin: 8px;
+        padding: 5px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 1.3rem;
+        border: none;
+        background: transparent;
+        color: black;
+        font-weight: 200;
+        font-family: 'Open Sans', sans-serif;
+        transition: 0.2s;
+        width: 33vw;
+      }
+      .button:hover {
+        background: rgba(185, 185, 185, 0.472);
+        box-shadow: 3px 3px 9px grey, -3px -3px 9px grey;
+      }
+      .opline {
+        background-color: #29d8e1;
+        height: 65vh;
+        width: 5px;
+        margin-left: 30vw;
+        margin-top: 15px;
+      }
+      .maincon {
+        display: flex;
+        width: 50vw;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      .img {
+        height: 350px;
+        border-radius: 50px;
+      }
+      .images {
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      .supermancon {
+        display: flex;
+      }
+      #subjectimg,
+      #sstimg,
+      #hindiimg,
+      #frenchimg,
+      #generalimg {
+        height: 250px;
+      }
+      @media (max-width: 1033px) { 
+        .opline{
+          display: none;
+        }
+        .images{
+          display: none;
+        }
+        .supermancon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .maincon {
+        display: flex;
+        width: auto;
+      }
+      .button{
+        width: 50vw;
+      }
+        }
+    </style>
+  </head>
+  <body>
+    <nav id="navbar">
+      <ul>
+        <a href="https://chat.whatsapp.com/BicNUSEy69L9P1nBN2p3uJ" target="__blank">
+          <img src="/public/logo.jfif" alt="" id="logo"
+        /></a>
+    
+        <li class="li"><a href="/" class="navbarthings">Home</a></li>
+        <li class="li">
+          <a href="/public/classwork" class="navbarthings">ClassWork</a>
+        </li>
+        <li class="li">
+          <a href="/public/homework" class="navbarthings">HomeWork</a>
+        </li>
+        <li class="li">
+          <a href="/public/timetable" class="navbarthings">Time Table</a>
+        </li>
+        <li class="li">
+          <a href="/public/contactus" class="navbarthings">Contact Us</a>
+        </li>
+        <li class="right li" id="rightid">
+          <a href="/public/aboutus" class="navbarthings">About Us</a>
+        </li>
+        <div id="icons" class="right">
+          <span id="ham" class="show"
+            ><ion-icon name="reorder-three-outline"></ion-icon
+          ></span>
+          <span id="cross" class="hide"
+            ><ion-icon name="add-outline"></ion-icon
+          ></span>
+        </div>
+      </ul>
+    </nav>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script>
+      let ham = document.getElementById("ham");
+      let cross = document.getElementById("cross");
+      let li = document.getElementsByClassName("li");
+      let rightid = document.getElementById("rightid");
+      let icons = document.getElementById("icons");
+      ham.addEventListener("click", () => {
+        ham.classList.toggle("show");
+        ham.classList.toggle("hide");
+        cross.classList.toggle("show");
+        cross.classList.toggle("hide");
+        for (let index = 0; index < li.length; index++) {
+          li[index].style.display = "block";
+        }
+      });
+      cross.addEventListener("click", () => {
+        ham.classList.toggle("show");
+        ham.classList.toggle("hide");
+        cross.classList.toggle("show");
+        cross.classList.toggle("hide");
+        for (let index = 0; index < li.length; index++) {
+          li[index].style.display = "none";
+        }
+      });
+    </script>
+    <h1>Select Subject</h1>
+    <div class="supermancon">
+      <div class="maincon">
+        <div id="buttonsforhomerowork">
+          <a href="/public/homework/sciencehomework">
+            <button class="button" id="Science">Science</button>
+          </a>
+          <a href="/public/homework/computerhomework"
+            ><button class="button" id="Computer">Computer</button></a
+          >
+          <a href="/public/homework/mathshomework"
+            ><button class="button" id="Maths">Maths</button></a
+          >
+          <a href="/public/homework/englishhomework"
+            ><button class="button" id="English">English</button></a
+          >
+          <a href="/public/homework/ssthomework"
+            ><button class="button" id="SocialScience">Sst</button></a
+          >
+          <a href="/public/homework/hindihomework"
+            ><button class="button" id="Hindi">Hindi</button></a
+          >
+          <a href="/public/homework/frenchhomework"
+            ><button class="button" id="French">French</button></a
+          >
+          <a href="/public/homework/generalhomework"
+            ><button class="button" id="General">General</button></a
+          >
+        </div>
+        <div class="opline"></div>
+      </div>
+      <div class="images">
+        <img src="/public/subject.jpg" alt="" id="subjectimg" class="img" />
+        <img src="/public/science.gif" alt="" id="scienceimg" class="img" />
+        <img src="/public/computer.gif" alt="" id="computerimg" class="img" />
+        <img src="/public/maths.gif" alt="" id="mathsimg" class="img" />
+        <img src="/public/english.gif" alt="" id="englishimg" class="img" />
+        <img src="/public/sst.jpg" alt="" id="sstimg" class="img" />
+        <img src="/public/hindi.jpg" alt="" id="hindiimg" class="img" />
+        <img src="/public/french.jpg" alt="" id="frenchimg" class="img" />
+        <img src="/public/general.jpg" alt="" id="generalimg" class="img" />
+      </div>
+    </div>
+  </body>
+  <script>
+    let subjectimg = document.getElementById("subjectimg");
+    let scienceimg = document.getElementById("scienceimg");
+    let computerimg = document.getElementById("computerimg");
+    let mathsimg = document.getElementById("mathsimg");
+    let englishimg = document.getElementById("englishimg");
+    let sstimg = document.getElementById("sstimg");
+    let hindiimg = document.getElementById("hindiimg");
+    let frenchimg = document.getElementById("frenchimg");
+    let generalimg = document.getElementById("generalimg");
+    // buttons
+    let science = document.getElementById("Science");
+    let computer = document.getElementById("Computer");
+    let maths = document.getElementById("Maths");
+    let english = document.getElementById("English");
+    let sst = document.getElementById("SocialScience");
+    let hindi = document.getElementById("Hindi");
+    let french = document.getElementById("French");
+    let general = document.getElementById("General");
+    scienceimg.style.display = "none";
+    computerimg.style.display = "none";
+    mathsimg.style.display = "none";
+    englishimg.style.display = "none";
+    sstimg.style.display = "none";
+    hindiimg.style.display = "none";
+    frenchimg.style.display = "none";
+    generalimg.style.display = "none";
+    subjectimg.style.display = "none";
+    // science part
+    science.addEventListener("mouseover", () => {
+      scienceimg.style.display = "inline";
+    });
+    science.addEventListener("mouseout", () => {
+      scienceimg.style.display = "none";
+    });
+    // computer part
+    computer.addEventListener("mouseover", () => {
+      computerimg.style.display = "inline";
+    });
+    computer.addEventListener("mouseout", () => {
+      computerimg.style.display = "none";
+    });
+    // maths part
+    maths.addEventListener("mouseover", () => {
+      mathsimg.style.display = "inline";
+    });
+    maths.addEventListener("mouseout", () => {
+      mathsimg.style.display = "none";
+    });
+    // english part
+    english.addEventListener("mouseover", () => {
+      englishimg.style.display = "inline";
+    });
+    english.addEventListener("mouseout", () => {
+      englishimg.style.display = "none";
+    });
+    // sst part
+    sst.addEventListener("mouseover", () => {
+      sstimg.style.display = "inline";
+    });
+    sst.addEventListener("mouseout", () => {
+      sstimg.style.display = "none";
+    });
+    // hindi part
+    hindi.addEventListener("mouseover", () => {
+      hindiimg.style.display = "inline";
+    });
+    hindi.addEventListener("mouseout", () => {
+      hindiimg.style.display = "none";
+    });
+    // french part
+    french.addEventListener("mouseover", () => {
+      frenchimg.style.display = "inline";
+    });
+    french.addEventListener("mouseout", () => {
+      frenchimg.style.display = "none";
+    });
+    // general part
+    general.addEventListener("mouseover", () => {
+      generalimg.style.display = "inline";
+    });
+    general.addEventListener("mouseout", () => {
+      generalimg.style.display = "none";
+    });
+  </script>  <script src="../index.js"></script>
+
+</html>

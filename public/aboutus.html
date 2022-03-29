@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <meta name="theme-color" content="#6957E7">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto',sans-serif;
+        }
+        body{
+            background: #0e1623;
+            /* background: #d7f2f2; */
+        }
+        section{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            min-height: 40vh;
+            align-items: center;
+            overflow: hidden;
+        }
+        section .text{
+            position: relative;
+            font-size: 5em;
+            text-align: center;
+            color:#00fe77;
+            font-weight: bold;
+            -webkit-box-reflect: below -0.46em linear-gradient(transparent,#0004);
+        }
+        section .text span{
+            position: relative;
+            display: inline-block;
+        }
+
+    </style>
+        <link rel="shortcut icon" href="ourgroupfavicon.png" type="image/x-icon" />
+        <link rel="stylesheet" href="nav.css" />
+        <link rel="stylesheet" href="about.css" />
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+          <a href="https://chat.whatsapp.com/BicNUSEy69L9P1nBN2p3uJ" target="__blank">
+            <img src="/public/logo.jfif" alt="" id="logo"
+          /></a>
+      
+          <li class="li"><a href="/" class="navbarthings">Home</a></li>
+          <li class="li">
+            <a href="/public/classwork" class="navbarthings">ClassWork</a>
+          </li>
+          <li class="li">
+            <a href="/public/homework" class="navbarthings">HomeWork</a>
+          </li>
+          <li class="li">
+            <a href="/public/timetable" class="navbarthings">Time Table</a>
+          </li>
+          <li class="li">
+            <a href="/public/contactus" class="navbarthings">Contact Us</a>
+          </li>
+          <li class="right li" id="rightid">
+            <a href="/public/aboutus" class="navbarthings">About Us</a>
+          </li>
+          <div id="icons" class="right">
+            <span id="ham" class="show"
+              ><ion-icon name="reorder-three-outline"></ion-icon
+            ></span>
+            <span id="cross" class="hide"
+              ><ion-icon name="add-outline"></ion-icon
+            ></span>
+          </div>
+        </ul>
+      </nav>
+      <script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+      ></script>
+      <script
+        nomodule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+      ></script>
+      <script>
+        let ham = document.getElementById("ham");
+        let cross = document.getElementById("cross");
+        let li = document.getElementsByClassName("li");
+        let rightid = document.getElementById("rightid");
+        let icons = document.getElementById("icons");
+        ham.addEventListener("click", () => {
+          ham.classList.toggle("show");
+          ham.classList.toggle("hide");
+          cross.classList.toggle("show");
+          cross.classList.toggle("hide");
+          for (let index = 0; index < li.length; index++) {
+            li[index].style.display = "block";
+          }
+        });
+        cross.addEventListener("click", () => {
+          ham.classList.toggle("show");
+          ham.classList.toggle("hide");
+          cross.classList.toggle("show");
+          cross.classList.toggle("hide");
+          for (let index = 0; index < li.length; index++) {
+            li[index].style.display = "none";
+          }
+        });
+      </script>
+    <section>
+        <h2 class="text">About Us</h2>
+    </section>
+    <p id="ab">
+        We are a group of children who want to make your life easier by helping
+        you to cope up with your problem of not being able to attend classes and
+        pending work. This site will help you solve these problems. If you want
+        this site to expand then please feel free to tell us where we went wrong.
+        Now, you will find the work for all the dates, subjects and topics on this
+        website but only of DIS. We wish you all a very good luck for the rest of
+        your school, and a word of caution -
+      </p>
+      <p id="note">
+        <b id="warning">Please don't misuse or overuse this website or we might have to shut it
+          down</b>
+      </p>
+</body>
+<script src="anime.min.js"></script>
+<script>
+    const text = document.querySelector('.text');
+    text.innerHTML = text.textContent.replace(/\S/g,"<span>$&</span>");
+
+    anime.timeline({
+        loop:true
+    })
+.add({
+    targets:'.text span',
+    translateY: [-600,0],
+    scale:[10,1],
+    opacity:[0,1],
+    easing:'easeOutExpo',
+    duration:1500,
+    delay:anime.stagger(100)
+})
+.add({
+    targets:'.text span',
+    translateX: [0,-1000],
+    scale:[1,1],
+    opacity:[1,0],
+    easing:'easeOutExpo',
+    duration:2000,
+    delay:anime.stagger(100)
+})
+.add({
+    targets:'.text span',
+    translateX: [1000,0],
+    scale:[1,1],
+    opacity:[0,1],
+    easing:'easeOutExpo',
+    duration:2000,
+    delay:anime.stagger(100)
+})
+.add({
+    targets:'.text span',
+    translateX: [10,0],
+    scale:[1,50],
+    opacity:[1,0],
+    easing:'easeOutExpo',
+    duration:2000,
+    delay:anime.stagger(100)
+})
+.add({
+    targets:'.text span',
+    translateX: [500,0],
+    scale:[50,1],
+    opacity:[0,1],
+    easing:'easeOutExpo',
+    duration:2000,
+    delay:anime.stagger(100)
+})
+
+.add({
+    targets:'.text span',
+    translateX: [0,-1000],
+    scale:[1,1],
+    opacity:[1,0],
+    easing:'easeOutExpo',
+    duration:2000,
+    delay:anime.stagger(100)
+})
+</script>
+</html>

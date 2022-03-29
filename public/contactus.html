@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="shortcut icon" href="ourgroupfavicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="nav.css" />
+    <meta name="theme-color" content="#6957E7">
+
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Dongle&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        background: #ffffff;
+      }
+      .container {
+        width: 80%;
+        padding: 20px;
+      }
+      .container h2 {
+        width: 100%;
+        color: black;
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .container .row100 {
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+      .container .row100 .col {
+        position: relative;
+        width: 100%;
+        padding: 0 10px;
+        margin: 30px 0 10px;
+        transition: 0.5s;
+      }
+      .container .row100 .inputbox {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        color: black;
+      }
+      .container .row100 .inputbox input,
+      .container .row100 .inputbox.textarea textarea {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        padding: 0 10px;
+        z-index: 1;
+        color: #000;
+      }
+      .container .row100 .inputbox .text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        line-height: 40px;
+        font-size: 18px;
+        padding: 0 10px;
+        display: block;
+        transition: 0.5s;
+        pointer-events: none;
+      }
+      .container .row100 .inputbox input:valid + .text,
+      .container .row100 .inputbox input:focus + .text {
+        top: -35px;
+        left: -10px;
+      }
+      .container .row100 .inputbox .line {
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #45f3ff;
+        transition: 0.5s;
+        border-radius: 2px;
+        pointer-events: none;
+      }
+      .container .row100 .inputbox input:valid ~ .line,
+      .container .row100 .inputbox input:focus ~ .line {
+        height: 100%;
+      }
+      .container .row100 .inputbox.textarea {
+        position: relative;
+        width: 100%;
+        height: 100px;
+        padding: 10px 0;
+      }
+      .container .row100 .inputbox.textarea textarea {
+        height: 100%;
+        resize: none;
+      }
+
+      .container .row100 .inputbox textarea:valid + .text,
+      .container .row100 .inputbox textarea:focus + .text {
+        top: -35px;
+        left: -10px;
+      }
+      .container .row100 .inputbox textarea:valid ~ .line,
+      .container .row100 .inputbox textarea:focus ~ .line {
+        height: 100%;
+      }
+      input[type="submit"] {
+        border: none;
+        padding: 7px 35px;
+        cursor: pointer;
+        outline: none;
+        background: #45f3ff;
+        color: #000;
+        font-size: 18px;
+        border-radius: 2px;
+      }
+      #form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 60vh;
+      }
+      @media (max-width: 1033px) { 
+        .container{
+          width: 100%;
+        }
+}
+    </style>
+  </head>
+  <body>
+    <nav id="navbar">
+      <ul>
+        <a href="https://chat.whatsapp.com/BicNUSEy69L9P1nBN2p3uJ" target="__blank">
+          <img src="/public/logo.jfif" alt="" id="logo"
+        /></a>
+    
+        <li class="li"><a href="/" class="navbarthings">Home</a></li>
+        <li class="li">
+          <a href="/public/classwork" class="navbarthings">ClassWork</a>
+        </li>
+        <li class="li">
+          <a href="/public/homework" class="navbarthings">HomeWork</a>
+        </li>
+        <li class="li">
+          <a href="/public/timetable" class="navbarthings">Time Table</a>
+        </li>
+        <li class="li">
+          <a href="/public/contactus" class="navbarthings">Contact Us</a>
+        </li>
+        <li class="right li" id="rightid">
+          <a href="/public/aboutus" class="navbarthings">About Us</a>
+        </li>
+        <div id="icons" class="right">
+          <span id="ham" class="show"
+            ><ion-icon name="reorder-three-outline"></ion-icon
+          ></span>
+          <span id="cross" class="hide"
+            ><ion-icon name="add-outline"></ion-icon
+          ></span>
+        </div>
+      </ul>
+    </nav>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script>
+      let ham = document.getElementById("ham");
+      let cross = document.getElementById("cross");
+      let li = document.getElementsByClassName("li");
+      let rightid = document.getElementById("rightid");
+      let icons = document.getElementById("icons");
+      ham.addEventListener("click", () => {
+        ham.classList.toggle("show");
+        ham.classList.toggle("hide");
+        cross.classList.toggle("show");
+        cross.classList.toggle("hide");
+        for (let index = 0; index < li.length; index++) {
+          li[index].style.display = "block";
+        }
+      });
+      cross.addEventListener("click", () => {
+        ham.classList.toggle("show");
+        ham.classList.toggle("hide");
+        cross.classList.toggle("show");
+        cross.classList.toggle("hide");
+        for (let index = 0; index < li.length; index++) {
+          li[index].style.display = "none";
+        }
+      });
+    </script>
+    <form
+      action="https://sheetdb.io/api/v1/rtblr0t9f4aaq"
+      method="POST"
+      id="sheetdb-form"
+    >
+      <div id="form">
+        <div class="container">
+          <h2>Contact Us</h2>
+          <div class="row100">
+            <div class="col">
+              <div class="inputbox">
+                <input
+                  type="text"
+                  name="data[Name]"
+                  required="required"
+                  id="name"
+                />
+                <span class="text">Name</span>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row100">
+            <div class="col">
+              <div class="inputbox">
+                <input
+                  type="email"
+                  name="data[E-mail]"
+                  required="required"
+                  id="email"
+                />
+                <span class="text">E-mail</span>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row100">
+            <div class="col">
+              <div class="inputbox textarea">
+                <textarea
+                  name="data[Message]"
+                  required="required"
+                  id="message"
+                ></textarea>
+                <span class="text">Type Your Message Here.....</span>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row100">
+            <div class="col">
+              <input type="submit" value="Send" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+
+  <script>
+    var naam = document.getElementById("name");
+    var email = document.getElementById("email");
+    var message = document.getElementById("message");
+    var form = document.getElementById("sheetdb-form");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(document.getElementById("sheetdb-form")),
+      })
+        .then((response) => response.json())
+        .then((html) => {
+          // you can put any JS code here
+          naam.value = "";
+          email.value = "";
+          message.value = "";
+          alert("Your Message Has Been Sent");
+        });
+    });
+  </script>
+  <script>
+    // Initialize the agent at application startup.
+    const fpPromise = new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.onload = resolve;
+      script.onerror = reject;
+      script.async = true;
+      script.src =
+        "https://cdn.jsdelivr.net/npm/" +
+        "@fingerprintjs/fingerprintjs-pro@3/dist/fp.min.js";
+      document.head.appendChild(script);
+    }).then(() =>
+      FingerprintJS.load({
+        token: "dHT4c7DUuUeJHqZ5CaaB",
+        region: "ap",
+      })
+    );
+
+    // Get the visitor identifier when you need it.
+    fpPromise
+      .then((fp) => fp.get())
+      .then((result) => console.log(result.visitorId));
+  </script>  <script src="../index.js"></script>
+
+</html>

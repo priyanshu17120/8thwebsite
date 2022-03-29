@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Table</title>
+  </head>
+  <meta name="theme-color" content="#6957E7">
+
+  <link rel="stylesheet" href="nav.css" />
+  <link rel="shortcut icon" href="ourgroupfavicon.png" type="image/x-icon" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Dongle&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Quintessential&display=swap");
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    html { 
+  background: url(bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-weight: bolder;
+    }
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 30px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+    #wrkfgverjfg{
+      margin-top: 50px;
+    }
+    @media (max-width: 1033px) { 
+
+    }
+  </style>
+  <body>
+    <nav id="navbar">
+      <ul>
+        <a href="https://chat.whatsapp.com/BicNUSEy69L9P1nBN2p3uJ" target="__blank">
+          <img src="/public/logo.jfif" alt="" id="logo"
+        /></a>
+    
+        <li class="li"><a href="/" class="navbarthings">Home</a></li>
+        <li class="li">
+          <a href="/public/classwork" class="navbarthings">ClassWork</a>
+        </li>
+        <li class="li">
+          <a href="/public/homework" class="navbarthings">HomeWork</a>
+        </li>
+        <li class="li">
+          <a href="/public/timetable" class="navbarthings">Time Table</a>
+        </li>
+        <li class="li">
+          <a href="/public/contactus" class="navbarthings">Contact Us</a>
+        </li>
+        <li class="right li" id="rightid">
+          <a href="/public/aboutus" class="navbarthings">About Us</a>
+        </li>
+        <div id="icons" class="right">
+          <span id="ham" class="show"
+            ><ion-icon name="reorder-three-outline"></ion-icon
+          ></span>
+          <span id="cross" class="hide"
+            ><ion-icon name="add-outline"></ion-icon
+          ></span>
+        </div>
+      </ul>
+    </nav>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script>
+      let ham = document.getElementById("ham");
+      let cross = document.getElementById("cross");
+      let li = document.getElementsByClassName("li");
+      let rightid = document.getElementById("rightid");
+      let icons = document.getElementById("icons");
+      ham.addEventListener("click", () => {
+        ham.classList.toggle("show");
+        ham.classList.toggle("hide");
+        cross.classList.toggle("show");
+        cross.classList.toggle("hide");
+        for (let index = 0; index < li.length; index++) {
+          li[index].style.display = "block";
+        }
+      });
+      cross.addEventListener("click", () => {
+        ham.classList.toggle("show");
+        ham.classList.toggle("hide");
+        cross.classList.toggle("show");
+        cross.classList.toggle("hide");
+        for (let index = 0; index < li.length; index++) {
+          li[index].style.display = "none";
+        }
+      });
+    </script>
+    <h1>Time Table</h1>
+    
+    <h1 id="wrkfgverjfg">The Time Table for classes has not been added yet. <br><br>
+      We are looking forward to your cooperation.</h1>
+  </body>
+  <script>
+    // Initialize the agent at application startup.
+    const fpPromise = new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.onload = resolve;
+      script.onerror = reject;
+      script.async = true;
+      script.src =
+        "https://cdn.jsdelivr.net/npm/" +
+        "@fingerprintjs/fingerprintjs-pro@3/dist/fp.min.js";
+      document.head.appendChild(script);
+    }).then(() =>
+      FingerprintJS.load({
+        token: "dHT4c7DUuUeJHqZ5CaaB",
+        region: "ap",
+      })
+    );
+
+    // Get the visitor identifier when you need it.
+    fpPromise
+      .then((fp) => fp.get())
+      .then((result) => console.log(result.visitorId));
+  </script>
+  <script src="../index.js"></script>
+</html>
