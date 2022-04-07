@@ -122,6 +122,11 @@
       onchange="datechanged()"
     >
       <option value="1apr2022" id="1apr2022">1/4/2022</option>
+      <option value="4apr2022" id="4apr2022">4/4/2022</option>
+      <option value="5apr2022" id="5apr2022">5/4/2022</option>
+      <option value="6apr2022" id="6apr2022">6/4/2022</option>
+      <option value="7apr2022" id="7apr2022">7/4/2022</option>
+
     </select>
     <div id="homeworktextsection">
       <div id="hw"></div>
@@ -144,6 +149,23 @@
       var teachername = document.getElementById("techername");
       console.log(datesselectid);
       if (datesselectid == "1apr2022") {
+      hw.innerHTML = "1. No Homework !";
+      teachername.innerHTML = "~Hindi";
+    }
+    
+    else if (datesselectid == "4apr2022") {
+      hw.innerHTML = "1. कक्षा में किये गए वर्ण माला के काम का संशोधन करे|<br>2.वसंत भाग तीन के पाठ २ (लाख की चूड़ियां) पढ़े !";
+      teachername.innerHTML = "~Hindi";
+    } 
+    else if (datesselectid == "5apr2022") {
+      hw.innerHTML = "1. वसंत भाग तीन के पाठ २ (लाख की चूड़ियां) पढ़े !";
+      teachername.innerHTML = "~Hindi";
+    } 
+    else if (datesselectid == "6apr2022") {
+      hw.innerHTML = "1. वर्णमाला के लिखित कार्य को संशोधित करें |<br> 2. Do the Abhyas Karya Of Ch-2 of vyakran.";
+      teachername.innerHTML = "~Hindi";
+    } 
+    else if (datesselectid == "7apr2022") {
       hw.innerHTML = "1. No Homework !";
       teachername.innerHTML = "~Hindi";
     } 

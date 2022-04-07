@@ -122,6 +122,11 @@
       onchange="datechanged()"
     >
       <option value="1apr2022" id="1apr2022">1/4/2022</option>
+      <option value="4apr2022" id="4apr2022">4/4/2022</option>
+      <option value="5apr2022" id="5apr2022">5/4/2022</option>
+      <option value="6apr2022" id="6apr2022">6/4/2022</option>
+      <option value="7apr2022" id="7apr2022">7/4/2022</option>
+
     </select>
     <div id="homeworktextsection">
       <div id="hw"></div>
@@ -145,6 +150,23 @@
       console.log(datesselectid);
       if (datesselectid == "1apr2022") {
       hw.innerHTML = "1. No Homework !";
+      teachername.innerHTML = "~Maths";
+    }
+    
+    else if (datesselectid == "4apr2022") {
+      hw.innerHTML = "1. No Homework !";
+      teachername.innerHTML = "~Maths";
+    }
+    else if (datesselectid == "5apr2022") {
+      hw.innerHTML = "1. Do the recap exercie of Ch-1(Rational Numbers) Of Maths.";
+      teachername.innerHTML = "~Maths";
+    }
+    else if (datesselectid == "6apr2022") {
+      hw.innerHTML = "1. Revise the work done in class.";
+      teachername.innerHTML = "~Maths";
+    }
+    else if (datesselectid == "7apr2022") {
+      hw.innerHTML = "1. Solve the following questions in your notebook:<br>a) Show that commutative law w.r.t. subtraction does not stisfy for rational no.'s by taking 2/5 & -3/2<br>b) Verify commutative law w.r.t. multiplication for a= -3/8 & b =-1/4";
       teachername.innerHTML = "~Maths";
     }
     }
