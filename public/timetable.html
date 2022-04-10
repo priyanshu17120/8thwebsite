@@ -27,6 +27,10 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    overflow: hidden;
+  }
+  body{
+    overflow: hidden;
   }
 
   h1 {
@@ -34,6 +38,7 @@
     font-size: 2rem;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: bolder;
+    margin-bottom: 150px;
   }
 
   ::-webkit-scrollbar {
@@ -56,15 +61,109 @@
   #wrkfgverjfg {
     margin-top: 50px;
   }
-
-  @media (max-width: 1033px) {}
+  .img{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.img img{
+  display: block;
+  margin:auto;
+  width:300px;
+  cursor: zoom-in;
+}
+.opened-image{
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 8053534;
+  overflow: hidden;
+  background:rgba(0, 0, 0, 0.75);
+}
+.opened-image img{
+  display: block;
+  margin-top: 6px;
+}
+.opened-image ion-icon{
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: white;
+  transform: rotate(45deg);
+  font-size: 50px;
+  cursor: pointer;
+}
+  @media (max-width: 1033px) {
+.opened-image{
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 8053534;
+  overflow: hidden;
+  background:rgba(0, 0, 0, 0.75);
+}
+.opened-image img{
+  display: block;
+  /* margin-top: 35vh; */
+  width: 90%;
+}
+.opened-image ion-icon{
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: white;
+  transform: rotate(45deg);
+  font-size: 50px;
+  cursor: pointer;
+}
+  }
+  @media (max-width: 633px) {
+    .opened-image img{
+  display: block;
+  /* margin-top: 35vh; */
+  width: 120%;
+  transform: rotate(90deg);
+}
+  }
 </style>
 
 <body>
   <script src="/public/testing.js"></script>
   <h1>Time Table</h1>
-  <h1 id="wrkfgverjfg">The Time Table for classes has not been added yet. <br><br>
-    We are looking forward to your cooperation.</h1>
-</body>
+  <div class="img">
+  <img src="/public/timetable.jpg" alt="" id="image">
+  
+</div>
+<div class="opened-image" id="imagecont">
+  <img src="/public/timetable.jpg" alt="" id="image">
+  <ion-icon name="add-outline" id="icon"></ion-icon>
 
+</div>
+</body>
+<script>
+  var image = document.getElementById('image');
+  var icon = document.getElementById('icon');
+  var imagecont = document.getElementById('imagecont');
+  image.addEventListener('click',()=>{
+    imagecont.style.display = "flex";
+  })
+  icon.addEventListener('click',()=>{
+    imagecont.style.display = "none";
+  })
+</script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </html>
