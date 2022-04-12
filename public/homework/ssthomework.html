@@ -55,6 +55,7 @@
   <script src="/public/testing.js"></script>
   <h1>Sst Homework</h1>
   <select name="dates" id="datesselect" id="datesselectid" onchange="datechanged()">
+    <option value="12apr2022" id="12apr2022">12/4/2022</option>
     <option value="11apr2022" id="11apr2022">11/4/2022</option>
     <option value="8apr2022" id="8apr2022">8/4/2022</option>
     <option value="7apr2022" id="7apr2022">7/4/2022</option>
@@ -102,6 +103,10 @@
     }
     else if (datesselectid == "11apr2022") {
       hw.innerHTML = "1. Find out how many ministries are there in India.<br>2. Briefly describe Dadabhai Naoroji.";
+      teachername.innerHTML = "~Social Science";
+    }
+    else if (datesselectid == "12apr2022") {
+      hw.innerHTML = "1. No Homework.";
       teachername.innerHTML = "~Social Science";
     }
   }
