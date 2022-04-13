@@ -55,6 +55,7 @@
   <script src="/public/testing.js"></script>
   <h1>Computer Homework</h1>
   <select name="dates" id="datesselect" id="datesselectid" onchange="datechanged()">
+    <option value="13apr2022" id="13apr2022">13/4/2022</option>
     <option value="12apr2022" id="12apr2022">12/4/2022</option>
     <option value="11apr2022" id="11apr2022">11/4/2022</option>
     <option value="8apr2022" id="8apr2022">8/4/2022</option>
@@ -103,7 +104,11 @@
       teachername.innerHTML = "~Computer";
     }
     else if (datesselectid == "12apr2022") {
-      hw.innerHTML = "1. Do the following questions in your n/b:-<br>a) When & how the AI word coined?<br>b) Write any 2 easy & hard tasks for human & computers.";
+      hw.innerHTML = "1. Do the following questions in your n/b:-<br>a) When & how the AI word coined?<br>b) Write any 2 easy & hard tasks for human & computers.<br><a style='font-weight:bold'>Note</a>-Take reference from book.";
+      teachername.innerHTML = "~Computer";
+    }
+    else if (datesselectid == "13apr2022") {
+      hw.innerHTML = "1. No Homework !";
       teachername.innerHTML = "~Computer";
     }
 
