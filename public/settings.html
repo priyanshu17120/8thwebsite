@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="shortcut icon" href="/public/settings-favicon.svg" type="image/x-icon" />
+    <meta name="theme-color" content="#6957E7">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: rgb(51, 51, 51);
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 2.6em;
+            font-family: 'Gugi', cursive;
+            color: rgb(255, 255, 255);
+
+        }
+
+        .options {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+            flex-direction: column;
+            padding: 25px;
+        }
+
+        .option {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 4vh;
+            background: rgb(59, 59, 59);
+            width: 100%;
+            font-family: 'Gugi', cursive;
+            color: rgb(255, 255, 255);
+            padding: 16px;
+            border-bottom: 1px solid gray;
+            cursor: pointer;
+        }
+
+        .option:hover {
+            background: rgb(70, 70, 70);
+        }
+
+        .about-us {
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+
+        .navbar {
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="/public/testing.js"></script>
+    <h1 class="heading">Settings</h1>
+
+    <div class="options">
+        <div class="about-us option" id="about-settings">
+            About Us
+            <div class="icon">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+            </div>
+        </div>
+        <div class="navbar option" id="navbar-settings">
+            Navbar
+            <div class="icon">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+    let about = document.getElementById('about-settings');
+    let navbar = document.getElementById('navbar-settings');
+    navbar.addEventListener('click', () => {
+        window.location = '/public/navbar-settings';
+    })
+    about.addEventListener('click', () => {
+        window.location = '/public/aboutus';
+    })
+</script>
+
+</html>

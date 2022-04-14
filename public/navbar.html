@@ -1,0 +1,154 @@
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Dongle&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+#navbar {
+    background-color: #222;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: 0.5s;
+  }
+  #navbar ul {
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+  }
+  #navbar ul li {
+    list-style: none;
+    transition: 0.5s;
+  }
+  .navbarthings {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-family: "Dongle", sans-serif;
+    font-size: 2rem;
+    transition: 0.5s;
+  }
+  #navbar li:last-child{
+    margin-left: auto;
+  }
+  .right{
+    margin-left: auto;
+  }
+  .navbarthings:hover {
+    color: rgb(177, 177, 177);
+  }
+  #logo {
+    height: 50px;
+    border-radius: 50%;
+  }
+  #icons{
+    display: none;
+    color: white;
+    font-size: 2.4rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .show{
+    display: inline;
+  }
+  #cross{
+    transform: rotate(45deg);
+  }
+  .hide{
+    display: none;
+  }
+  .settings{
+      font-size: 30px;
+      cursor: pointer;
+      color: white;
+  }
+  a{
+    color: white;
+    text-decoration: none;
+  }
+@media (max-width: 1033px) { 
+  #icons{
+    display: flex;
+  }
+  li{
+    display: none;
+  }
+  #navbar ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .right{
+    margin-left: 0;
+  }
+}
+</style>
+<nav id="navbar">
+  <ul>
+    <a href="https://chat.whatsapp.com/BicNUSEy69L9P1nBN2p3uJ" target="__blank">
+      <img src="/public/logo.jfif" alt="" id="logo"
+    /></a>
+
+    <li class="li"><a href="/" class="navbarthings">Home</a></li>
+    <li class="li">
+      <a href="/public/classwork" class="navbarthings">ClassWork</a>
+    </li>
+    <li class="li">
+      <a href="/public/homework" class="navbarthings">HomeWork</a>
+    </li>
+    <li class="li">
+      <a href="/public/timetable" class="navbarthings">Time Table</a>
+    </li>
+    <li class="li">
+      <a href="/public/contactus" class="navbarthings">Contact Us</a>
+    </li>
+    <li class="right li" id="rightid">
+      <a href="/public/aboutus" class="navbarthings hide">About Us</a>
+    </li>
+    <div class="settings">
+        <a href="/public/settings"><ion-icon name="settings-outline" id="settings"></ion-icon></a>
+    </div>
+    <div id="icons" class="right">
+        <span id="ham" class="show"
+        ><ion-icon name="reorder-three-outline"></ion-icon
+      ></span>
+      <span id="cross" class="hide"
+        ><ion-icon name="add-outline"></ion-icon
+      ></span>
+    </div>
+  </ul>
+</nav>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+  let ham = document.getElementById("ham");
+  let cross = document.getElementById("cross");
+  let li = document.getElementsByClassName("li");
+  let rightid = document.getElementById("rightid");
+  let icons = document.getElementById("icons");
+  let settings = document.getElementById("settings");
+  settings.addEventListener('click',()=>{
+
+  })
+  ham.addEventListener("click", () => {
+    ham.classList.toggle("show");
+    ham.classList.toggle("hide");
+    cross.classList.toggle("show");
+    cross.classList.toggle("hide");
+    for (let index = 0; index < li.length; index++) {
+      li[index].style.display = "block";
+    }
+  });
+  cross.addEventListener("click", () => {
+    ham.classList.toggle("show");
+    ham.classList.toggle("hide");
+    cross.classList.toggle("show");
+    cross.classList.toggle("hide");
+    for (let index = 0; index < li.length; index++) {
+      li[index].style.display = "none";
+    }
+  });
+</script>
