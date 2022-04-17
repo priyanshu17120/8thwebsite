@@ -25,11 +25,6 @@ p {
   filter: drop-shadow(0 0 2px #00fe77) drop-shadow(0 0 100px #00fe77);
   
 }
-img {
-  height: 360px;
-  display: block;
-  margin: auto;
-}
 #warning {
   filter: drop-shadow(0 0 2px #fe0000) drop-shadow(0 0 100px #fe0000);
   color:#fe0000;

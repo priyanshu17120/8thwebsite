@@ -90,6 +90,7 @@
 .opened-image img{
   display: block;
   margin-top: 6px;
+  width: 70%;
 }
 .opened-image ion-icon{
   position: absolute;
@@ -100,6 +101,168 @@
   font-size: 50px;
   cursor: pointer;
 }
+#toast {
+      visibility: hidden;
+      max-width: 50px;
+      height: 50px;
+      /*margin-left: -125px;*/
+      margin: auto;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 2px;
+
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      bottom: 30px;
+      font-size: 17px;
+      white-space: nowrap;
+    }
+
+    #toast #img {
+      width: 50px;
+      height: 50px;
+
+      float: left;
+
+      padding-top: 16px;
+      padding-bottom: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+
+
+      background-color: #111;
+      color: #fff;
+    }
+
+    #toast #desc {
+      color: #fff;
+      padding: 16px;
+      overflow: hidden;
+      /* white-space: nowrap; */
+    }
+
+    #toast.show {
+      visibility: visible;
+      -webkit-animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
+      animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+    }
+
+    @-webkit-keyframes fadein {
+      from {
+        bottom: 0;
+        opacity: 0;
+      }
+
+      to {
+        bottom: 30px;
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadein {
+      from {
+        bottom: 0;
+        opacity: 0;
+      }
+
+      to {
+        bottom: 30px;
+        opacity: 1;
+      }
+    }
+
+    @-webkit-keyframes expand {
+      from {
+        min-width: 50px
+      }
+
+      to {
+        min-width: 350px
+      }
+    }
+
+    @keyframes expand {
+      from {
+        min-width: 50px
+      }
+
+      to {
+        min-width: 350px
+      }
+    }
+
+    @-webkit-keyframes stay {
+      from {
+        min-width: 350px
+      }
+
+      to {
+        min-width: 350px
+      }
+    }
+
+    @keyframes stay {
+      from {
+        min-width: 350px
+      }
+
+      to {
+        min-width: 350px
+      }
+    }
+
+    @-webkit-keyframes shrink {
+      from {
+        min-width: 350px;
+      }
+
+      to {
+        min-width: 50px;
+      }
+    }
+
+    @keyframes shrink {
+      from {
+        min-width: 350px;
+      }
+
+      to {
+        min-width: 50px;
+      }
+    }
+
+    @-webkit-keyframes fadeout {
+      from {
+        bottom: 30px;
+        opacity: 1;
+      }
+
+      to {
+        bottom: 60px;
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeout {
+      from {
+        bottom: 30px;
+        opacity: 1;
+      }
+
+      to {
+        bottom: 60px;
+        opacity: 0;
+      }
+    }
+
+    img {
+      width: 50px;
+    }
   @media (max-width: 1033px) {
 .opened-image{
   position: absolute;
@@ -118,7 +281,7 @@
 .opened-image img{
   display: block;
   /* margin-top: 35vh; */
-  width: 90%;
+  width: 70%;
 }
 .opened-image ion-icon{
   position: absolute;
@@ -141,7 +304,7 @@
 </style>
 
 <body>
-  <script src="/public/testing.js"></script>
+  <script src="/public/navbar-code.js"></script> 
   <h1>Time Table</h1>
   <div class="img">
   <img src="/public/timetable.jpg" alt="" id="image">
@@ -152,17 +315,32 @@
   <ion-icon name="add-outline" id="icon"></ion-icon>
 
 </div>
+<div id="toast">
+  <div id="img"><img src="/public/logo.jfif" alt=""></div>
+  <div id="desc">Click the image to expand it.</div>
+</div>
 </body>
 <script>
   var image = document.getElementById('image');
   var icon = document.getElementById('icon');
   var imagecont = document.getElementById('imagecont');
+  var isImageClicked = false;
   image.addEventListener('click',()=>{
+    isImageClicked = true;
     imagecont.style.display = "flex";
   })
   icon.addEventListener('click',()=>{
     imagecont.style.display = "none";
   })
+  function launch_toast() {
+    var x = document.getElementById("toast")
+    x.className = "show";
+    setTimeout(function () { x.className = x.className.replace("show", ""); },5000);
+  }
+  setTimeout(() => {
+  if(isImageClicked == false){
+    launch_toast()
+  }}, 3000)
 </script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

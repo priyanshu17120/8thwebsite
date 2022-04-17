@@ -13,29 +13,19 @@
     @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap");
 
     body {
-      background: #d7f2f2;
+      background: black;
       background-size: cover;
-      position: relative;
-      overflow: hidden;
     }
 
     * {
       box-sizing: border-box;
     }
-.parent{
-  position: relative;
-  height: 30vh;
-  width: 100%;
-}
+
     .wrapper {
-      width: 92%;
-    right: 0;
-    position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
     }
 
     .wrapper a {
@@ -56,7 +46,7 @@
       font-size: 20px;
       text-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
       white-space: nowrap;
-      color: #222;
+      color: white;
       background: transparent;
       background-image: url(https://web.archive.org/web/20160312084140im_/http://splatoon.nintendo.com/assets/img/nav-bg-fill-blue.png?1443460871);
       background-repeat: repeat-x;
@@ -122,11 +112,6 @@
         display: none;
       }
     }
-    @media (max-width: 1000px) {
-      .wrapper {
-        width:100%;
-      }
-    }
 
     @media (max-width: 550px) {
       .wrapper {
@@ -144,9 +129,8 @@
 </head>
 
 <body>
-  <script src="/public/navbar-code.js"></script> 
-  <div class="parent">
-  <div class="wrapper" id="wrapper">
+  <script src="/public/testing.js"></script>
+  <div class="wrapper">
     <a href="/public/classwork/scienceclasswork" class="subjectimages" id="Science"> <button>Science</button></a>
     <a href="/public/classwork/computerclasswork" class="subjectimages" id="Computer"> <button>Computer</button></a>
     <a href="/public/classwork/mathsclasswork" class="subjectimages" id="Maths"> <button>Maths</button></a>
@@ -157,8 +141,8 @@
     <a href="/public/classwork/frenchclasswork" class="subjectimages" id="French"><button>French</button></a>
     <a href="/public/classwork/generalclasswork" class="subjectimages" id="General"><button>General</button></a>
   </div>
-</div>
   <div id="images">
+    <img src="/public/subject.jpg" alt="" id="subjectimg" class="img" />
     <img src="/public/science.gif" alt="" id="scienceimg" class="img" />
     <img src="/public/computer.gif" alt="" id="computerimg" class="img" />
     <img src="/public/maths.gif" alt="" id="mathsimg" class="img" />
@@ -170,6 +154,7 @@
   </div>
 </body>
 <script>
+  let subjectimg = document.getElementById("subjectimg");
   let scienceimg = document.getElementById("scienceimg");
   let computerimg = document.getElementById("computerimg");
   let mathsimg = document.getElementById("mathsimg");
@@ -195,6 +180,7 @@
   hindiimg.style.display = "none";
   frenchimg.style.display = "none";
   generalimg.style.display = "none";
+  subjectimg.style.display = "none";
   // science part
   science.addEventListener("mouseover", () => {
     scienceimg.style.display = "block";
@@ -251,16 +237,6 @@
   general.addEventListener("mouseout", () => {
     generalimg.style.display = "none";
   });
-  if(localStorage.getItem('positionofnavbarisleft')){
-    let wrapper = document.getElementById('wrapper');
-    if(window.innerWidth>1000){
-        wrapper.style.width = "92%";
-    }
-  }
-  else{
-    let wrapper = document.getElementById('wrapper');
-    wrapper.style.width = "100%"
-  }
 </script>
 
 </html>

@@ -149,11 +149,16 @@
       align-items: center;
       min-height: 60vh;
     }
-
+.nameemail{
+  display: flex;
+}
     @media (max-width: 1033px) {
       .container {
         width: 100%;
       }
+      .nameemail{
+  display: block;
+}
     }
 
     #toast {
@@ -322,11 +327,12 @@
 </head>
 
 <body>
-  <script src="/public/testing.js"></script>
+  <script src="/public/navbar-code.js"></script> 
   <form action="https://sheetdb.io/api/v1/rtblr0t9f4aaq" method="POST" id="sheetdb-form">
     <div id="form">
       <div class="container">
         <h2>Contact Us</h2>
+        <div class="nameemail">
         <div class="row100">
           <div class="col">
             <div class="inputbox">
@@ -345,6 +351,7 @@
             </div>
           </div>
         </div>
+      </div>
         <div class="row100">
           <div class="col">
             <div class="inputbox textarea">

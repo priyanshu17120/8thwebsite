@@ -85,6 +85,9 @@
 
     .supermancon {
       display: flex;
+      width: 100%;
+    position: absolute;
+    right: 0;
     }
 
     #subjectimg,
@@ -123,9 +126,9 @@
 </head>
 
 <body>
-  <script src="/public/testing.js"></script>
+  <script src="/public/navbar-code.js"></script> 
   <h1>Select Subject</h1>
-  <div class="supermancon">
+  <div class="supermancon" id="supermancon">
     <div class="maincon">
       <div id="buttonsforhomerowork">
         <a href="/public/homework/sciencehomework">
@@ -238,6 +241,12 @@
   general.addEventListener("mouseout", () => {
     generalimg.style.display = "none";
   });
+  if(localStorage.getItem('positionofnavbarisleft')){
+    let supermancon = document.getElementById('supermancon');
+    if(window.innerWidth>1000){
+    supermancon.style.width = "92%";
+  }
+  }
 </script>
 
 </html>

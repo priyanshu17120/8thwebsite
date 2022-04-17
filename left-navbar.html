@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+
+            height: 100vh;
+            width: 8%;
+            position: fixed;
+            z-index: 100;
+            top: 0;
+            left: 0;
+            bottom: 0px;
+            background-color: #111;
+            transition: 0.5s;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: column;
+            margin-right: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 8px;
+            margin: 5px;
+            text-decoration: none;
+            font-size: 32px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            display: none;
+        }
+
+        #logo {
+            margin-bottom: 30px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .text {
+            display: none;
+        }
+
+        .hover-text {
+            display: none;
+            color: white;
+            padding: 15px;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            border-radius: 10px;
+            transition: 0.5s;
+            z-index: 50;
+            /* width: 120px; */
+            max-width: 150px;
+            white-space: nowrap;
+        }
+
+        .fixed-sidenav-text-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sidenav a:hover .hover-text {
+            display: flex;
+            animation: move 1s ease-in-out 1 forwards;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(10px);
+            }
+
+            100% {
+                transform: translateX(105px);
+            }
+        }
+
+        .red {
+            background: #f53b57;
+            box-shadow: 0 15px 25px #f53b5799;
+
+        }
+
+        .blue {
+            background: #5d62fb;
+            box-shadow: 0 15px 25px #5d62fb99;
+        }
+
+        .green {
+            background: #05c46b;
+            box-shadow: 0 15px 25px #05c46b99;
+        }
+
+        .anotherblue {
+            background: #0fbcf9;
+            box-shadow: 0 15px 25px #0fbcf999;
+        }
+
+        .yellow {
+            background: #ffa801;
+            box-shadow: 0 15px 25px #ffa80199;
+        }
+
+        .anotheryellow {
+            background: #ffcb2e;
+            box-shadow: 0 15px 25px #ffcb2e99;
+        }
+
+        .pink {
+            background: #ff2eff;
+            box-shadow: 0 15px 25px #ff2eff99;
+        }
+
+        .icon-of-navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #ham {
+            font-size: 30px;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            z-index: 5;
+            margin: 8px;
+        }
+
+        .links {
+            width: 100%;
+            display: flex;
+            justify-content: initial;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .bottom {
+
+            display: flex !important;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        @media screen and (max-width: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+
+            .text {
+                display: inline;
+            }
+
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+
+            #logo {
+                margin-bottom: 70px;
+                height: 50px;
+                border-radius: 50%;
+            }
+
+            .sidenav {
+
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 100;
+                top: 0;
+                left: 0;
+                background-color: #111;
+                overflow: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .sidenav a {
+                padding: 8px 8px 8px 8px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+            }
+
+            .sidenav a:hover {
+                color: #f1f1f1;
+            }
+
+            .sidenav .closebtn {
+                display: inline;
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+
+            .hover-text {
+                display: none;
+            }
+
+            .icon-of-navbar {
+                display: none;
+            }
+
+            .sidenav a:hover .hover-text {
+                display: none;
+                animation: none;
+            }
+
+            .bottom {
+
+                display: flex !important;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="https://chat.whatsapp.com/BicNUSEy69L9P1nBN2p3uJ" target="__blank">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <img src="/public/logo.jfif" alt="" id="logo" /></a>
+        <div class="links">
+            <a href="/"><span class="text">Home</span>
+                <span class="fixed-sidenav-text-icon">
+                    <ion-icon name="home" class="icon-of-navbar"></ion-icon><span class="hover-text red">Home</span>
+                </span>
+            </a>
+            <a href="/public/classwork"><span class="text">ClassWork</span>
+                <span class="fixed-sidenav-text-icon">
+                    <ion-icon name="book" class="icon-of-navbar"></ion-icon><span
+                        class="hover-text blue">ClassWork</span>
+                </span>
+            </a>
+            <a href="/public/homework"><span class="text">HomeWork</span>
+                <span class="fixed-sidenav-text-icon">
+                    <ion-icon name="pencil-outline" class="icon-of-navbar"></ion-icon><span
+                        class="hover-text green">HomeWork</span>
+                </span>
+            </a>
+            <a href="/public/timetable"><span class="text">Time Table</span>
+                <span class="fixed-sidenav-text-icon">
+                    <ion-icon name="calendar-outline" class="icon-of-navbar"></ion-icon><span
+                        class="hover-text anotherblue">Time Table</span>
+                </span>
+            </a>
+            <a href="/public/contactus"><span class="text">Contact Us</span>
+                <span class="fixed-sidenav-text-icon">
+                    <ion-icon name="call" class="icon-of-navbar"></ion-icon><span class="hover-text yellow">Contact
+                        Us</span>
+                </span>
+            </a>
+            <a href="/public/aboutus"><span class="text">About us</span>
+                <span class="fixed-sidenav-text-icon">
+                    <ion-icon name="people-outline" class="icon-of-navbar"></ion-icon><span
+                        class="hover-text anotheryellow">About Us</span>
+                </span>
+            </a>
+            <a href="/public/settings" class="bottom"><span class="text">Settings</span>
+                <span class="fixed-sidenav-text-icon">
+                    <ion-icon name="settings-outline" class="icon-of-navbar last"></ion-icon><span
+                        class="hover-text pink">Settings</span>
+                </span>
+            </a>
+        </div>
+    </div>
+
+
+    <span onclick="openNav()" id="ham">&#9776; </span>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+</body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</html>
