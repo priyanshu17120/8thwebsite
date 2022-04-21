@@ -14,6 +14,7 @@ document.write(`
         body {
             font-family: "Lato", sans-serif;
         }
+        
 
         .sidenav {
 
@@ -140,14 +141,7 @@ document.write(`
             align-items: center;
         }
 
-        #ham {
-            font-size: 30px;
-            cursor: pointer;
-            position: absolute;
-            top: 0;
-            z-index: 5;
-            margin: 8px;
-        }
+        
 
         .links {
             width: 100%;
@@ -166,7 +160,14 @@ document.write(`
             justify-content: center;
             align-items: flex-end;
         }
-
+        #ham {
+            font-size: 30px;
+            cursor: pointer;
+           position: absolute;
+            top: 0;
+            z-index: 5;
+            margin: 8px;
+        }
         @media screen and (max-width: 450px) {
             .sidenav {
                 padding-top: 15px;
@@ -178,6 +179,15 @@ document.write(`
         }
 
         @media screen and (max-width: 1000px) {
+            #ham {
+                  display: block;
+                  font-size: 30px;
+                  cursor: pointer;
+                  position: static;
+                  top: 0;
+                  z-index: 5;
+                  margin: 8px;
+              }
 
             .text {
                 display: inline;
@@ -199,9 +209,9 @@ document.write(`
 
             .sidenav {
 
-                height: 100%;
+                height: 100vh;
                 width: 0;
-                position: fixed;
+                position: absolute;
                 z-index: 100;
                 top: 0;
                 left: 0;
@@ -259,6 +269,7 @@ document.write(`
                 align-items: center;
             }
         }
+        
     </style>
 </head>
 

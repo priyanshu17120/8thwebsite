@@ -35,6 +35,9 @@
       margin-top: 20px;
       font-family: "Baloo 2", cursive;
       text-align: center;
+      width: 100%;
+    position: absolute;
+    right: 0;
     }
 
     #techername {
@@ -55,6 +58,10 @@
   <script src="/public/navbar-code.js"></script> 
   <h1>General Homework</h1>
   <select name="dates" id="datesselect" id="datesselectid" onchange="datechanged()">
+    <option value="21apr2022" id="21apr2022">21/4/2022</option>
+    <option value="20apr2022" id="20apr2022">20/4/2022</option>
+    <option value="19apr2022" id="19apr2022">19/4/2022</option>
+    <option value="18apr2022" id="18apr2022">18/4/2022</option>
     <option value="13apr2022" id="13apr2022">13/4/2022</option>
     <option value="12apr2022" id="12apr2022">12/4/2022</option>
     <option value="11apr2022" id="11apr2022">11/4/2022</option>
@@ -113,8 +120,34 @@
       hw.innerHTML = "1. No Homework.";
       teachername.innerHTML = "~General";
     }
+    else if (datesselectid == "18apr2022") {
+      hw.innerHTML = "1. Bring A4 sized or A3 sized sheet on Friday (22-4-22) for Earth Day Poster Making Activity.";
+      teachername.innerHTML = "~General";
+    }
+    else if (datesselectid == "19apr2022") {
+      hw.innerHTML = "1. Bring A4 sized or A3 sized sheet on Friday (22-4-22) for Earth Day Poster Making Activity.";
+      teachername.innerHTML = "~General";
+    }
+    else if (datesselectid == "20apr2022") {
+      hw.innerHTML = "1. Bring A4 sized or A3 sized sheet on Friday (22-4-22) for Earth Day Poster Making Activity.";
+      teachername.innerHTML = "~General";
+    }
+    else if (datesselectid == "21apr2022") {
+      hw.innerHTML = "1. Bring A4 sized or A3 sized sheet on Friday (22-4-22) for Earth Day Poster Making Activity.";
+      teachername.innerHTML = "~General";
+    }
   }
   datechanged()
+  if(localStorage.getItem('positionofnavbarisleft')){
+    let hw = document.getElementById('homeworktextsection');
+    if(window.innerWidth>1000){
+        hw.style.width = "92%";
+    }
+  }
+  else{
+    let hw = document.getElementById('homeworktextsection');
+    hw.style.width = "100%"
+  }
 </script>
 
 </html>

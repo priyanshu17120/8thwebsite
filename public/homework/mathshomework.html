@@ -34,6 +34,9 @@
         margin-top: 20px;
         font-family: "Baloo 2", cursive;
         text-align: center;
+        width: 100%;
+    position: absolute;
+    right: 0;
       }
       #techername {
         position: fixed;
@@ -56,6 +59,10 @@
       id="datesselectid"
       onchange="datechanged()"
     >
+    <option value="21apr2022" id="21apr2022">21/4/2022</option>
+    <option value="20apr2022" id="20apr2022">20/4/2022</option>
+    <option value="19apr2022" id="19apr2022">19/4/2022</option>
+    <option value="18apr2022" id="18apr2022">18/4/2022</option>
     <option value="13apr2022" id="13apr2022">13/4/2022</option>
     <option value="12apr2022" id="12apr2022">12/4/2022</option>
     <option value="11apr2022" id="11apr2022">11/4/2022</option>
@@ -112,11 +119,37 @@
       teachername.innerHTML = "~Maths";
     }
     else if (datesselectid == "13apr2022") {
-      hw.innerHTML = "1. Complete exercise 1.2 in notebook.";
+      hw.innerHTML = "1. Complete exercise 1.2 of ch-1 in notebook.";
+      teachername.innerHTML = "~Maths";
+    }
+    else if (datesselectid == "18apr2022") {
+      hw.innerHTML = "1. Complete exercise 1.3 of ch-1 in notebook.";
+      teachername.innerHTML = "~Maths";
+    }
+    else if (datesselectid == "19apr2022") {
+      hw.innerHTML = "1. Complete exercise 1.4 of ch-1 in notebook.";
+      teachername.innerHTML = "~Maths";
+    }
+    else if (datesselectid == "20apr2022") {
+      hw.innerHTML = "1. Complete exercise 1.4 of ch-1 in notebook.";
+      teachername.innerHTML = "~Maths";
+    }
+    else if (datesselectid == "21apr2022") {
+      hw.innerHTML = "1. Complete revision exercise of ch-1 in notebook.";
       teachername.innerHTML = "~Maths";
     }
     }
     datechanged();
+    if(localStorage.getItem('positionofnavbarisleft')){
+    let hw = document.getElementById('homeworktextsection');
+    if(window.innerWidth>1000){
+        hw.style.width = "92%";
+    }
+  }
+  else{
+    let hw = document.getElementById('homeworktextsection');
+    hw.style.width = "100%"
+  }
   </script> 
 
 </html>

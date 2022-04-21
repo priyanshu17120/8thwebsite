@@ -34,6 +34,9 @@
         margin-top: 20px;
         font-family: "Baloo 2", cursive;
         text-align: center;
+        width: 100%;
+    position: absolute;
+    right: 0;
       }
       #techername {
         position: fixed;
@@ -56,6 +59,10 @@
       id="datesselectid"
       onchange="datechanged()"
     >
+    <option value="21apr2022" id="21apr2022">21/4/2022</option>
+    <option value="20apr2022" id="20apr2022">20/4/2022</option>
+    <option value="19apr2022" id="19apr2022">19/4/2022</option>
+    <option value="18apr2022" id="18apr2022">18/4/2022</option>
     <option value="13apr2022" id="13apr2022">13/4/2022</option>
     <option value="12apr2022" id="12apr2022">12/4/2022</option>
     <option value="11apr2022" id="11apr2022">11/4/2022</option>
@@ -116,8 +123,34 @@
       hw.innerHTML = "1. Draw the diagram of Nitrogen Cycle from book.";
       teachername.innerHTML = "~Science";
     }
+    else if (datesselectid == "18apr2022") {
+      hw.innerHTML = "1. Draw table 2.1 of Ch-2 of science book in n/b.";
+      teachername.innerHTML = "~Science";
+    }
+    else if (datesselectid == "19apr2022") {
+      hw.innerHTML = "1. Draw table 2.2 of Ch-2 of science book in n/b on pg 38.";
+      teachername.innerHTML = "~Science";
+    }
+    else if (datesselectid == "20apr2022") {
+      hw.innerHTML = "1. Do the back exercises of ch-2.";
+      teachername.innerHTML = "~Science";
+    }
+    else if (datesselectid == "21apr2022") {
+      hw.innerHTML = "1. Bring the materials for poster making and slogan writing activity on the topic - Say No To Plactic.";
+      teachername.innerHTML = "~Science";
+    }
     }
     datechanged();
+    if(localStorage.getItem('positionofnavbarisleft')){
+    let hw = document.getElementById('homeworktextsection');
+    if(window.innerWidth>1000){
+        hw.style.width = "92%";
+    }
+  }
+  else{
+    let hw = document.getElementById('homeworktextsection');
+    hw.style.width = "100%"
+  }
   </script>
 
 </html>

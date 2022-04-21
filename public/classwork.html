@@ -15,27 +15,27 @@
     body {
       background: #d7f2f2;
       background-size: cover;
-      position: relative;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
     * {
       box-sizing: border-box;
     }
-.parent{
-  position: relative;
-  height: 30vh;
-  width: 100%;
-}
+
+    .parent {
+      position: relative;
+      height: 30vh;
+      width: 100%;
+    }
+
     .wrapper {
-      width: 92%;
-    right: 0;
-    position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+      right: 0;
+      position: absolute;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
     }
 
     .wrapper a {
@@ -122,9 +122,10 @@
         display: none;
       }
     }
+
     @media (max-width: 1000px) {
       .wrapper {
-        width:100%;
+        width: 100%;
       }
     }
 
@@ -144,20 +145,20 @@
 </head>
 
 <body>
-  <script src="/public/navbar-code.js"></script> 
-  <div class="parent">
-  <div class="wrapper" id="wrapper">
-    <a href="/public/classwork/scienceclasswork" class="subjectimages" id="Science"> <button>Science</button></a>
-    <a href="/public/classwork/computerclasswork" class="subjectimages" id="Computer"> <button>Computer</button></a>
-    <a href="/public/classwork/mathsclasswork" class="subjectimages" id="Maths"> <button>Maths</button></a>
-    <a href="/public/classwork/englishclasswork" class="subjectimages" id="English"> <button>English</button></a>
-    <a href="/public/classwork/sstclasswork" class="subjectimages" id="SocialScience"><button>Social
-        Science</button></a>
-    <a href="/public/classwork/hindiclasswork" class="subjectimages" id="Hindi"><button>Hindi</button></a>
-    <a href="/public/classwork/frenchclasswork" class="subjectimages" id="French"><button>French</button></a>
-    <a href="/public/classwork/generalclasswork" class="subjectimages" id="General"><button>General</button></a>
+  <script src="/public/navbar-code.js"></script>
+  <div class="parent" id="parent">
+    <div class="wrapper" id="wrapper">
+      <a href="/public/classwork/scienceclasswork" class="subjectimages" id="Science"> <button>Science</button></a>
+      <a href="/public/classwork/computerclasswork" class="subjectimages" id="Computer"> <button>Computer</button></a>
+      <a href="/public/classwork/mathsclasswork" class="subjectimages" id="Maths"> <button>Maths</button></a>
+      <a href="/public/classwork/englishclasswork" class="subjectimages" id="English"> <button>English</button></a>
+      <a href="/public/classwork/sstclasswork" class="subjectimages" id="SocialScience"><button>Social
+          Science</button></a>
+      <a href="/public/classwork/hindiclasswork" class="subjectimages" id="Hindi"><button>Hindi</button></a>
+      <a href="/public/classwork/frenchclasswork" class="subjectimages" id="French"><button>French</button></a>
+      <a href="/public/classwork/generalclasswork" class="subjectimages" id="General"><button>General</button></a>
+    </div>
   </div>
-</div>
   <div id="images">
     <img src="/public/science.gif" alt="" id="scienceimg" class="img" />
     <img src="/public/computer.gif" alt="" id="computerimg" class="img" />
@@ -251,16 +252,17 @@
   general.addEventListener("mouseout", () => {
     generalimg.style.display = "none";
   });
-  if(localStorage.getItem('positionofnavbarisleft')){
+  if (localStorage.getItem('positionofnavbarisleft')) {
     let wrapper = document.getElementById('wrapper');
-    if(window.innerWidth>1000){
-        wrapper.style.width = "92%";
+    if (window.innerWidth > 1000) {
+      wrapper.style.width = "92%";
+    }
+    else {
+      let wrapper = document.getElementById('wrapper');
+      wrapper.style.width = "100%";
     }
   }
-  else{
-    let wrapper = document.getElementById('wrapper');
-    wrapper.style.width = "100%"
-  }
+
 </script>
 
 </html>
