@@ -70,11 +70,27 @@
                 font-size: 18px;
             }
         }
+        #preloader{
+  background:#d7f2f2 ;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 100000000000000000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+video{
+  width: 100%;
+  height: auto;
+}
     </style>
 </head>
 
 <body>
-
+    <div id="preloader">
+        <video src="/pre-loader-vid.mp4" loop id="pre-loader-vid" autoplay muted></video>
+      </div>
     <div id="mySidenav" class="sidenav">
         <a href="https://chat.whatsapp.com/BicNUSEy69L9P1nBN2p3uJ" target="__blank">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -107,6 +123,12 @@
                 document.getElementById("mySidenav").style.width = "0";
             }, 500);
         }
+        var loader = document.getElementById('preloader');
+  window.addEventListener(('load'),()=>{
+    setTimeout(() => {
+        loader.style.display = "none";
+}, 1500);
+  })
     </script>
 
 </body>

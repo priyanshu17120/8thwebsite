@@ -11,17 +11,12 @@ document.write(`
             padding: 0;
         }
 
-        body {
-            font-family: "Lato", sans-serif;
-        }
-        
-
         .sidenav {
-
+            font-family: "Lato", sans-serif !important;
             height: 100vh;
             width: 8%;
             position: fixed;
-            z-index: 100;
+            z-index: 1000;
             top: 0;
             left: 0;
             bottom: 0px;
@@ -32,6 +27,7 @@ document.write(`
             align-items: center;
             flex-direction: column;
             margin-right: 60px;
+            overflow-x: visible;
         }
 
         .sidenav a {
@@ -42,6 +38,7 @@ document.write(`
             color: #818181;
             display: block;
             transition: 0.3s;
+            overflow-x: visible;
         }
 
         .sidenav a:hover {
@@ -91,7 +88,7 @@ document.write(`
 
         @keyframes move {
             0% {
-                transform: translateX(10px);
+                transform: translateX(0px);
             }
 
             100% {
@@ -141,7 +138,12 @@ document.write(`
             align-items: center;
         }
 
-        
+        #ham {
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 10;
+            margin: 8px;
+        }
 
         .links {
             width: 100%;
@@ -154,20 +156,15 @@ document.write(`
 
         .bottom {
 
-            display: flex !important;
+            /* display: flex !important;
             width: 100%;
             height: 100%;
             justify-content: center;
-            align-items: flex-end;
+            align-items: flex-end; */
+            position: absolute;
+    bottom: 0;
         }
-        #ham {
-            font-size: 30px;
-            cursor: pointer;
-           position: absolute;
-            top: 0;
-            z-index: 5;
-            margin: 8px;
-        }
+
         @media screen and (max-width: 450px) {
             .sidenav {
                 padding-top: 15px;
@@ -179,15 +176,7 @@ document.write(`
         }
 
         @media screen and (max-width: 1000px) {
-            #ham {
-                  display: block;
-                  font-size: 30px;
-                  cursor: pointer;
-                  position: static;
-                  top: 0;
-                  z-index: 5;
-                  margin: 8px;
-              }
+            
 
             .text {
                 display: inline;
@@ -211,7 +200,7 @@ document.write(`
 
                 height: 100vh;
                 width: 0;
-                position: absolute;
+                position: fixed;
                 z-index: 100;
                 top: 0;
                 left: 0;
@@ -223,6 +212,7 @@ document.write(`
                 justify-content: start;
                 align-items: center;
                 flex-direction: column;
+                font-family: "Lato", sans-serif !important;
             }
 
             .sidenav a {
@@ -232,6 +222,7 @@ document.write(`
                 color: #818181;
                 display: block;
                 transition: 0.3s;
+                margin: 0;
             }
 
             .sidenav a:hover {
@@ -259,22 +250,33 @@ document.write(`
                 display: none;
                 animation: none;
             }
-
             .bottom {
+position: relative;
 
-                display: flex !important;
-                width: 100%;
-                height: 100%;
-                justify-content: center;
-                align-items: center;
-            }
+
+}
         }
-        
+        /* #preloader{
+  background:#d7f2f2 ;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 100000000000000000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+video{
+  width: 100%;
+  height: auto;
+} */
     </style>
 </head>
 
 <body>
-
+    <!-- <div id="preloader">
+        <video src="/pre-loader-vid.mp4" loop id="pre-loader-vid" autoplay muted></video>
+      </div> -->
     <div id="mySidenav" class="sidenav">
         <a href="https://chat.whatsapp.com/BicNUSEy69L9P1nBN2p3uJ" target="__blank">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -282,7 +284,8 @@ document.write(`
         <div class="links">
             <a href="/"><span class="text">Home</span>
                 <span class="fixed-sidenav-text-icon">
-                    <ion-icon name="home" class="icon-of-navbar"></ion-icon><span class="hover-text red">Home</span>
+                    <ion-icon name="home" class="icon-of-navbar"></ion-icon>
+                    <span class="hover-text red">Home</span>
                 </span>
             </a>
             <a href="/public/classwork"><span class="text">ClassWork</span>
@@ -335,6 +338,12 @@ document.write(`
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
         }
+//         var loader = document.getElementById('preloader');
+//   window.addEventListener(('load'),()=>{
+//     setTimeout(() => {
+//         loader.style.display = "none";
+// }, 1500);
+//   })
     </script>
 
 </body>
@@ -422,7 +431,6 @@ document.write(`
 </head>
 
 <body>
-
     <div id="mySidenav" class="sidenav">
         <a href="https://chat.whatsapp.com/BicNUSEy69L9P1nBN2p3uJ" target="__blank">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -437,7 +445,7 @@ document.write(`
     </div>
 
 
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+    <span style="font-size:30px;cursor:pointer;margin: 5px;" onclick="openNav()">&#9776; </span>
 
     <script>
         function openNav() {
@@ -460,6 +468,7 @@ document.write(`
 </body>
 </html>
 
+
 `
 )
   }
@@ -467,178 +476,206 @@ document.write(`
     document.write(
       `
       <style>
-    @import url("https://fonts.googleapis.com/css2?family=Dongle&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-}
-#navbar {
-    background-color: #111;
-    padding: 5px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    transition: 0.5s;
+      @import url("https://fonts.googleapis.com/css2?family=Dongle&display=swap");
+  * {
+    margin: 0;
+    padding: 0;
   }
-  #navbar ul {
-    display: flex;
-    align-items: center;
-    transition: 0.5s;
-  }
-  #navbar ul li {
-    list-style: none;
-    transition: 0.5s;
-  }
-  .navbarthings {
-    color: white;
-    text-decoration: none;
-    margin: 15px;
-    font-family: "Dongle", sans-serif;
-    font-size: 2rem;
-    transition: 0.5s;
-  }
-  /* #navbar li:last-child{
-    margin-left: auto;
-  } */
-  .right{
-    margin-left: auto;
-  }
-  .navbarthings:hover {
-    color: rgb(177, 177, 177);
-  }
-  #logo {
-    height: 50px;
-    border-radius: 50%;
-  }
-  #icons{
-    display: none;
-    color: white;
-    font-size: 2.4rem;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    cursor: pointer;
-  }
-  .show{
-    display: inline;
-  }
-  #cross{
-    transform: rotate(45deg);
-  }
-  .hide{
-    display: none;
-  }
-  .settings{
-      font-size: 30px;
-      cursor: pointer;
+  #navbar {
+      background-color: #111;
+      padding: 5px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: 0.5s;
+      overflow-x: hidden;
+    }
+    #navbar ul {
+      display: flex;
+      align-items: center;
+      transition: 0.5s;
+    }
+    #navbar ul li {
+      list-style: none;
+      transition: 0.5s;
+      /* border-bottom: 3px white solid; */
+    }
+    .navbarthings {
       color: white;
+      text-decoration: none;
+      margin: 15px;
+      font-family: "Dongle", sans-serif;
+      font-size: 2rem;
+      transition: 0.5s;
+    }
+    /* #navbar li:last-child{
+      margin-left: auto;
+    } */
+    .right{
+      margin-left: auto;
+    }
+    .navbarthings:hover {
+      color: rgb(177, 177, 177);
+    }
+    #logo {
+      height: 50px;
+      border-radius: 50%;
+    }
+    #icons{
+      display: none;
+      color: white;
+      font-size: 2.4rem;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .show{
+      display: inline;
+    }
+    #cross{
+      transform: rotate(45deg);
+    }
+    .hide{
+      display: none;
+    }
+    .settings{
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+    }
+    #settings-link{
+      color: white;
+      text-decoration: none;
+      margin: 15px;
+      font-family: "Dongle", sans-serif;
+      font-size: 2rem;
+      transition: 0.5s;
+      display: none;
+    }
+    a{
+      color: white;
+      text-decoration: none;
+    }
+  @media (max-width: 1033px) { 
+    #about-us{
+      display: inline;
+    }
+    #settings{
+      display: none;
+    }
+    #icons{
+      display: flex;
+    }
+    li{
+      display: none;
+    }
+    #navbar ul {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    .right{
+      margin-left: 0;
+    }
   }
-  #settings-link{
-    color: white;
-    text-decoration: none;
-    margin: 15px;
-    font-family: "Dongle", sans-serif;
-    font-size: 2rem;
-    transition: 0.5s;
-    display: none;
-  }
-  a{
-    color: white;
-    text-decoration: none;
-  }
-@media (max-width: 1033px) { 
-  #about-us{
-    display: inline;
-  }
-  #settings{
-    display: none;
-  }
-  #icons{
+  /* #preloader{
+    background:#d7f2f2 ;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100000000000000000000;
     display: flex;
-  }
-  li{
-    display: none;
-  }
-  #navbar ul {
-    display: flex;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
   }
-  .right{
-    margin-left: 0;
-  }
-}
-</style>
-<nav id="navbar">
-  <ul>
-    <a href="https://chat.whatsapp.com/BicNUSEy69L9P1nBN2p3uJ" target="__blank">
-      <img src="/public/logo.jfif" alt="" id="logo"
-    /></a>
-
-    <li class="li"><a href="/" class="navbarthings">Home</a></li>
-    <li class="li">
-      <a href="/public/classwork" class="navbarthings">ClassWork</a>
-    </li>
-    <li class="li">
-      <a href="/public/homework" class="navbarthings">HomeWork</a>
-    </li>
-    <li class="li">
-      <a href="/public/timetable" class="navbarthings">Time Table</a>
-    </li>
-    <li class="li">
-      <a href="/public/contactus" class="navbarthings">Contact Us</a>
-    </li>
-    <li class="li" id="rightid">
-      <a href="/public/aboutus" class="navbarthings" id="about-us">About Us</a>
-    </li>
-    <div class="settings right">
-        <a href="/public/settings"><ion-icon name="settings-outline" id="settings"></ion-icon></a>
-        <a href="/public/settings" id="settings-link">Settings</a>
-    </div>
-    <div id="icons" class="right">
-        <span id="ham" class="show"
-        ><ion-icon name="reorder-three-outline"></ion-icon
-      ></span>
-      <span id="cross" class="hide"
-        ><ion-icon name="add-outline"></ion-icon
-      ></span>
-    </div>
-  </ul>
-</nav>
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script>
-  let ham = document.getElementById("ham");
-  let cross = document.getElementById("cross");
-  let li = document.getElementsByClassName("li");
-  let rightid = document.getElementById("rightid");
-  let icons = document.getElementById("icons");
-  let settings = document.getElementById("settings");
-  let settingslink = document.getElementById("settings-link");
-  settings.addEventListener('click',()=>{
-
-  })
-  ham.addEventListener("click", () => {
-    ham.classList.toggle("show");
-    ham.classList.toggle("hide");
-    cross.classList.toggle("show");
-    cross.classList.toggle("hide");
-    for (let index = 0; index < li.length; index++) {
-      li[index].style.display = "block";
-    }
-    settingslink.style.display = "inline";
-  });
-  cross.addEventListener("click", () => {
-    ham.classList.toggle("show");
-    ham.classList.toggle("hide");
-    cross.classList.toggle("show");
-    cross.classList.toggle("hide");
-    for (let index = 0; index < li.length; index++) {
-      li[index].style.display = "none";
-    }
-    settingslink.style.display = "none";
-  });
-</script>
+  video{
+    width: 100%;
+    height: auto;
+  } */
+  </style>
+  <!-- <div id="preloader">
+    <video src="/pre-loader-vid.mp4" loop id="pre-loader-vid" autoplay muted></video>
+  </div> -->
+  <nav id="navbar">
+    <ul>
+      <a href="https://chat.whatsapp.com/BicNUSEy69L9P1nBN2p3uJ" target="__blank">
+        <img src="/public/logo.jfif" alt="" id="logo"
+      /></a>
+  
+      <li class="li url-underlined" id="a"><a href="/" class="navbarthings">Home</a></li>
+      <li class="li url-underlined">
+        <a href="/public/classwork" class="navbarthings">ClassWork</a>
+      </li>
+      <li class="li url-underlined">
+        <a href="/public/homework" class="navbarthings">HomeWork</a>
+      </li>
+      <li class="li url-underlined">
+        <a href="/public/timetable" class="navbarthings">Time Table</a>
+      </li>
+      <li class="li url-underlined">
+        <a href="/public/contactus" class="navbarthings">Contact Us</a>
+      </li>
+      <li class="li url-underlined" id="rightid">
+        <a href="/public/aboutus" class="navbarthings" id="about-us">About Us</a>
+      </li>
+      <div class="settings right">
+          <a href="/public/settings"><ion-icon name="settings-outline" id="settings"></ion-icon></a>
+          <a href="/public/settings" id="settings-link">Settings</a>
+      </div>
+      <div id="icons" class="right">
+          <span id="ham" class="show"
+          ><ion-icon name="reorder-three-outline"></ion-icon
+        ></span>
+        <span id="cross" class="hide"
+          ><ion-icon name="add-outline"></ion-icon
+        ></span>
+      </div>
+    </ul>
+  </nav>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    let ham = document.getElementById("ham");
+    let cross = document.getElementById("cross");
+    let li = document.getElementsByClassName("li");
+    let rightid = document.getElementById("rightid");
+    let icons = document.getElementById("icons");
+    let settings = document.getElementById("settings");
+    let settingslink = document.getElementById("settings-link");
+    settings.addEventListener('click',()=>{
+  
+    })
+    ham.addEventListener("click", () => {
+      ham.classList.toggle("show");
+      ham.classList.toggle("hide");
+      cross.classList.toggle("show");
+      cross.classList.toggle("hide");
+      for (let index = 0; index < li.length; index++) {
+        li[index].style.display = "block";
+      }
+      settingslink.style.display = "inline";
+    });
+    cross.addEventListener("click", () => {
+      ham.classList.toggle("show");
+      ham.classList.toggle("hide");
+      cross.classList.toggle("show");
+      cross.classList.toggle("hide");
+      for (let index = 0; index < li.length; index++) {
+        li[index].style.display = "none";
+      }
+      settingslink.style.display = "none";
+    });
+  //   var loader = document.getElementById('preloader');
+  //   window.addEventListener(('load'),()=>{
+  //     setTimeout(() => {
+  //         loader.style.display = "none";
+  // }, 1500);
+  //   })
+  
+      
+  </script>
+  
 
 `
     )

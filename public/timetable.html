@@ -27,7 +27,6 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    overflow: hidden;
   }
   body{
     overflow: hidden;
@@ -97,10 +96,17 @@
   right: 0;
   top: 0;
   color: white;
-  transform: rotate(45deg);
   font-size: 50px;
   cursor: pointer;
 }
+#icon{
+  transform: rotate(0deg) scale(1);
+  transition: 2s;
+}
+#icon:hover{
+  transform: rotate(360deg) scale(0.7);
+}
+
 #toast {
       visibility: hidden;
       max-width: 50px;
@@ -151,6 +157,7 @@
       -webkit-animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
       animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
     }
+  
 
     @-webkit-keyframes fadein {
       from {
@@ -288,10 +295,18 @@
   right: 0;
   top: 0;
   color: white;
-  transform: rotate(45deg);
   font-size: 50px;
   cursor: pointer;
 }
+@keyframes crossanimate{
+  0%{
+    transform: scale(0.5);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
   }
   @media (max-width: 633px) {
     .opened-image img{
@@ -307,12 +322,12 @@
   <script src="/public/navbar-code.js"></script> 
   <h1>Time Table</h1>
   <div class="img">
-  <img src="/public/timetable.jpg" alt="" id="image">
+  <img src="/public/timetable.png" alt="" id="image">
   
 </div>
 <div class="opened-image" id="imagecont">
-  <img src="/public/timetable.jpg" alt="" id="image">
-  <ion-icon name="add-outline" id="icon"></ion-icon>
+  <img src="/public/timetable.png" alt="" id="image">
+  <ion-icon name="close-outline" id="icon" class="cross"></ion-icon>
 
 </div>
 <div id="toast">

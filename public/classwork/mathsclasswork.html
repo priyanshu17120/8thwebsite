@@ -11,7 +11,8 @@
     #heading {
       text-align: center;
       font-size: 2rem;
-      margin-top: 25px;
+      margin-top: 5px;
+      color: black;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
 
     }
@@ -29,7 +30,7 @@
     }
 
     html {
-      background: url(bg.jpg) no-repeat center center fixed;
+      background: #d7f2f2;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -39,7 +40,7 @@
     body {
       font-weight: 400;
       font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-      overflow: hidden;
+      /* overflow: hidden; */
     }
 
     .buttons {
@@ -58,16 +59,16 @@
       align-items: center;
       display: flex;
       gap: 20px;
+flex-wrap: wrap;
       justify-content: center;
       text-align: center;
-      flex-wrap: wrap;
       padding: 40px 0px;
       width: 100%;
     }
 
     h1 {
       text-align: left;
-      color: #444;
+      color: #fff;
       letter-spacing: 0.05em;
       margin: 0 0 0.4em;
     }
@@ -86,7 +87,7 @@
       font-size: 14px;
       font-weight: 400;
       line-height: 45px;
-      max-width: 200px;
+      max-width: 250px;
       position: relative;
       text-decoration: none;
       text-transform: uppercase;
@@ -151,18 +152,39 @@
       -webkit-transform: rotate(40deg);
       transform: rotate(40deg);
     }
+    #wrapper{
+      position: absolute;
+      right: 0;
+      width: 100%;
+    }
   </style>
 </head>
 
 <body>
   <script src="/public/navbar-code.js"></script> 
+  <div id="wrapper">
   <h1 id="heading">Maths Classwork</h1>
-  <div class="buttons">
+  <div class="buttons" id="buttons">
     <div class="container">
       <a href="https://drive.google.com/file/d/146gcQQCKdqkTVgwrxNXwOBcClLFlQCGf/view?usp=sharing"
-        class="btn effect01"><span>Chapter-1</span></a>
+        class="btn effect01" target="__blank"><span>Chapter-1</span></a>
+      <a href="https://drive.google.com/file/d/1qCrklwFgfo4PBaXEzRxPRr-79VfJXVZt/view?usp=sharing"
+        class="btn effect01" target="__blank"><span>Chapter-2</span></a>
+        </div>
     </div>
+    <!-- done 6/5/22 -->
   </div>
 </body>
-
+<script>
+  if (localStorage.getItem('positionofnavbarisleft')) {
+    let wrapper = document.getElementById('wrapper');
+    if (window.innerWidth > 1000) {
+      wrapper.style.width = "92%";
+    }
+    else {
+      let wrapper = document.getElementById('wrapper');
+      wrapper.style.width = "100%";
+    }
+  }
+</script>
 </html>

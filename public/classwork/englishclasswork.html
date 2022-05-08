@@ -11,7 +11,8 @@
     #heading {
       text-align: center;
       font-size: 2rem;
-      margin-top: 25px;
+      margin-top: 5px;
+      color: black;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
 
     }
@@ -29,7 +30,7 @@
     }
 
     html {
-      background: url(bg.jpg) no-repeat center center fixed;
+      background: #d7f2f2 no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -39,7 +40,7 @@
     body {
       font-weight: 400;
       font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-      overflow: hidden;
+      /* overflow: hidden; */
     }
 
     .buttons {
@@ -58,7 +59,7 @@
       align-items: center;
       display: flex;
       gap: 20px;
-flex-wrap: wrap;
+      /* flex-wrap: wrap; */
       justify-content: center;
       text-align: center;
       padding: 40px 0px;
@@ -67,7 +68,7 @@ flex-wrap: wrap;
 
     h1 {
       text-align: left;
-      color: #444;
+      color: #fff;
       letter-spacing: 0.05em;
       margin: 0 0 0.4em;
     }
@@ -151,22 +152,94 @@ flex-wrap: wrap;
       -webkit-transform: rotate(40deg);
       transform: rotate(40deg);
     }
+
+    #wrapper {
+      position: absolute;
+      right: 0;
+      width: 100%;
+    }
+    .sections{
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .litrature{
+      gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 45%;
+    flex-wrap: wrap;
+    }
+    .grammar{
+      gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 45%;
+    flex-wrap: wrap;
+    }
+    .section-heading{
+      display: block;
+    text-align: center;
+    width: 100%;
+    color: black;
+    }
+    @media (max-width: 1033px) {
+      .sections{
+        flex-direction: column;
+      }
+      .litrature{
+        width: 100%;
+      }
+      .grammar{
+        width: 100%;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <script src="/public/navbar-code.js"></script> 
-  <h1 id="heading">English Classwork</h1>
-  <div class="buttons">
-    <div class="container">
-      <a href="https://drive.google.com/file/d/1akUde1biYNMn9SrV6wg04VT2zk9SV1Zd/view?usp=sharing"
-        class="btn effect01"><span>Chapter-2 (Coursebook)</span></a>
-      <a href="https://drive.google.com/file/d/1iEAsUGd12-KWHpPg3s84GkuaGtzm272j/view?usp=sharing"
-        class="btn effect01"><span>Chapter-7 (Grammar)</span></a>
-      <a href="https://drive.google.com/file/d/1EMGwbMWJ6MICqdvbmRdSZCBYK1Y01H8V/view?usp=sharing"
-        class="btn effect01"><span>Chapter-2 (Litrature)</span></a>
+  <script src="/public/navbar-code.js"></script>
+  <div id="wrapper">
+    <h1 id="heading">English Classwork</h1>
+    <div class="buttons" id="buttons">
+      <div class="container sections">
+        <div class="litrature">
+          <h1 class="section-heading">Literature</h1>
+            <a href="https://drive.google.com/file/d/1akUde1biYNMn9SrV6wg04VT2zk9SV1Zd/view?usp=sharing"
+              class="btn effect01" target="__blank"><span>Chapter-2 (Coursebook)</span></a>
+            <a href="https://drive.google.com/file/d/19LTIkUvJKiqTFuHDUoqcD1C7k6XLzxFY/view?usp=sharing"
+              class="btn effect01" target="__blank"><span>Chapter-2 (Litrature)</span></a>
+            <a href="https://drive.google.com/file/d/1MLoS_ywuu0snpNdTQyBWSjqfcO2GggPt/view?usp=sharing"
+              class="btn effect01" target="__blank"><span>Chapter-10 (Coursebook)</span></a>
+            </div>
+            <div class="grammar">
+              <h1 class="section-heading">Grammar</h1>
+            <a href="https://drive.google.com/file/d/1zEzpLdC5UZk10s0DrBVxm3x2IM9GenSh/view?usp=sharing"
+              class="btn effect01" target="__blank"><span>Chapter-7</span></a>
+            <a href="https://drive.google.com/file/d/1B8va07i2uGvPDZvDxupRIGX_er6r4WEs/view?usp=sharing"
+              class="btn effect01" target="__blank"><span>Notice Writing</span></a>
+            </div>
+      </div>
+      <!-- done 6/5/22 -->
     </div>
   </div>
 </body>
+<script>
+  if (localStorage.getItem('positionofnavbarisleft')) {
+    let wrapper = document.getElementById('wrapper');
+    if (window.innerWidth > 1000) {
+      wrapper.style.width = "92%";
+    }
+    else {
+      let wrapper = document.getElementById('wrapper');
+      wrapper.style.width = "100%";
+    }
+  }
+</script>
 
 </html>
