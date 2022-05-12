@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class work</title>
+  <link rel="shortcut icon" href="./ourgroupfavicon.png" type="image/x-icon" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,300&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      word-wrap: break-word;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 3rem;
+    }
+
+    body {
+      overflow-x: hidden;
+      background-color: #d7f2f2;
+      overflow-y: visible !important;
+    }
+
+    select {
+      display: block;
+      margin: 50px auto;
+      font-size: 1.5em;
+      border: none;
+      outline: none;
+      background: transparent;
+    }
+
+    #classworkbuttonsection {
+      font-size: 1.6em;
+      margin-top: 20px;
+      font-family: "Baloo 2", cursive;
+      text-align: center;
+    }
+
+    #cw {
+      word-wrap: break-word;
+      /* right: 0; */
+      /* position: absolute; */
+      margin-top: 10%;
+
+    }
+    .classwork-area {
+      margin: 15px;
+      margin-bottom: 50px;
+    }
+    #top-section{
+      z-index:5;
+    }
+    @media screen and (max-width: 1000px) {
+
+      #cw {
+        word-wrap: break-word;
+        padding: 0 2% 0 2%;
+      }
+
+      #classworkbuttonsection {
+        font-size: 1.6em;
+        margin-top: -64px;
+        font-family: "Baloo 2", cursive;
+        text-align: center;
+      }
+      .classwork-area {
+      margin: 0;
+      margin-bottom: 50px;
+    }
+    }
+
+    
+  </style>
+</head>
+
+<body>
+  <script src="/public/navbar-code.js"></script>
+
+<div id="top-section">
+  <h1>Classwork</h1>
+  <div class="selectingdates">
+    <select name="dates" id="datesselect" id="datesselectid" onchange="datechanged()">
+      <option value="11may2022" id="11may2022">11/5/2022</option>
+      <option value="10may2022" id="10may2022">10/5/2022</option>
+      <option value="9may2022" id="9may2022">9/5/2022</option>
+      <option value="6may2022" id="6may2022">6/5/2022</option>
+      <option value="5may2022" id="5may2022">5/5/2022</option>
+      <option value="4may2022" id="4may2022">4/5/2022</option>
+      <option value="2may2022" id="2may2022">2/5/2022</option>
+      <option value="29apr2022" id="29apr2022">29/4/2022</option>
+      <option value="28apr2022" id="28apr2022">28/4/2022</option>
+      <option value="27apr2022" id="27apr2022">27/4/2022</option>
+      <option value="26apr2022" id="26apr2022">26/4/2022</option>
+      <option value="25apr2022" id="25apr2022">25/4/2022</option>
+      <option value="22apr2022" id="22apr2022">22/4/2022</option>
+      <option value="21apr2022" id="21apr2022">21/4/2022</option>
+      <option value="20apr2022" id="20apr2022">20/4/2022</option>
+      <option value="19apr2022" id="19apr2022">19/4/2022</option>
+      <option value="18apr2022" id="18apr2022">18/4/2022</option>
+      <option value="13apr2022" id="13apr2022">13/4/2022</option>
+      <option value="12apr2022" id="12apr2022">12/4/2022</option>
+      <option value="11apr2022" id="11apr2022">11/4/2022</option>
+      <option value="8apr2022" id="8apr2022">8/4/2022</option>
+      <option value="7apr2022" id="7apr2022">7/4/2022</option>
+      <option value="6apr2022" id="6apr2022">6/4/2022</option>
+      <option value="5apr2022" id="5apr2022">5/4/2022</option>
+      <option value="4apr2022" id="4apr2022">4/4/2022</option>
+      <option value="1apr2022" id="1apr2022">1/4/2022</option>
+    </select>
+  </div>
+</div>
+  <div id="classworkbuttonsection">
+    <div id="cw">
+      
+    </div>
+</body>
+<script>
+  function datechanged() {
+    const datesselectid = document.querySelector("select").value;
+    const cw = document.getElementById("cw");
+    if (datesselectid == "1apr2022") {
+      cw.innerHTML = `
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>English:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Hindi:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Computer:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Science:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Sst:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Maths:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>French:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>General:-</h3><br>No Homework !</div>
+      `;
+    }
+
+    else if (datesselectid == "4apr2022") {
+      cw.innerHTML = `
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>English:-</h3><br>Self-read Ch-2 (Oh, I wish I'd Looked after Me Teeth) from the English coursebook (Stairway) and find the meaning of words which you find difficult.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Hindi:-</h3><br>कक्षा में किये गए वर्ण माला के काम का संशोधन करे|<br>2.वसंत भाग तीन के पाठ २ (लाख की चूड़ियां) पढ़े !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Computer:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Science:-</h3><br>Bring materials for the drawing of diagrams of microorganisms in class. (Ch-2 Microorganisms)<br>2. Revise the points told in the class. (Ch-2 Microorganisms,mentioned in classwork)</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Sst:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Maths:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>French:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>General:-</h3><br>No Homework !</div>
+      `;
+    }
+    else if (datesselectid == "5apr2022") {
+      cw.innerHTML = `
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>English:-</h3><br>Read Ch-2(Oh,I wish I'd Looked after Me Teeth) of english coursebook.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Hindi:-</h3><br>वसंत भाग तीन के पाठ २ (लाख की चूड़ियां) पढ़े </div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Computer:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Science:-</h3><br>Bring materials for the drawing of diagrams of microorganisms in class. (Ch-2 Microorganisms)</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Sst:-</h3><br>Read the chapter 1(The Modern Period) of history.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Maths:-</h3><br>Do the recap exercie of Ch-1(Rational Numbers) Of Maths</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>French:-</h3><br>Learn & Revise The Lexique Done In Class.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>General:-</h3><br>No Homework !</div>
+      `;
+    }
+    else if (datesselectid == "6apr2022") {
+      cw.innerHTML = `
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>English:-</h3><br>Revise Ch-2 of coursebook for a oral test tomorrow.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Hindi:-</h3><br>वर्णमाला के लिखित कार्य को संशोधित करें |<br> 2. Do the Abhyas Karya Of Ch-2 of vyakran.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Computer:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Science:-</h3><br>Revise topics done in class.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Sst:-</h3><br>Read the chapter 1(The Modern Period) of history.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Maths:-</h3><br>Revise the work done in class.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>French:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>General:-</h3><br>No Homework !</div>
+      `;
+    }
+    else if (datesselectid == "7apr2022") {
+      cw.innerHTML = `
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>English:-</h3><br>Learn and revise the question/answers done in notebook.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Hindi:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Computer:-</h3><br>Read the introduction given in book.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Science:-</h3><br>Revise topics done in class.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Sst:-</h3><br>Revise topics done in class.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Maths:-</h3><br>Solve the following questions in your notebook:<br>a) Show that commutative law w.r.t. subtraction does not satisfy for rational no.'s by taking 2/5 & -3/2<br>b) Verify commutative law w.r.t. multiplication for a= -3/8 & b =-1/4</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>French:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>General:-</h3><br>No Homework !</div>
+      `;
+    }
+    else if (datesselectid == "8apr2022") {
+      cw.innerHTML = `
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>English:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Hindi:-</h3><br>Do the shabd aarth of ch-2(vasant) given in book & Kathin shabd.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Computer:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Science:-</h3><br>Revise topics done in class & do the fill in the blanks given in book pg-32.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Sst:-</h3><br>Revise topics done in class.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Maths:-</h3><br>Make a question and solve it for accociative property w.r.t. Division proving LHS≠RHS.<br>2. Do the associative property for subtraction.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>French:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>General:-</h3><br>No Homework !</div>
+      `;
+    }
+    else if (datesselectid == "11apr2022") {
+      cw.innerHTML = `
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>English:-</h3><br>Do exercises A,B,C and D given on page no. 47 in English Grammar Book and bring it tomorrow.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Hindi:-</h3><br>कल होने वाले पाठ-२, लाख की चूड़ियाँ (वसंत)  की कक्षा परीक्षा के लिए तैयारी करके आएं|</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Computer:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Science:-</h3><br>Revise topics done in class.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Sst:-</h3><br>Find out how many ministries are there in India.<br>2. Briefly describe Dadabhai Naoroji.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Maths:-</h3><br>Revise work done in class.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>French:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>General:-</h3><br>Learn ek tu hi bharosa song.</div>
+      `;
+    }
+    else if (datesselectid == "12apr2022") {
+      cw.innerHTML = `
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>English:-</h3><br>Do exercises H,I,J given on page no. 54 & 55 in English Grammar Book.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Hindi:-</h3><br>पाठ - ३ ( बस की यात्रा ) पढ़ के आए |</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Computer:-</h3><br>Do the following questions in your n/b:-<br>a) When & how the AI word coined?<br>b) Write any 2 easy & hard tasks for human & computers.<br><a style='font-weight:bold'>Note</a>-Take reference from book.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Science:-</h3><br>Draw the digram of microscope from pg-9 of book in science practicle file and label following things:-<br>Eyepiece Lens , Nosepiece , Fine adjustment , Coverslip , Glass slide , Mirror.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Sst:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Maths:-</h3><br>Do all questions of exercise 1.1 of ch-1 in n/b.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>French:-</h3><br>Do the exercise 3,10,11 of lecon-1 given on pg- 17,18 & 19 in book.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>General:-</h3><br>No Homework !</div>
+      `;
+    }
+    else if (datesselectid == "13apr2022") {
+      cw.innerHTML = `
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>English:-</h3><br>Revise for class test on Monday (ch-2) – I wish I looked me teeth.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Hindi:-</h3><br>Do word meanings of lesson 3 in notebook from book. <br>2. Do Question/Answers of lesson 3 (will be provided in group by Ma'am)</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Computer:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Science:-</h3><br>Draw the diagram of Nitrogen Cycle from book.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Sst:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Maths:-</h3><br>Complete exercise 1.2 of ch-1 in notebook.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>French:-</h3><br>Revise the work done in class.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>General:-</h3><br>No Homework !</div>
+      `;
+    }
+    else if (datesselectid == "18apr2022") {
+      cw.innerHTML = `
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>English:-</h3><br>Read Ch-2 of litrature.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Hindi:-</h3><br>Revise for the test of hindi Ch-3 tomorrow.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Computer:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Science:-</h3><br>Draw table 2.1 of Ch-2 of science book in n/b.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Sst:-</h3><br>Do the back exercises & write answers of the ques/ans in rough n/b of Ch-1(History).</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Maths:-</h3><br>Complete exercise 1.3 of ch-1 in notebook.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>French:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>General:-</h3><br>Bring A4 sized or A3 sized sheet on Friday (22-4-22) for Earth Day Poster Making Activity.</div>
+      `;
+    }
+    else if (datesselectid == "19apr2022") {
+      cw.innerHTML = `
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>English:-</h3><br>Bring literature book tomorrow for reading of Ch-2.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Hindi:-</h3><br>Bring vyakran book tomorrow.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Computer:-</h3><br>Revise work done in class.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Science:-</h3><br>Draw table 2.2 of Ch-2 of science book in n/b on pg 38.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Sst:-</h3><br>Do the ques/ans that will be given by mam.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Maths:-</h3><br>Complete exercise 1.4 of ch-1 in notebook.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>French:-</h3><br>Do ques 4 of lecon-1 of french book.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>General:-</h3><br>Bring A4 sized or A3 sized sheet on Friday (22-4-22) for Earth Day Poster Making Activity.</div>
+      `;
+    }
+    else if (datesselectid == "20apr2022") {
+      cw.innerHTML = `
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>English:-</h3><br>Read ch-2(litrature) and do exercise A & B given in litrature book pg-16.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Hindi:-</h3><br>Revise work done in class.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Computer:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Science:-</h3><br>Do the back exercises of ch-2.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Sst:-</h3><br>Revise the ques/ans.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Maths:-</h3><br>Complete exercise 1.4 of ch-1 in notebook.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>French:-</h3><br>Bring french book & notebook tomorrow.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>General:-</h3><br>Bring A4 sized or A3 sized sheet on Friday (22-4-22) for Earth Day Poster Making Activity.</div>
+      `;
+    }
+    else if (datesselectid == "21apr2022") {
+      cw.innerHTML = `
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>English:-</h3><br>Bring English litrature book and n/b for ques/ans of ch-2.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Hindi:-</h3><br>Revise work done in class & try to do the back exercises of ch-1 (vyakran).</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Computer:-</h3><br>Do the question/answers that will be given by mam.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Science:-</h3><br>Bring the materials for poster making and slogan writing activity on the topic - Say No To Plactic.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Sst:-</h3><br>Read ch-1(civics).</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Maths:-</h3><br>Complete revision exercise of ch-1 in notebook.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>French:-</h3><br>Do the ques 5 of lecon-1 of french book.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>General:-</h3><br>Bring A4 sized or A3 sized sheet on Friday (22-4-22) for Earth Day Poster Making Activity.</div>
+      `;
+    }
+    else if (datesselectid == "22apr2022") {
+      cw.innerHTML = `
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>English:-</h3><br>Do the word meaning of ch-2(lit) in n/b.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Hindi:-</h3><br>Write the following work of ch-1(vyakran) in your n/b:-<br>Write hindi ki upbhashyan to upbhashyan dont write the boliyan pg-9.<br>Do the whole vyakran part on pg-10 from vyakran to vakya vichar.<br>2. Do the abyas karya of ch-1(vyakran).</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Computer:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Science:-</h3><br>Draw the table 2.3 of Ch-2 in n/b.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Sst:-</h3><br>Read ch-1(civics).</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Maths:-</h3><br>Complete revision exercise of ch-1 in notebook & examples given of ch-1.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>French:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>General:-</h3><br>No Homework !</div>
+      `;
+    }
+    else if (datesselectid == "25apr2022") {
+      cw.innerHTML = `
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>English:-</h3><br>Revise the RTC done today<br>Bring Litrature book and English Notebook for Q/A tomorrow.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Hindi:-</h3><br>Do the correction work of today's class test.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Computer:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Science:-</h3><br>Revise the chapter from book for MCQ test tomorrow.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Sst:-</h3><br>Read the chapter 1 civics.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Maths:-</h3><br>Prepare for Class Test of chapter 1 on Wednesday.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>French:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>General:-</h3><br>Art and Craft<br>Bring 2 poly bags, a pair of scissors and a stapler on next Monday for Activity<br>2.Music<br>Bring Music notebook in next period (on Monday)</div>
+      `;
+    }
+    else if (datesselectid == "26apr2022") {
+      cw.innerHTML = `
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>English:-</h3><br>Revise the Q/A Done.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Hindi:-</h3><br>Complete the patr done today in class.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Computer:-</h3><br>Read pg-5 of computer book.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Science:-</h3><br>Revise work done in class.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Sst:-</h3><br>Read the chapter 1 civics.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Maths:-</h3><br>Prepare for Class Test of chapter 1 on Wednesday(Tomorrow).!</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>French:-</h3><br>Do the ques 6 of book of lecon-1.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>General:-</h3><br>No Homework !</div>
+      `;
+    }
+    else if (datesselectid == "27apr2022") {
+      cw.innerHTML = `
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>English:-</h3><br>Prepare Past tense and Present tense of tenses for class test on 28th April 2022 (i.e. tomorrow).</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Hindi:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Computer:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Science:-</h3><br>Read ch-1 of science.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Sst:-</h3><br>Prepare Ch-1 of History (The Modern Period) for class test on Monday.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Maths:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>French:-</h3><br>Revise the work done.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>General:-</h3><br>No Homework !</div>
+      `;
+    }
+    else if (datesselectid == "28apr2022") {
+      cw.innerHTML = `
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>English:-</h3><br>Prepare for the test of tenses on monday.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Hindi:-</h3><br>Revise the prayavachi.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Computer:-</h3><br>Revise the ANI & AGI.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Science:-</h3><br>Read ch-1 of science.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Sst:-</h3><br>Prepare Ch-1 of History (The Modern Period) for class test on Monday.<br>2. Read the salt satyagreh and Anti-liquor movement of ch-1(civics).</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Maths:-</h3><br>Complete the recap exercise of ch-2.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>French:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>General:-</h3><br>Bring all the notebooks tomorrow for scrutiny.</div>
+      `;
+    }
+    else if (datesselectid == "29apr2022") {
+      cw.innerHTML = `
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>English:-</h3><br>Prepare for the test of tenses on monday.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Hindi:-</h3><br>Learn the prayavachi & vilom for test on monday.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Computer:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Science:-</h3><br>Read ch-1 of science.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Sst:-</h3><br>Learn for the Test on monday of ch-1(history).</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Maths:-</h3><br>Do the ex-2.1 till question 4.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>French:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>General:-</h3><br>No Homework !</div>
+      `;
+    }
+    else if (datesselectid == "2may2022") {
+      cw.innerHTML = `
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>English:-</h3><br>Bring Eng Coursebook on wednesday for reading ch-10.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Hindi:-</h3><br>Bring the vasant book for reading of ch-6.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Computer:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Science:-</h3><br>Learn the table 1.2 and draw in notebook without seeing from book.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Sst:-</h3><br>Mark the ques/ans of ch-1(civics) in book.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>Maths:-</h3><br>Do the ques 10 of ex-2.1 and do first 4 questions of revision exercise.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>French:-</h3><br>No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>General:-</h3><br>Learn the songs done in music.<br>2. Make 5 more flowers same as the flower made today in A/C class.</div>
+      `;
+    }
+    else if (datesselectid == "4may2022") {
+      cw.innerHTML = `
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        English:-</h3><br>
+        1.Bring english n/b and coursebook for writing ques/ans.<br>
+        2.Write the difficult words and word meaning of ch-10 in n/b.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Hindi:-</h3><br>
+        1.Write the ch-6 poem in n/b.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Computer:-</h3><br>
+        No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Science:-</h3><br>
+        No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Sst:-</h3><br>
+        1.Mark the ques/ans of ch-1(civics) in book.<br>
+        2.Read the ch-1 of geography.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Maths:-</h3><br>
+        1.Complete the revision exercise.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        French:-</h3><br>
+        1.Revise the work done.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        General:-</h3><br>
+        1.Learn about asian games for next G.K. Period.</div>
+      `;
+    }
+    else if (datesselectid == "5may2022") {
+      cw.innerHTML = `
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        English:-</h3><br>
+        1.Revise the work done.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Hindi:-</h3><br>
+        1.Complete the classwork.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Computer:-</h3><br>
+        1.Revise the work done and complete the ques/ans.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Science:-</h3><br>
+        1.Revise the work done.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Sst:-</h3><br>
+        1.Write the ques/ans which were marked in book by mam.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Maths:-</h3><br>
+        1.Revise the work done.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        French:-</h3><br>
+        No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        General:-</h3><br>
+        This is to inform you all that we have an Activity regarding the topic 'Save Soil Movement' on Friday, 6th May, 2022.<br>
+So the Procedure of the activity goes as follows:- <br>
+1. Search on youtube about save soil and get information about it.<br>
+2. After that your respective class teachers will ask you all to write a textual letter regarding the Save Soil Movement which would be written to the Prime minister of India. If any of you is not able to write a letter they may also make a sketch or a poster or write a poem or just the line 'Save Our Soil'.<br>
+3. Once everyone is done with the above, the class teachers will collect their works with them and keep it safely.
+(The activity will be collected in first period itself)</div>
+      `;
+    }
+    else if (datesselectid == "6may2022") {
+      cw.innerHTML = `
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        English:-</h3><br>
+        1.Bring only english coursebook and n/b on monday.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Hindi:-</h3><br>
+        1.Learn for test of ch-6 on monday.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Computer:-</h3><br>
+        No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Science:-</h3><br>
+        1.Revise the work done and read about Harvesting.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Sst:-</h3><br>
+        1.Read the ch-1(Geography)</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Maths:-</h3><br>
+        1.Revise work done today.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        French:-</h3><br>
+        No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        General:-</h3><br>
+        1.Do all the back exercises of ch-1 of Moral Education.
+        2.Write ten changes that you will adapt in gk/medu n/b and write a star change.</div>
+      `;
+    }
+    else if (datesselectid == "9may2022") {
+      cw.innerHTML = `
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        English:-</h3><br>
+        1.Bring only english notebook tomorrow for letter writing.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Hindi:-</h3><br>
+        1.Complete the poem writing activity.<br>
+        2.Revise for test of ch-6 tomorrow.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Computer:-</h3><br>
+        No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Science:-</h3><br>
+        1.Complete the ques/ans done till Q4.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Sst:-</h3><br>
+        1.Test of ch-1(civics) on thursday.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Maths:-</h3><br>
+        1.Complete the recap exercise of ch-11.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        French:-</h3><br>
+        1.Bring french book and notebook tomorrow.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        General:-</h3><br>
+        1.Write the poem written in music.<br>
+        2.Complete the drawings:- <br> There should be four drawing in your sketch file - <br>a) A shoe and book on pg-8 <br> b) Pen shading and Pen drawing & wash given on pg-8 <br>c) Do pg-8 all in book as well<br>3.Make 5 flowers same as the flower made in class last monday.
+        </div>
+      `;
+    }
+    else if (datesselectid == "10may2022") {
+      cw.innerHTML = `
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        English:-</h3><br>
+        1.There will be a test of formal letter writing.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Hindi:-</h3><br>
+        1.Revise work done.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Computer:-</h3><br>
+        1.Complete the ques/ans that will be send by mam.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Science:-</h3><br>
+        1.Read Animal husbandry then you have to explain it in class tomorrow.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Sst:-</h3><br>
+        1.Revise the work done.<br>
+        2.Learn for test on thursday of ch-1(civics)</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Maths:-</h3><br>
+        1.Revise work done.<br>
+        2.Learn for test of ch-2 and 1 tomorrow.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        French:-</h3><br>
+        1.Write the word with meanings marked in book today.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        General:-</h3><br>
+        No Homework !
+        </div>
+      `;
+    }
+    else if (datesselectid == "11may2022") {
+      cw.innerHTML = `
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        English:-</h3><br>
+        1.Bring english litrature tomorrow.<br>
+        2.ASL Activity will be conducted.<br>
+        3.Read chapter lazy afternoon.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Hindi:-</h3><br>
+        1.Complete the classwork.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Computer:-</h3><br>
+        No Homework !</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Science:-</h3><br>
+        1.Revise work done.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Sst:-</h3><br>
+        1.Read the whole chapter 1 of geo.<br>
+        2.Learn for the test tomorrow.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        Maths:-</h3><br>
+        1.Do the ques 6 and 7 of ex-11.1 in n/b</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        French:-</h3><br>
+        1.Bring french book and n/b tomorrow.</div>
+      <div class="classwork-area"><h3 style='text-align:left;padding:8px'>
+        General:-</h3><br>
+        1.Write about common wealth games for G.K. period.
+        </div>
+      `;
+    }
+  }
+  datechanged()
+  if (localStorage.getItem('positionofnavbarisleft')) {
+    let supermancon = document.getElementById('cw');
+    let topsection = document.getElementById('top-section');
+    if (window.innerWidth > 1000) {
+      supermancon.style.width = "92%";
+      supermancon.style.position = "absolute";
+      supermancon.style.right = "0";
+      topsection.style.width = "92%";
+      topsection.style.position = "absolute";
+      topsection.style.right = "0";
+
+    } else {
+      topsection.style.width = "100%";
+      topsection.style.position = "relative";
+      topsection.style.right = "0";
+      supermancon.style.position = "static";
+      supermancon.style.right = "auto";
+    }
+  }
+</script>
+
+</html>

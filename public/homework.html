@@ -44,6 +44,7 @@
     body {
       overflow-x: hidden;
       background-color: #d7f2f2;
+      overflow-y: visible !important;
     }
 
     select {
@@ -64,8 +65,8 @@
 
     #hw {
       word-wrap: break-word;
-      right: 0;
-      position: absolute;
+      /* right: 0; */
+      /* position: absolute; */
       margin-top: 10%;
 
     }
@@ -106,6 +107,7 @@
   <h1>Homework</h1>
   <div class="selectingdates">
     <select name="dates" id="datesselect" id="datesselectid" onchange="datechanged()">
+      <option value="12may2022" id="12may2022">12/5/2022</option>
       <option value="11may2022" id="11may2022">11/5/2022</option>
       <option value="10may2022" id="10may2022">10/5/2022</option>
       <option value="9may2022" id="9may2022">9/5/2022</option>
@@ -571,6 +573,35 @@ So the Procedure of the activity goes as follows:- <br>
         </div>
       `;
     }
+    else if (datesselectid == "12may2022") {
+      hw.innerHTML = `
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        English:-</h3><br>
+        1.Dont bring any book and notebook as there will be ASL activity and holiday homework would be discussed.</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        Hindi:-</h3><br>
+        1.Complete classwork.</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        Computer:-</h3><br>
+        1.Do all the activities given from page-13.</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        Science:-</h3><br>
+        1.Revise the classwork.</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        Sst:-</h3><br>
+        1.Read the whole chapter 1 of geo.</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        Maths:-</h3><br>
+        1.Revise work done.</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        French:-</h3><br>
+        1.Do ques 2 and 3 given on pg 25.</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        General:-</h3><br>
+        No Homework !
+        </div>
+      `;
+    }
   }
   datechanged()
   if (localStorage.getItem('positionofnavbarisleft')) {
@@ -578,6 +609,8 @@ So the Procedure of the activity goes as follows:- <br>
     let topsection = document.getElementById('top-section');
     if (window.innerWidth > 1000) {
       supermancon.style.width = "92%";
+      supermancon.style.position = "absolute";
+      supermancon.style.right = "0";
       topsection.style.width = "92%";
       topsection.style.position = "absolute";
       topsection.style.right = "0";
@@ -586,6 +619,8 @@ So the Procedure of the activity goes as follows:- <br>
       topsection.style.width = "100%";
       topsection.style.position = "relative";
       topsection.style.right = "0";
+      supermancon.style.position = "static";
+      supermancon.style.right = "auto";
     }
   }
 </script>
