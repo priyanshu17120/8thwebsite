@@ -65,9 +65,6 @@
 
     #hw {
       word-wrap: break-word;
-      /* right: 0; */
-      /* position: absolute; */
-      margin-top: 10%;
 
     }
     .homework-area {
@@ -107,6 +104,7 @@
   <h1>Homework</h1>
   <div class="selectingdates">
     <select name="dates" id="datesselect" id="datesselectid" onchange="datechanged()">
+      <option value="13may2022" id="13may2022">13/5/2022</option>
       <option value="12may2022" id="12may2022">12/5/2022</option>
       <option value="11may2022" id="11may2022">11/5/2022</option>
       <option value="10may2022" id="10may2022">10/5/2022</option>
@@ -602,6 +600,36 @@ So the Procedure of the activity goes as follows:- <br>
         </div>
       `;
     }
+    else if (datesselectid == "13may2022") {
+      hw.innerHTML = `
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        English:-</h3><br>
+        1.Mam will give the topic in group and we have to prepare a speech on it.</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        Hindi:-</h3><br>
+        1.Complete the patr lekhan.</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        Computer:-</h3><br>
+        No Homework !</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        Science:-</h3><br>
+        1.Do the G and D part of ch-1 in n/b.<br>
+        2.There will be a mcq test on tuesday.</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        Sst:-</h3><br>
+        1.Make a flash card having a title related to the three chapters done till now<br>There will be the title and the defination of it.</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        Maths:-</h3><br>
+        1.Revise work done.</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        French:-</h3><br>
+        No Homework !</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        General:-</h3><br>
+        1.Write about your idol and bring it on next M.Edu period.
+        </div>
+      `;
+    }
   }
   datechanged()
   if (localStorage.getItem('positionofnavbarisleft')) {
@@ -609,18 +637,14 @@ So the Procedure of the activity goes as follows:- <br>
     let topsection = document.getElementById('top-section');
     if (window.innerWidth > 1000) {
       supermancon.style.width = "92%";
-      supermancon.style.position = "absolute";
-      supermancon.style.right = "0";
+      supermancon.style.float = "right";
       topsection.style.width = "92%";
-      topsection.style.position = "absolute";
-      topsection.style.right = "0";
+      topsection.style.float = "right";
 
     } else {
       topsection.style.width = "100%";
-      topsection.style.position = "relative";
-      topsection.style.right = "0";
-      supermancon.style.position = "static";
-      supermancon.style.right = "auto";
+      topsection.style.float = "none";
+      supermancon.style.float = "none";
     }
   }
 </script>
