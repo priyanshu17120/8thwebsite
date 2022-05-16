@@ -78,12 +78,12 @@
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <img src="/public/logo.jfif" alt="" id="logo" /></a>
         <a href="/"><i class="fa fa-home"></i>Home</a>
-        <a href="/public/classwork"><i class="fa fa-book"></i>ClassWork</a>
-        <a href="/public/homework"><i class="fa fa-pencil"></i>HomeWork</a>
-        <a href="/public/timetable"><i class="fa fa-calendar"></i>Time Table</a>
-        <a href="/public/contactus"><i class="fa fa-phone"></i>Contact Us</a>
-        <a href="/public/aboutus"><i class="fa fa-user"></i>About Us</a>
-        <a href="/public/settings"><i class="fa fa-gear"></i>Settings</a>
+        <a href="/public/classwork.html" id="classwork_of_navbar"><i class="fa fa-book"></i>ClassWork</a>
+        <a href="/public/homework.html"><i class="fa fa-pencil"></i>HomeWork</a>
+        <a href="/public/timetable.html"><i class="fa fa-calendar"></i>Time Table</a>
+        <a href="/public/contactus.html"><i class="fa fa-phone"></i>Contact Us</a>
+        <a href="/public/aboutus.html"><i class="fa fa-user"></i>About Us</a>
+        <a href="/public/settings.html"><i class="fa fa-gear"></i>Settings</a>
     </div>
 
 
@@ -104,6 +104,13 @@
 
                 document.getElementById("mySidenav").style.width = "0";
             }, 500);
+        }
+        let classwork_of_navbar = document.getElementById('classwork_of_navbar');
+        if(localStorage.getItem('setclassworkdatewise')){
+            classwork_of_navbar.href = "/public/classwork2.html";
+        }
+        else{
+            classwork_of_navbar.href = "/public/classwork.html";
         }
     </script>
 

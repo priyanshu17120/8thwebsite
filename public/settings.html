@@ -10,7 +10,22 @@
     <meta name="theme-color" content="#6957E7">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+        ::-webkit-scrollbar {
+  width: 5px;
+}
 
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
         * {
             margin: 0;
             padding: 0;
@@ -33,11 +48,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 50vh;
             flex-direction: column;
             padding: 25px;
-            position: absolute;
-            right: 0;
+            position: relative;
+            height: auto;
+            float: right;
             width: 100%;
         }
 
@@ -61,6 +76,9 @@
         .navbar {
             border-top-left-radius: 4px;
             border-top-right-radius: 4px;
+        }
+
+        .classwork {
             border-bottom-left-radius: 4px;
             border-bottom-right-radius: 4px;
         }
@@ -73,139 +91,204 @@
             opacity: 0.6;
             font-size: 20px;
         }
+
         @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
-        #navbar-settings-option{
-            
-    border-radius: 5px;
-    background: rgb(59, 59, 59);
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    padding: 15px;
+
+        #navbar-settings-option {
+
+            border-radius: 5px;
+            background: rgb(59, 59, 59);
+            display: none;
+            width: 100%;
+            flex-direction: column;
+            padding: 15px;
         }
-        #navbar-settings-option.active{
+
+        #navbar-settings-option.active {
             display: flex;
         }
- .box {
-     
-    font-family: 'Quicksand', sans-serif;
-	 width: 300px;
-	 margin: 25px 0;
-	 display: flex;
-	 align-items: center;
-	 user-select: none;
-}
- .box label {
-	 font-size: 26px;
-	 color: white;
-	 position: absolute;
-	 z-index: 10;
-	 padding-left: 50px;
-	 cursor: pointer;
-}
- .box input {
-	 opacity: 0;
-	 visibility: hidden;
-	 position: absolute;
-}
- .box input:checked ~ .check {
-	 border-color: #00ea90;
-	 box-shadow: 0px 0px 0px 15px #00ea90 inset;
-}
- .box input:checked ~ .check::after {
-	 opacity: 1;
-	 transform: scale(1);
-}
- .box .check {
-	 width: 30px;
-	 height: 30px;
-	 display: flex;
-	 justify-content: center;
-	 align-items: center;
-	 position: relative;
-	 border-radius: 100px;
-	 background-color: #fff;
-	 border: 2px solid #00ea90;
-	 box-shadow: 0px 0px 0px 0px #00ea90 inset;
-	 transition: all 0.15s cubic-bezier(0, 1.05, 0.72, 1.07);
-}
- .box .check::after {
-	 content: '';
-	 width: 100%;
-	 height: 100%;
-	 opacity: 0;
-	 z-index: 4;
-	 position: absolute;
-	 transform: scale(0);
-	 background-size: 50%;
-	 background-image: url('https://s6.picofile.com/d/8392306668/bacc888c-bed7-41a9-bf24-f6ff0718f471/checkmark.svg');
-	 background-repeat: no-repeat;
-	 background-position: center;
-	 transition-delay: 0.2s !important;
-	 transition: all 0.25s cubic-bezier(0, 1.05, 0.72, 1.07);
-}
-#down-drop{
-    display: none;
-}
-#down-drop.active{
-    display: block;
-}
-#side-drop{
-    display: none;
-}
-#side-drop.active{
-    display: block;
-}
-#navbar-settings{
-    border-bottom: 1px solid gray;
-}
-#navbar-settings.border-bottom{
-    border-bottom: none;
-    border-radius: 0;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-}
-#navbar-settings.border-bottom ~ #navbar-settings-option{
-    border-radius: 0;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-}
+
+        .box {
+
+            font-family: 'Quicksand', sans-serif;
+            width: 300px;
+            margin: 25px 0;
+            display: flex;
+            align-items: center;
+            user-select: none;
+        }
+
+        .box label {
+            font-size: 26px;
+            color: white;
+            position: absolute;
+            z-index: 10;
+            padding-left: 50px;
+            cursor: pointer;
+        }
+
+        .box input {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+        }
+
+        .box input:checked~.check {
+            border-color: #00ea90;
+            box-shadow: 0px 0px 0px 15px #00ea90 inset;
+        }
+
+        .box input:checked~.check::after {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .box .check {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border-radius: 100px;
+            background-color: #fff;
+            border: 2px solid #00ea90;
+            box-shadow: 0px 0px 0px 0px #00ea90 inset;
+            transition: all 0.15s cubic-bezier(0, 1.05, 0.72, 1.07);
+        }
+
+        .box .check::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 4;
+            position: absolute;
+            transform: scale(0);
+            background-size: 50%;
+            background-image: url('https://s6.picofile.com/d/8392306668/bacc888c-bed7-41a9-bf24-f6ff0718f471/checkmark.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            transition-delay: 0.2s !important;
+            transition: all 0.25s cubic-bezier(0, 1.05, 0.72, 1.07);
+        }
+
+        .down-drop {
+            display: none;
+        }
+
+        .down-drop.active {
+            display: block;
+        }
+
+        .side-drop {
+            display: none;
+        }
+
+        .side-drop.active {
+            display: block;
+        }
+
+        #navbar-settings {
+            border-bottom: 1px solid gray;
+        }
+
+        #classwork-settings {
+            border-bottom: 1px solid gray;
+        }
+
+        #navbar-settings.border-bottom {
+            border-bottom: none;
+            border-radius: 0;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+
+        #classwork-settings.border-bottom {
+            border-bottom: none;
+            border-radius: 0;
+        }
+
+        #navbar-settings.border-bottom~#navbar-settings-option {
+            border-radius: 0;
+        }
+
+        #classwork-settings.border-bottom~#classwork-settings-option {
+            border-radius: 0;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+
+        #classwork-settings-option {
+
+            background: rgb(59, 59, 59);
+            display: none;
+            width: 100%;
+            flex-direction: column;
+            padding: 15px;
+        }
+
+        #classwork-settings-option.active {
+            display: flex;
+        }
     </style>
 </head>
 
 <body>
-    <script src="/public/navbar-code.js"></script> 
+    <script src="/public/navbar-code.js"></script>
     <h1 class="heading">Settings</h1>
 
     <div class="options" id="options">
         <div class="navbar option" id="navbar-settings">
             Navbar
             <div class="icon">
-                <ion-icon name="chevron-forward-outline" id="side-drop" class="active"></ion-icon>
-                <ion-icon name="chevron-down-outline" id="down-drop"></ion-icon>
+                <ion-icon name="chevron-forward-outline" id="side-drop-navbar" class="active side-drop"></ion-icon>
+                <ion-icon name="chevron-down-outline" id="down-drop-navbar" class="down-drop"></ion-icon>
             </div>
-           
+
         </div>
         <div id="navbar-settings-option">
             <div class="box" id="top-pos">
-              <input type="radio" name="position" id="input-3" class="input">
-              <span class="check"></span>
-              <label for="input-3">Top</label>
+                <input type="radio" name="position" id="input-3" class="input">
+                <span class="check"></span>
+                <label for="input-3">Top</label>
             </div>
             <div class="box" id="left-pos">
-              <input type="radio" name="position" id="input-1" class="input">
-              <span class="check"></span>
-              <label for="input-1">Left</label>
+                <input type="radio" name="position" id="input-1" class="input">
+                <span class="check"></span>
+                <label for="input-1">Left</label>
             </div>
             <div class="box" id="fulls-pos">
-              <input type="radio" name="position" id="input-4" class="input">
-              <span class="check"></span>
-              <label for="input-4">Full Screen</label>
+                <input type="radio" name="position" id="input-4" class="input">
+                <span class="check"></span>
+                <label for="input-4">Full Screen</label>
             </div>
-          </div>
-        
         </div>
+
+        <!-- classwork  -->
+        <div class="classwork option" id="classwork-settings">
+            Classwork
+            <div class="icon">
+                <ion-icon name="chevron-forward-outline" id="side-drop-cl" class="active side-drop"></ion-icon>
+                <ion-icon name="chevron-down-outline" id="down-drop-cl" class="down-drop"></ion-icon>
+            </div>
+
         </div>
+        <div id="classwork-settings-option">
+            <div class="box" id="classwork-chapter">
+                <input type="radio" name="classwork" id="classwork-chapter-wise" class="input">
+                <span class="check"></span>
+                <label for="classwork-chapter-wise">Chapter Wise</label>
+            </div>
+            <div class="box" id="classwork-date">
+                <input type="radio" name="classwork" id="classwork-date-wise" class="input">
+                <span class="check"></span>
+                <label for="classwork-date-wise">Date Wise</label>
+            </div>
+        </div>
+
+    </div>
+    </div>
     </div>
 </body>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -213,73 +296,113 @@
 <script>
     let about = document.getElementById('about-settings');
     let navbar = document.getElementById('navbar-settings');
-    let downdrop = document.getElementById('down-drop');
-    let sidedrop = document.getElementById('side-drop');
+    let downdropnv = document.getElementById('down-drop-navbar');
+    let sidedropnv = document.getElementById('side-drop-navbar');
     let navbarsettingsoption = document.getElementById('navbar-settings-option');
     navbar.addEventListener('click', () => {
         navbarsettingsoption.classList.toggle('active');
-        downdrop.classList.toggle('active');
-        sidedrop.classList.toggle('active');
+        downdropnv.classList.toggle('active');
+        sidedropnv.classList.toggle('active');
         navbar.classList.toggle('border-bottom')
     })
-    
+    let classwork = document.getElementById('classwork-settings')
+    let classworksettingsoption = document.getElementById('classwork-settings-option')
+    let downdropcl = document.getElementById('down-drop-cl');
+    let sidedropcl = document.getElementById('side-drop-cl');
+    classwork.addEventListener('click', () => {
+        classworksettingsoption.classList.toggle('active');
+        downdropcl.classList.toggle('active');
+        sidedropcl.classList.toggle('active');
+        classwork.classList.toggle('border-bottom')
+    })
+
     let left_pos = document.getElementById('left-pos');
     let fulls_pos = document.getElementById('fulls-pos');
     let top_pos = document.getElementById('top-pos');
     let topinput = document.getElementById('input-3');
     let leftinput = document.getElementById('input-1');
     let fullsinput = document.getElementById('input-4');
-    left_pos.addEventListener('click',()=>{
-        localStorage.setItem('positionofnavbarisleft',true)
-        if(localStorage.getItem('positionofnavbaristop')){
+    left_pos.addEventListener('click', () => {
+        localStorage.setItem('positionofnavbarisleft', true)
+        if (localStorage.getItem('positionofnavbaristop')) {
             localStorage.removeItem('positionofnavbaristop')
 
         }
-        if(localStorage.getItem('positionofnavbarisfulls')){
+        if (localStorage.getItem('positionofnavbarisfulls')) {
             localStorage.removeItem('positionofnavbarisfulls')
 
         }
         location.reload();
     })
-    top_pos.addEventListener('click',()=>{
-        localStorage.setItem('positionofnavbaristop',true)
-        if(localStorage.getItem('positionofnavbarisleft')){
+    top_pos.addEventListener('click', () => {
+        localStorage.setItem('positionofnavbaristop', true)
+        if (localStorage.getItem('positionofnavbarisleft')) {
             localStorage.removeItem('positionofnavbarisleft')
-        }if(localStorage.getItem('positionofnavbarisfulls')){
+        } if (localStorage.getItem('positionofnavbarisfulls')) {
             localStorage.removeItem('positionofnavbarisfulls')
         }
         location.reload();
     })
-    fulls_pos.addEventListener('click',()=>{
-        localStorage.setItem('positionofnavbarisfulls',true)
-        if(localStorage.getItem('positionofnavbarisleft')){
+    fulls_pos.addEventListener('click', () => {
+        localStorage.setItem('positionofnavbarisfulls', true)
+        if (localStorage.getItem('positionofnavbarisleft')) {
             localStorage.removeItem('positionofnavbarisleft')
-        }if(localStorage.getItem('positionofnavbaristop')){
+        } if (localStorage.getItem('positionofnavbaristop')) {
             localStorage.removeItem('positionofnavbaristop')
         }
         location.reload();
     })
-    if(localStorage.getItem('positionofnavbarisleft')){
+    if (localStorage.getItem('positionofnavbarisleft')) {
         let options = document.getElementById('options');
-            if(window.innerWidth>1000){
-        options.style.width = "92%";
-            }
-leftinput.checked = true;
-topinput.checked = false;
-fullsinput.checked = false;
-    }
-    
-    else if(localStorage.getItem('positionofnavbarisfulls')){
-leftinput.checked = false;
-topinput.checked = false;
-fullsinput.checked = true;
-    }
-    else{
-leftinput.checked = false;
-fullsinput.checked = false;
-topinput.checked = true;
+        if (window.innerWidth > 1000) {
+            options.style.width = "92%";
+        }
+        leftinput.checked = true;
+        topinput.checked = false;
+        fullsinput.checked = false;
     }
 
+    else if (localStorage.getItem('positionofnavbarisfulls')) {
+        leftinput.checked = false;
+        topinput.checked = false;
+        fullsinput.checked = true;
+    }
+    else {
+        leftinput.checked = false;
+        fullsinput.checked = false;
+        topinput.checked = true;
+    }
+
+
+    let classworkchap = document.getElementById('classwork-chapter');
+    let classworkdate = document.getElementById('classwork-date');
+    let chapinput = document.getElementById('classwork-chapter-wise');
+    let dateinput = document.getElementById('classwork-date-wise');
+    classworkchap.addEventListener('click', () => {
+        localStorage.setItem('setclassworkchapterwise', true)
+        if (localStorage.getItem('setclassworkdatewise')) {
+            localStorage.removeItem('setclassworkdatewise')
+
+        }
+        location.reload();
+    })
+    classworkdate.addEventListener('click', () => {
+        localStorage.setItem('setclassworkdatewise', true)
+        if (localStorage.getItem('setclassworkchapterwise')) {
+            localStorage.removeItem('setclassworkchapterwise')
+        }
+        location.reload();
+    })
+    if (localStorage.getItem('setclassworkdatewise')) {
+        chapinput.checked = false;
+        dateinput.checked = true;
+    }
+    else {
+        chapinput.checked = true;
+        dateinput.checked = false;
+    }
+
+    
 </script>
 
 </html>

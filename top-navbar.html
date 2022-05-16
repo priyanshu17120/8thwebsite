@@ -111,23 +111,23 @@
 
     <li class="li url-underlined" id="a"><a href="/" class="navbarthings">Home</a></li>
     <li class="li url-underlined">
-      <a href="/public/classwork" class="navbarthings">ClassWork</a>
+      <a href="/public/classwork.html" id="classwork_of_navbar" class="navbarthings">ClassWork</a>
     </li>
     <li class="li url-underlined">
-      <a href="/public/homework" class="navbarthings">HomeWork</a>
+      <a href="/public/homework.html" class="navbarthings">HomeWork</a>
     </li>
     <li class="li url-underlined">
-      <a href="/public/timetable" class="navbarthings">Time Table</a>
+      <a href="/public/timetable.html" class="navbarthings">Time Table</a>
     </li>
     <li class="li url-underlined">
-      <a href="/public/contactus" class="navbarthings">Contact Us</a>
+      <a href="/public/contactus.html" class="navbarthings">Contact Us</a>
     </li>
     <li class="li url-underlined" id="rightid">
-      <a href="/public/aboutus" class="navbarthings" id="about-us">About Us</a>
+      <a href="/public/aboutus.html" class="navbarthings" id="about-us">About Us</a>
     </li>
     <div class="settings right">
-        <a href="/public/settings"><ion-icon name="settings-outline" id="settings"></ion-icon></a>
-        <a href="/public/settings" id="settings-link">Settings</a>
+        <a href="/public/settings.html"><ion-icon name="settings-outline" id="settings"></ion-icon></a>
+        <a href="/public/settings.html" id="settings-link">Settings</a>
     </div>
     <div id="icons" class="right">
         <span id="ham" class="show"
@@ -172,7 +172,13 @@
     }
     settingslink.style.display = "none";
   });
-
+  let classwork_of_navbar = document.getElementById('classwork_of_navbar');
+        if(localStorage.getItem('setclassworkdatewise')){
+          classwork_of_navbar.href = "/public/classwork2.html";
+        }
+        else{
+          classwork_of_navbar.href = "/public/classwork.html";
+        }
 
     
 </script>

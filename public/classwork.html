@@ -11,7 +11,22 @@
 
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap");
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
 
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
     body {
       background: #d7f2f2;
       background-size: cover;
@@ -25,13 +40,9 @@
 
     .parent {
       position: relative;
-      height: 30vh;
-      width: 100%;
     }
 
     .wrapper {
-      right: 0;
-      position: absolute;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -149,15 +160,15 @@
   <script src="/public/navbar-code.js"></script>
   <div class="parent" id="parent">
     <div class="wrapper" id="wrapper">
-      <a href="/public/classwork/scienceclasswork" class="subjectimages" id="Science"> <button>Science</button></a>
-      <a href="/public/classwork/computerclasswork" class="subjectimages" id="Computer"> <button>Computer</button></a>
-      <a href="/public/classwork/mathsclasswork" class="subjectimages" id="Maths"> <button>Maths</button></a>
-      <a href="/public/classwork/englishclasswork" class="subjectimages" id="English"> <button>English</button></a>
-      <a href="/public/classwork/sstclasswork" class="subjectimages" id="SocialScience"><button>Social
+      <a href="/public/classwork/scienceclasswork.html" class="subjectimages" id="Science"> <button>Science</button></a>
+      <a href="/public/classwork/computerclasswork.html" class="subjectimages" id="Computer"> <button>Computer</button></a>
+      <a href="/public/classwork/mathsclasswork.html" class="subjectimages" id="Maths"> <button>Maths</button></a>
+      <a href="/public/classwork/englishclasswork.html" class="subjectimages" id="English"> <button>English</button></a>
+      <a href="/public/classwork/sstclasswork.html" class="subjectimages" id="SocialScience"><button>Social
           Science</button></a>
-      <a href="/public/classwork/hindiclasswork" class="subjectimages" id="Hindi"><button>Hindi</button></a>
-      <a href="/public/classwork/frenchclasswork" class="subjectimages" id="French"><button>French</button></a>
-      <a href="/public/classwork/generalclasswork" class="subjectimages" id="General"><button>General</button></a>
+      <a href="/public/classwork/hindiclasswork.html" class="subjectimages" id="Hindi"><button>Hindi</button></a>
+      <a href="/public/classwork/frenchclasswork.html" class="subjectimages" id="French"><button>French</button></a>
+      <a href="/public/classwork/generalclasswork.html" class="subjectimages" id="General"><button>General</button></a>
     </div>
   </div>
   <div id="images">
@@ -257,10 +268,12 @@
     let wrapper = document.getElementById('wrapper');
     if (window.innerWidth > 1000) {
       wrapper.style.width = "92%";
+      wrapper.style.float = "right";
     }
     else {
       let wrapper = document.getElementById('wrapper');
       wrapper.style.width = "100%";
+      wrapper.style.float = "center";
     }
   }
 

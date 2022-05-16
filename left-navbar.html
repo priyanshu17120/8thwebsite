@@ -153,14 +153,10 @@
         }
 
         .bottom {
-
-            /* display: flex !important;
-            width: 100%;
-            height: 100%;
-            justify-content: center;
-            align-items: flex-end; */
-            position: absolute;
-    bottom: 0;
+    vertical-align: bottom;
+    height: 100%;
+    display: flex !important;
+    align-items: end;
         }
 
         @media screen and (max-width: 450px) {
@@ -174,8 +170,6 @@
         }
 
         @media screen and (max-width: 1000px) {
-            
-
             .text {
                 display: inline;
             }
@@ -251,8 +245,9 @@
             .bottom {
 position: relative;
 
-
 }
+
+            
         }
     </style>
 </head>
@@ -269,42 +264,44 @@ position: relative;
                     <span class="hover-text red">Home</span>
                 </span>
             </a>
-            <a href="/public/classwork"><span class="text">ClassWork</span>
+            <a href="/public/classwork.html" id="classwork_of_navbar"><span class="text">ClassWork</span>
                 <span class="fixed-sidenav-text-icon">
                     <ion-icon name="book" class="icon-of-navbar"></ion-icon><span
                         class="hover-text blue">ClassWork</span>
                 </span>
             </a>
-            <a href="/public/homework"><span class="text">HomeWork</span>
+            <a href="/public/homework.html"><span class="text">HomeWork</span>
                 <span class="fixed-sidenav-text-icon">
                     <ion-icon name="pencil-outline" class="icon-of-navbar"></ion-icon><span
                         class="hover-text green">HomeWork</span>
                 </span>
             </a>
-            <a href="/public/timetable"><span class="text">Time Table</span>
+            <a href="/public/timetable.html"><span class="text">Time Table</span>
                 <span class="fixed-sidenav-text-icon">
                     <ion-icon name="calendar-outline" class="icon-of-navbar"></ion-icon><span
                         class="hover-text anotherblue">Time Table</span>
                 </span>
             </a>
-            <a href="/public/contactus"><span class="text">Contact Us</span>
+            <a href="/public/contactus.html"><span class="text">Contact Us</span>
                 <span class="fixed-sidenav-text-icon">
                     <ion-icon name="call" class="icon-of-navbar"></ion-icon><span class="hover-text yellow">Contact
                         Us</span>
                 </span>
             </a>
-            <a href="/public/aboutus"><span class="text">About us</span>
+            <a href="/public/aboutus.html"><span class="text">About us</span>
                 <span class="fixed-sidenav-text-icon">
                     <ion-icon name="people-outline" class="icon-of-navbar"></ion-icon><span
                         class="hover-text anotheryellow">About Us</span>
                 </span>
             </a>
-            <a href="/public/settings" class="bottom"><span class="text">Settings</span>
+            <a class="bottom">
+            <a href="/public/settings.html"><span class="text" >Settings</span>
                 <span class="fixed-sidenav-text-icon">
                     <ion-icon name="settings-outline" class="icon-of-navbar last"></ion-icon><span
                         class="hover-text pink">Settings</span>
                 </span>
             </a>
+        </a>
         </div>
     </div>
 
@@ -318,6 +315,13 @@ position: relative;
 
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
+        }
+        let classwork_of_navbar = document.getElementById('classwork_of_navbar');
+        if(localStorage.getItem('setclassworkdatewise')){
+            classwork_of_navbar.href = "/public/classwork2.html";
+        }
+        else{
+            classwork_of_navbar.href = "/public/classwork.html";
         }
     </script>
 
