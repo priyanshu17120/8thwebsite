@@ -104,6 +104,7 @@
   <h1>Homework</h1>
   <div class="selectingdates">
     <select name="dates" id="datesselect" id="datesselectid" onchange="datechanged()">
+      <option value="17may2022" id="17may2022">17/5/2022</option>
       <option value="13may2022" id="13may2022">13/5/2022</option>
       <option value="12may2022" id="12may2022">12/5/2022</option>
       <option value="11may2022" id="11may2022">11/5/2022</option>
@@ -627,6 +628,35 @@ So the Procedure of the activity goes as follows:- <br>
       <div class="homework-area"><h3 style='text-align:left;padding:8px'>
         General:-</h3><br>
         1.Write about your ideal and bring it on next M.Edu period.
+        </div>
+      `;
+    }
+    else if (datesselectid == "17may2022") {
+      hw.innerHTML = `
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        English:-</h3><br>
+        No Homework !</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        Hindi:-</h3><br>
+        1.Do pg-1 to 4 of assignment booklet.</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        Computer:-</h3><br>
+        1.Do the marked ques/ans.</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        Science:-</h3><br>
+        1.Revise for test tomorrow.</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        Sst:-</h3><br>
+        1.Mark the ques/ans of ch-1(geo)</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        Maths:-</h3><br>
+        No Homework !</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        French:-</h3><br>
+        No Homework !</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        General:-</h3><br>
+        1.Music:-<br>There should 2 songs in the music n/b<br> 1.Three colours <br>2.Meri pyari ammi
         </div>
       `;
     }
