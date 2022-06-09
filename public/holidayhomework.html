@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Homework</title>
+    <link rel="shortcut icon" href="./ourgroupfavicon.png" type="image/x-icon" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #d7f2f2;
+        }
+        .heading{
+            font-family: 'Kdam Thmor Pro', sans-serif;
+            text-align: center;
+            font-size: 2.6em;
+        }
+        .buttons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .button {
+            text-decoration: none;
+  appearance: button;
+  background-color: var(--shadowco);
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 300px;
+  margin: 20px;
+}
+
+.button:after {
+  background-clip: padding-box;
+  background-color: var(--color);
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.button:main,
+.button:focus {
+  user-select: auto;
+}
+
+.button:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.button:disabled {
+  cursor: auto;
+}
+    </style>
+</head>
+<body>
+    <script src="/public/navbar-code.js"></script>
+    <h1 class="heading" id="heading">Holiday Homework</h1>
+    <div class="buttons" id="buttons">
+        <a href="https://drive.google.com/file/d/1ojvUqfwhJEPWHnLE8OcH4Wz-xEWW8A0r/view?usp=sharing" target="_blank" class="button" style="--color:#ffa801;--shadowco:#ffa80199" role="button">
+            English</a>
+        <a href="https://drive.google.com/file/d/16_x3GSpuHH2Qfl74w6SitZtTFeXyc_CM/view?usp=sharing" target="_blank" class="button" style="--color:#5d62fb;--shadowco:#5d62fb99" role="button">
+            Hindi</a>
+        <a href="https://drive.google.com/file/d/1-Fn2DcSt0GcyMAwkTrZSHQb0ruAGq_Cn/view?usp=sharing" target="_blank" class="button" style="--color:#05c46b;--shadowco:#05c46b99" role="button">
+            Science</a>
+        <a href="https://drive.google.com/file/d/1ZvEh1rCvZpGnDAs__XmZinStUsVLL75w/view?usp=sharing" target="_blank" class="button" style="--color:#0fbcf9;--shadowco:#0fbcf999" role="button">
+            Sst</a>
+        <a href="https://drive.google.com/file/d/1nmH2D9McIrxNVFJLkaYH8KNeYO_Qen0u/view?usp=sharing" target="_blank" class="button" style="--color:#f53b57;--shadowco:#f53b5799" role="button">
+            Maths</a>
+        <a href="https://drive.google.com/file/d/1cv4ElNDYFc1GtgWxRw4yx4x3gs78EbYT/view?usp=sharing" target="_blank" class="button" style="--color:#ffcb2e;--shadowco:#ffcb2e99" role="button">
+            French</a>
+        <a href="https://drive.google.com/file/d/1Wz3quOURAiIMi1LJvqT5dChHPH9Oh5fl/view?usp=sharing" target="_blank" class="button" style="--color:#ff2eff;--shadowco:#ff2eff99" role="button">
+            Computer</a>
+        <a href="https://drive.google.com/file/d/1SyGNpkVjh2tPXAkNaGQv5hD4avFgOZru/view?usp=sharing" target="_blank" class="button" style="--color:#5d62fb99;--shadowco:#5d62fb99" role="button">
+            Sanskrit</a>
+    </div>
+</body>
+<script>
+    if (localStorage.getItem('positionofnavbarisleft')) {
+    let buttons = document.getElementById('buttons');
+    let heading = document.getElementById('heading');
+    if (window.innerWidth > 1000) {
+      buttons.style.width = "92%";
+      buttons.style.float = "right";
+      heading.style.width = "92%";
+      heading.style.float = "right";
+
+    } else {
+      heading.style.width = "100%";
+      heading.style.float = "none";
+      buttons.style.float = "none";
+      buttons.style.width = "100%";
+    }
+  }
+</script>
+</html>
