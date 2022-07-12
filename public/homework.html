@@ -39,11 +39,12 @@
       word-wrap: break-word;
       font-family: 'Open Sans', sans-serif;
       font-size: 3rem;
+      color: #46ac8d;
     }
 
     body {
       overflow-x: hidden;
-      background-color: #d7f2f2;
+      background-color: #DFFDFF;
       overflow-y: visible !important;
     }
 
@@ -104,6 +105,8 @@
   <h1>Homework</h1>
   <div class="selectingdates">
     <select name="dates" id="datesselect" id="datesselectid" onchange="datechanged()">
+      <option value="12july2022" id="12july2022">12/7/2022</option>
+      <option value="11july2022" id="11july2022">11/7/2022</option>
       <option value="8july2022" id="8july2022">8/7/2022</option>
       <option value="7july2022" id="7july2022">7/7/2022</option>
       <option value="6july2022" id="6july2022">6/7/2022</option>
@@ -905,6 +908,69 @@ So the Procedure of the activity goes as follows:- <br>
       <div class="homework-area"><h3 style='text-align:left;padding:8px'>
         General:-</h3><br>
         1.Do the whiz quiz on page 17 of G.K. book.<br>
+        </div>
+      `;
+    }
+    else if (datesselectid == "11july2022") {
+      hw.innerHTML = `
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        English:-</h3><br>
+        1.Learn and revise for english paper.</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        Hindi:-</h3><br>
+        1.Learn for test of vasant chapters coming in exam.</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        Computer:-</h3><br>
+        No Homework !</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        Science:-</h3><br>
+        1.Draw the diagrams of electroplating and electrorefining.</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        Sst:-</h3><br>
+        No Homework !</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        Maths:-</h3><br>
+        1.Complete ex-3.1 till question 12,dont do ques 9 and 10.</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        French:-</h3><br>
+        1.Bring french book and notebook tomorrow.</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        General:-</h3><br>
+        1.Write the song Count On Me - Bruno Mars in music notebook.<br>
+        </div>
+      `;
+    }
+    else if (datesselectid == "12july2022") {
+      hw.innerHTML = `
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        English:-</h3><br>
+        1.Learn and revise for english paper.</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        Hindi:-</h3><br>
+        No Homework !</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        Computer:-</h3><br>
+        1.Complete the questions of the test in notebook after learning.<br>
+        2.Do the following questions in notebook as test:-<br>
+        a)What are the different applications of AI.<br>
+        b)What are the different fields of AI.</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        Science:-</h3><br>
+        1.Draw the diagrams of dry cell in notebook.</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        Sst:-</h3><br>
+        No Homework !</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        Maths:-</h3><br>
+        1.Complete ex-3.2 till q6 dont do ques 4 and 5.</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        French:-</h3><br>
+        1.Bring french book and notebook tomorrow.</div>
+      <div class="homework-area"><h3 style='text-align:left;padding:8px'>
+        General:-</h3><br>
+        1.Complete the page 3 and 4 of moral education book.<br>
+        2.Dont bring the time table of first 2 period.<br>
+        3.Classwork will be closed in website in evening.<br>
         </div>
       `;
     }

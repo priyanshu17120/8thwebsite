@@ -8,6 +8,8 @@
   <title>Social Science Classwork</title>
   <link rel="shortcut icon" href="../ourgroupfavicon.png" type="image/x-icon" />
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
     #heading {
       text-align: center;
       font-size: 2rem;
@@ -210,6 +212,13 @@ flex-wrap: wrap;
         width: 100%;
       }
     }
+    
+    #Chaptername{
+      font-size: 2em;
+      text-align: center;
+      margin-top: 2em;
+      font-family: 'Roboto', sans-serif;
+    }
   </style>
 </head>
 
@@ -222,23 +231,26 @@ flex-wrap: wrap;
       <div class="history">
         <h1 class="section-heading">History</h1>
         <a href="https://drive.google.com/file/d/1oXfM0Nq1CR_bLhVA1VM5boPzcZjjMSlb/view?usp=sharing"
-        class="btn effect01" target="_blank"><span>Chapter-1</span></a>
+        class="btn effect01" target="_blank" onmouseover="chaptername('The Modern Period')" onmouseleave="chaptername('')"><span>Chapter-1</span></a>
       </div>
       <div class="geography">
         <h1 class="section-heading">Geography</h1>
         <a href="https://drive.google.com/file/d/1dt6viLB6U6xPcvs29GPSgZkJzDL_tDPD/view?usp=sharing"
-        class="btn effect01" target="_blank"><span>Chapter-1</span></a>
+        class="btn effect01" target="_blank" onmouseover="chaptername('Resources')" onmouseleave="chaptername('')"><span>Chapter-1</span></a>
         <a href="https://drive.google.com/file/d/1C5UWZ9w-uqwVQqlBpEAZGJ_FhCPs-FC3/view?usp=sharing"
-        class="btn effect01" target="_blank"><span>Chapter-2</span></a>
+        class="btn effect01" target="_blank" onmouseover="chaptername('Natural Resources')" onmouseleave="chaptername('')"><span>Chapter-2</span></a>
       </div>
       <div class="civics">
         <h1 class="section-heading">Civics</h1>
         <a href="https://drive.google.com/file/d/1juRNIosIgrM4pNOJ3X5eyDr4KSHftrIO/view?usp=sharing"
-        class="btn effect01" target="_blank"><span>Chapter-1</span></a>
+        class="btn effect01" target="_blank" onmouseover="chaptername('The Constitution and Need For Laws')" onmouseleave="chaptername('')"><span>Chapter-1</span></a>
       </div>
     </div>
     </div>
-    <!-- done 8/7/22 -->
+    <div id="Chaptername">
+      
+    </div>
+    <!-- done 12/7/22 -->
   </div>
 </body>
 <script>
@@ -252,6 +264,10 @@ flex-wrap: wrap;
       wrapper.style.width = "100%";
     }
   }
+  // let chapternamebox = document.getElementById('Chaptername');
+  // function chaptername(name){
+  //   chapternamebox.innerText = name;
+  // }
 </script>
 
 </html>

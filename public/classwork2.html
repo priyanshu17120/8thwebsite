@@ -123,6 +123,8 @@
   <h1>Classwork</h1>
   <div class="selectingdates">
     <select name="dates" id="datesselect" id="datesselectid" onchange="datechanged()">
+      <option value="12july2022" id="12july2022">12/7/2022</option>
+      <option value="11july2022" id="11july2022">11/7/2022</option>
       <option value="8july2022" id="8july2022">8/7/2022</option>
       <option value="7july2022" id="7july2022">7/7/2022</option>
       <option value="6july2022" id="6july2022">6/7/2022</option>
@@ -361,6 +363,16 @@
     else if (datesselectid == "8july2022") {
       cw.innerHTML = `
       <a href="https://drive.google.com/file/d/1nbInk8Q8vc2mSWm3n8XiVIbcOhcAnBHb/view?usp=sharing" class="button button2">Go to work</a>
+      `;
+    }
+    else if (datesselectid == "11july2022") {
+      cw.innerHTML = `
+      <a href="https://drive.google.com/file/d/1jumGq5Iih8AWTmHE-2u-mLAQXQG2DrMB/view?usp=sharing" class="button button2">Go to work</a>
+      `;
+    }
+    else if (datesselectid == "12july2022") {
+      cw.innerHTML = `
+      <a href="https://drive.google.com/file/d/1QTQxuzqaFs_6ihMCf2-eG7qNJUTvnU3y/view?usp=sharing" class="button button2">Go to work</a>
       `;
     }
   }
