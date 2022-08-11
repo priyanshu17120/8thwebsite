@@ -15,7 +15,7 @@
 </div>
     <script src="/public/navbar-code.js"></script>
     <section id="home">
-      <h1>Welcome To Our Class</h1>
+      <h1 id="h1">Welcome To Our Class</h1>
       <h1>8th Rose</h1>
       <h1 class="smol-heading">By</h1>
       <h1 class="smol-heading">Shelly Mehra Ma'am</h1>
@@ -29,5 +29,16 @@
         loader.style.display = "none";
 }, 1300);
   })
+  if (localStorage.getItem('positionofnavbarisleft')) {
+    let h1 = document.getElementById('h1');
+    if (window.innerWidth > 1000) {
+      h1.style.width = "92%";
+      h1.style.float = "right";
+
+    } else {
+      h1.style.width = "100%";
+      h1.style.float = "none";
+    }
+  }
   </script>
 </html>

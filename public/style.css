@@ -10,7 +10,12 @@
 }
 
 body {
-  background-color: #d7f2f2;
+  background: url('https://think360studio-media.s3.ap-south-1.amazonaws.com/download/india-flag-2021-wallpaper-4.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  
   
 }
 
@@ -18,18 +23,23 @@ body {
   text-align: center ;
   font-size: 4rem ;
   font-family: "Montserrat", sans-serif ;
+  color: black;
+  width: 100%;
+  float: none;
 }
 .smol-heading{
   font-size: 2rem !important;
+  display: none;/*Should be removed */
   }
 #home p {
   text-align: center;
   margin: 0px 300px;
   font-size: 25px;
+  
 }
 
 #home #bookanimation {
-  display: block;
+  display: none;/*should be changed to block*/
   margin: 5px auto;
 }
 

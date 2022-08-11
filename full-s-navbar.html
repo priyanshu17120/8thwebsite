@@ -17,7 +17,7 @@
             z-index: 100;
             top: 0;
             left: 0;
-            background-color: #111;
+            background-color: rgba(17, 17, 17, 0.75);
             overflow: hidden;
             transition: 0.5s;
             padding-top: 60px;
@@ -89,18 +89,25 @@
     </div>
 
 
-    <span style="font-size:30px;cursor:pointer;margin: 5px;" onclick="openNav()">&#9776; </span>
+    <span style="font-size:30px;cursor:pointer;margin: 5px;" onclick="openNav()" id="ham">&#9776; </span>
 
     <script>
         function openNav() {
+            let ham = document.getElementById('ham')
+                ham.style.visibility = "hidden";
             document.getElementById("mySidenav").style.width = "100%";
+
             setTimeout(() => {
 
                 document.getElementById("mySidenav").style.height = "100%";
+                
+
             }, 500);
         }
 
         function closeNav() {
+            let ham = document.getElementById('ham')
+                ham.style.visibility = "visible";
             document.getElementById("mySidenav").style.height = "0%";
             setTimeout(() => {
 
