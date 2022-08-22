@@ -10,11 +10,13 @@
 }
 
 body {
-  background: url('https://think360studio-media.s3.ap-south-1.amazonaws.com/download/india-flag-2021-wallpaper-4.png') no-repeat center center fixed;
+  /* background: url('/jan.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-position: 50% 80%; */
+    background:#d7f2f2;
   
   
 }
@@ -26,10 +28,11 @@ body {
   color: black;
   width: 100%;
   float: none;
+  /* display: none;Should be removed */
 }
 .smol-heading{
   font-size: 2rem !important;
-  display: none;/*Should be removed */
+  /* display: none;Should be removed */
   }
 #home p {
   text-align: center;
@@ -39,7 +42,7 @@ body {
 }
 
 #home #bookanimation {
-  display: none;/*should be changed to block*/
+  display: block;/*should be changed to block*/
   margin: 5px auto;
 }
 
@@ -78,3 +81,15 @@ video{
   width: 100%;
   height: auto;
 }
+/* @media screen and (max-width: 920px) {
+  body {
+    background: url('/jan-phone.jpg') no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-position: 50% 80%;
+    
+    
+  }
+} */
