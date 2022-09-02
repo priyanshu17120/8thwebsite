@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Avestan&family=Raleway:ital,wght@1,300&display=swap');
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #d7f2f2;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+}
+
+
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    font-size: 1.8em;
+    overflow: hidden;
+}
+
+
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+.form-box{
+display: flex;
+flex-direction: column;
+}
+#sheetdb-form{
+    display: flex;
+flex-direction: column;
+}
+#headingofbox{
+    font-family: 'Raleway', sans-serif;
+    margin: 20px 24px;
+    overflow: visible;
+}
+.form-box{
+    font-family: 'Noto Sans Avestan', sans-serif;
+    font-size: 1.3em;
+}
+#submit-button{
+    margin-top: 25px;
+    padding: 10px;
+      border: none;
+      padding: 7px 35px;
+      cursor: pointer;
+      outline: none;
+      background: #90F3FF;
+      color: #000;
+      font-size: 18px;
+      border-radius: 2px;
+
+}
+input{
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+    margin: 15px 0px;
+    font-size: 1em;
+    background: transparent;
+}
+    </style>
+</head>
+<body>
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="button-to-close">×</span>
+            <h1 id="headingofbox">Suggestion For 8th Rose Website</h1>
+            <div class="form-box">
+                <form action="https://sheetdb.io/api/v1/rn9u0gbjlrruw" method="POST" id="sheetdb-form">
+            <label for="name">Name:</label>
+            <input type="text" name="Name" id="name">
+            <label for="suggestion">Drop Suggestion Here</label>
+            <input type="text" name="Suggestion" id="suggestion">
+            <button type="submit" id="submit-button">Send !</button>
+        </form>
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+const modal = document.querySelector(".modal");
+const trigger = document.querySelector(".trigger");
+const closeButton = document.querySelector(".close-button");
+
+function toggleModal() {
+    modal.classList.toggle("show-modal");
+}
+setTimeout(() => {
+    if(localStorage.getItem("Submittedornot")=="false"){
+        toggleModal()
+    }
+}, 800);
+
+  var form = document.getElementById("sheetdb-form");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(document.getElementById("sheetdb-form")),
+    })
+      .then((response) => response.json())
+      .then((html) => {
+        // you can put any JS code here
+        // alert("Your Message Has Been Sent");
+        toggleModal()
+        localStorage.setItem("Submittedornot", "true");
+      });
+  });
+  let buttonclose = document.getElementById('button-to-close');
+  buttonclose.addEventListener('click',()=>{
+    toggleModal()
+    localStorage.setItem("Submittedornot", "false");
+  })
+</script>
+</html>

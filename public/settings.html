@@ -1,3 +1,6 @@
+
+
+<!-- Settings  -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,7 +81,10 @@
             border-top-right-radius: 4px;
         }
 
-        .classwork {
+        /* .classwork {
+            
+        } */
+        .suggestion {
             border-bottom-left-radius: 4px;
             border-bottom-right-radius: 4px;
         }
@@ -196,6 +202,9 @@
         #classwork-settings {
             border-bottom: 1px solid gray;
         }
+        #suggestion-settings {
+            border-bottom: 1px solid gray;
+        }
 
         #navbar-settings.border-bottom {
             border-bottom: none;
@@ -209,14 +218,14 @@
             border-radius: 0;
         }
 
+
         #navbar-settings.border-bottom~#navbar-settings-option {
             border-radius: 0;
         }
 
         #classwork-settings.border-bottom~#classwork-settings-option {
             border-radius: 0;
-            border-bottom-left-radius: 4px;
-            border-bottom-right-radius: 4px;
+            
         }
 
         #classwork-settings-option {
@@ -231,11 +240,100 @@
         #classwork-settings-option.active {
             display: flex;
         }
+
+        /* Modal */
+
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Avestan&family=Raleway:ital,wght@1,300&display=swap');
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #d7f2f2;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+}
+
+
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    font-size: 1.8em;
+    overflow: hidden;
+}
+
+
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+.form-box{
+display: flex;
+flex-direction: column;
+}
+#sheetdb-form{
+    display: flex;
+flex-direction: column;
+}
+#headingofbox{
+    font-family: 'Raleway', sans-serif;
+    margin: 20px 24px;
+    overflow: visible;
+}
+.form-box{
+    font-family: 'Noto Sans Avestan', sans-serif;
+    font-size: 1.3em;
+}
+#submit-button{
+    margin-top: 25px;
+    padding: 10px;
+      border: none;
+      padding: 7px 35px;
+      cursor: pointer;
+      outline: none;
+      background: #90F3FF;
+      color: #000;
+      font-size: 18px;
+      border-radius: 2px;
+
+}
+input{
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+    margin: 15px 0px;
+    font-size: 1em;
+    background: transparent;
+}
     </style>
 </head>
 
 <body>
     <script src="/public/navbar-code.js"></script>
+    <!-- <script src="/Modal.js"></script> -->
     <h1 class="heading">Settings</h1>
 
     <div class="options" id="options">
@@ -286,8 +384,36 @@
                 <label for="classwork-date-wise">Date Wise</label>
             </div>
         </div>
+        <!-- suggestion  -->
+        <div class="suggestion option" id="suggestion-settings">
+            Suggestion
+            
+            <div class="icon">
+                <ion-icon name="chevron-forward-outline" id="side-drop-cl" class="active side-drop"></ion-icon>
+            </div>
 
+        </div>
     </div>
+    </div>
+    </div>
+
+
+    <!-- Modal  -->
+
+
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="button-to-close">×</span>
+            <h1 id="headingofbox">Suggestion For 8th Rose Website</h1>
+            <div class="form-box">
+                <form action="https://sheetdb.io/api/v1/rn9u0gbjlrruw" method="POST" id="sheetdb-form">
+            <label for="name">Name:</label>
+            <input type="text" name="Name" id="name">
+            <label for="suggestion">Drop Suggestion Here</label>
+            <input type="text" name="Suggestion" id="suggestion">
+            <button type="submit" id="submit-button">Send !</button>
+        </form>
+        </div>
     </div>
     </div>
 </body>
@@ -401,6 +527,40 @@
         chapinput.checked = true;
         dateinput.checked = false;
     }
+
+
+    // Modal 
+
+
+    const modal = document.querySelector(".modal");
+const trigger = document.querySelector(".trigger");
+const closeButton = document.querySelector(".close-button");
+
+function toggleModal() {
+    modal.classList.toggle("show-modal");
+}
+  var form = document.getElementById("sheetdb-form");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(document.getElementById("sheetdb-form")),
+    })
+      .then((response) => response.json())
+      .then((html) => {
+        // you can put any JS code here
+        // alert("Your Message Has Been Sent");
+        toggleModal()
+      });
+  });
+  let buttonclose = document.getElementById('button-to-close');
+  buttonclose.addEventListener('click',()=>{
+    toggleModal()
+  }) 
+let suggestion = document.getElementById('suggestion-settings');
+suggestion.addEventListener('click',()=>{
+toggleModal()
+})
 
     
 </script>
