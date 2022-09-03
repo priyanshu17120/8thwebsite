@@ -99,7 +99,7 @@ input{
                 <form action="https://sheetdb.io/api/v1/rn9u0gbjlrruw" method="POST" id="sheetdb-form">
             <label for="name">Name:</label>
             <input type="text" name="Name" id="name">
-            <label for="suggestion">Drop Suggestion Here</label>
+            <label for="suggestion">What can we add in our website ?</label>
             <input type="text" name="Suggestion" id="suggestion">
             <button type="submit" id="submit-button">Send !</button>
         </form>
@@ -115,11 +115,12 @@ const closeButton = document.querySelector(".close-button");
 function toggleModal() {
     modal.classList.toggle("show-modal");
 }
+
 setTimeout(() => {
-    if(localStorage.getItem("Submittedornot")=="false"){
+    if(localStorage.getItem("Submittedornot") !== 'undefined'){
         toggleModal()
     }
-}, 800);
+}, 3000);
 
   var form = document.getElementById("sheetdb-form");
   form.addEventListener("submit", (e) => {
@@ -133,13 +134,13 @@ setTimeout(() => {
         // you can put any JS code here
         // alert("Your Message Has Been Sent");
         toggleModal()
-        localStorage.setItem("Submittedornot", "true");
+        localStorage.setItem("Submittedornot", "undefined");
       });
   });
   let buttonclose = document.getElementById('button-to-close');
   buttonclose.addEventListener('click',()=>{
     toggleModal()
-    localStorage.setItem("Submittedornot", "false");
+    localStorage.setItem("Submittedornot", "undefined");
   })
 </script>
 </html>
