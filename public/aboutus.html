@@ -10,6 +10,8 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+        @import url("https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Dongle&display=swap");
 
         * {
             margin: 0;
@@ -45,10 +47,12 @@
             position: relative;
             display: inline-block;
         }
-        ::selection .bottom-right{
-  background-color: #00fe77;
-  color:#555;
-}
+
+        ::selection .bottom-right {
+            background-color: #00fe77;
+            color: #555;
+        }
+
         .bottom-right {
             position: fixed;
             bottom: 0;
@@ -58,13 +62,73 @@
             opacity: 0.8;
             margin: 5px;
         }
+
+        ::selection {
+            background-color: #00fe77;
+            color: #555;
+        }
+
+        #warning::selection {
+            background-color: #fe0000;
+            color: #0e1623;
+        }
+
+        p {
+            text-align: center;
+            margin: 30px auto;
+            width: 75%;
+            font-size: 1.4rem;
+            font-family: sans-serif;
+            font-weight: 500;
+            color: #00fe77b2;
+        }
+
+        #ab {
+            filter: drop-shadow(0 0 2px #00fe77) drop-shadow(0 0 100px #00fe77);
+
+        }
+
+        #warning {
+            filter: drop-shadow(0 0 2px #fe0000) drop-shadow(0 0 100px #fe0000);
+            color: #fe0000;
+            font-weight: 500;
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 30px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        @media (max-width: 1033px) {
+            p {
+                text-align: center;
+                margin: 30px auto;
+                width: 75%;
+                font-size: 1.1rem;
+                font-family: sans-serif;
+                font-weight: 500;
+                color: #00fe77b2;
+                text-transform: capitalize;
+            }
+        }
     </style>
     <link rel="shortcut icon" href="ourgroupfavicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="about.css" />
 </head>
 
 <body>
-    <script src="/public/navbar-code.js"></script> 
+    <script src="/public/navbar-code.js"></script>
     <section>
         <h2 class="text-of-aboutus">About Us</h2>
     </section>
@@ -82,7 +146,7 @@
             down</b>
     </p>
     <div class="bottom-right">
-        ~version-1.9.1
+        ~version-1.9.2
     </div>
 </body>
 <script src="anime.min.js"></script>
