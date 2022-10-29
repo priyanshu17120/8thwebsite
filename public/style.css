@@ -44,6 +44,8 @@ body {
 #home #bookanimation {
   display: block;/*should be changed to block*/
   margin: 5px auto;
+  width: 400px;
+  height: 300px;
 }
 
 #wholepart {
@@ -76,6 +78,10 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+#preloader video{
+  width:auto;
+  height:auto;
 }
 video{
   width: 100%;
