@@ -123,6 +123,7 @@
   <h1>Classwork</h1>
   <div class="selectingdates">
     <select name="dates" id="datesselect" id="datesselectid" onchange="datechanged()">
+      <option value="4nov2022">4/11/2022</option>
       <option value="3nov2022">3/11/2022</option>
       <option value="2nov2022">2/11/2022</option>
       <option value="1nov2022">1/11/2022</option>
@@ -685,6 +686,11 @@
     else if (datesselectid == "3nov2022") {
       cw.innerHTML = `
       <a href="https://drive.google.com/file/d/1q-_lv5y8DKsHhz4WOjZeEGnOadr6k8p6/view?usp=sharing" class="button button2">Go to work</a>
+      `; 
+    }
+    else if (datesselectid == "4nov2022") {
+      cw.innerHTML = `
+      <a href="https://drive.google.com/file/d/1wo3GytNyE0A79Qkesl_PApgf_D9YtKUr/view?usp=sharing" class="button button2">Go to work</a>
       `; 
     }
   }
