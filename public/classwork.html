@@ -28,11 +28,20 @@
       background: #555;
     }
     body {
-      background: #DFFDFF;
+      /* background: #DFFDFF; */
+      /* background: #85213b; */
       background-size: cover;
       overflow-x: hidden;
       overflow-y: visible !important;
+      
     }
+    html {
+    background: url(https://assets.khelnow.com/news/uploads/2022/08/FIFA-World-Cup-2022-lead.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 
     * {
       box-sizing: border-box;
@@ -69,6 +78,9 @@
       text-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
       white-space: nowrap;
       color: #222;
+      font-weight: bold;
+      /* color: #efefe5 !important; */
+
       background: transparent;
       background-image: url(https://web.archive.org/web/20160312084140im_/http://splatoon.nintendo.com/assets/img/nav-bg-fill-blue.png?1443460871);
       background-repeat: repeat-x;
@@ -209,61 +221,61 @@
   frenchimg.style.display = "none";
   generalimg.style.display = "none";
   // science part
-  science.addEventListener("mouseover", () => {
-    scienceimg.style.display = "block";
-  });
-  science.addEventListener("mouseout", () => {
-    scienceimg.style.display = "none";
-  });
-  // computer part
-  computer.addEventListener("mouseover", () => {
-    computerimg.style.display = "block";
-  });
-  computer.addEventListener("mouseout", () => {
-    computerimg.style.display = "none";
-  });
-  // maths part
-  maths.addEventListener("mouseover", () => {
-    mathsimg.style.display = "block";
-  });
-  maths.addEventListener("mouseout", () => {
-    mathsimg.style.display = "none";
-  });
-  // english part
-  english.addEventListener("mouseover", () => {
-    englishimg.style.display = "block";
-  });
-  english.addEventListener("mouseout", () => {
-    englishimg.style.display = "none";
-  });
-  // sst part
-  sst.addEventListener("mouseover", () => {
-    sstimg.style.display = "block";
-  });
-  sst.addEventListener("mouseout", () => {
-    sstimg.style.display = "none";
-  });
-  // hindi part
-  hindi.addEventListener("mouseover", () => {
-    hindiimg.style.display = "block";
-  });
-  hindi.addEventListener("mouseout", () => {
-    hindiimg.style.display = "none";
-  });
-  // french part
-  french.addEventListener("mouseover", () => {
-    frenchimg.style.display = "block";
-  });
-  french.addEventListener("mouseout", () => {
-    frenchimg.style.display = "none";
-  });
-  // general part
-  general.addEventListener("mouseover", () => {
-    generalimg.style.display = "block";
-  });
-  general.addEventListener("mouseout", () => {
-    generalimg.style.display = "none";
-  });
+  // science.addEventListener("mouseover", () => {
+  //   scienceimg.style.display = "block";
+  // });
+  // science.addEventListener("mouseout", () => {
+  //   scienceimg.style.display = "none";
+  // });
+  // // computer part
+  // computer.addEventListener("mouseover", () => {
+  //   computerimg.style.display = "block";
+  // });
+  // computer.addEventListener("mouseout", () => {
+  //   computerimg.style.display = "none";
+  // });
+  // // maths part
+  // maths.addEventListener("mouseover", () => {
+  //   mathsimg.style.display = "block";
+  // });
+  // maths.addEventListener("mouseout", () => {
+  //   mathsimg.style.display = "none";
+  // });
+  // // english part
+  // english.addEventListener("mouseover", () => {
+  //   englishimg.style.display = "block";
+  // });
+  // english.addEventListener("mouseout", () => {
+  //   englishimg.style.display = "none";
+  // });
+  // // sst part
+  // sst.addEventListener("mouseover", () => {
+  //   sstimg.style.display = "block";
+  // });
+  // sst.addEventListener("mouseout", () => {
+  //   sstimg.style.display = "none";
+  // });
+  // // hindi part
+  // hindi.addEventListener("mouseover", () => {
+  //   hindiimg.style.display = "block";
+  // });
+  // hindi.addEventListener("mouseout", () => {
+  //   hindiimg.style.display = "none";
+  // });
+  // // french part
+  // french.addEventListener("mouseover", () => {
+  //   frenchimg.style.display = "block";
+  // });
+  // french.addEventListener("mouseout", () => {
+  //   frenchimg.style.display = "none";
+  // });
+  // // general part
+  // general.addEventListener("mouseover", () => {
+  //   generalimg.style.display = "block";
+  // });
+  // general.addEventListener("mouseout", () => {
+  //   generalimg.style.display = "none";
+  // });
   if (localStorage.getItem('positionofnavbarisleft')) {
     let wrapper = document.getElementById('wrapper');
     if (window.innerWidth > 1000) {
