@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FIFA World Cup | 2022</title>
+  <link rel="shortcut icon" href="./ourgroupfavicon.png" type="image/x-icon" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,300&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      word-wrap: break-word;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 3rem;
+      color: white;
+    }
+    h2 {
+      text-align: center;
+      word-wrap: break-word;
+      font-family: 'Open Sans', sans-serif;
+      /* font-size: 3rem; */
+      color: white;
+      font-weight: bolder;
+    }
+
+
+    body {
+      overflow-x: hidden;
+      /* background-color: #DFFDFF; */
+      /* background: #ff788e; */
+      overflow-y: visible !important;
+    }
+    html {
+    background: url('https://wallpapers.com/images/hd/colorful-vector-fifa-world-cup-2022-zbeqxd6ol8d8xt54.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+    #top-section{
+      z-index:5;
+      clear: both;
+    }
+    #teamselect{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 10px 5px 10px;
+        
+    }
+    .submit{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .submit #selectedtext{
+        font-family: cursive;
+        font-size: 1.2em;
+        color: white;
+        background: #ff135a;
+        border-radius: 5px;
+        margin: 15px;
+        padding: 8px;
+
+    }
+    .submit button{
+        padding: 5px;
+        outline: none;
+        border: none;
+        background: #fd004c;
+        font-size: 1.8em;
+        font-family: cursive;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #btnn.done{
+        cursor: not-allowed;
+    }
+    
+    .submit button:hover{
+        background: #ff135a;
+    }
+    #teamselect select{
+        outline: none;
+        border: none;
+        background: #fd004c;
+        border-bottom: 2px solid white;
+        font-size: 1.8em;
+        font-family: cursive;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #select.done{
+        cursor: not-allowed;
+    }
+    #teamselect select::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    #teamselect select::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    #teamselect select::-webkit-scrollbar-thumb {
+      background: #888;
+
+    }
+
+    #teamselect select::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+    #selectedtext{
+        text-align: center;
+    }
+    @media screen and (max-width: 1000px) {
+h2{
+    margin: 10px;
+    font-weight: bold;
+    background: #fd004c;
+
+}
+    }
+  </style>
+</head>
+
+<body>
+  <script src="/public/navbar-code.js"></script>
+
+<div id="top-section">
+  <h1>Fifa World Cup 2022</h1>
+  <h2>Predict Which Country Will Win The FIFA World Cup <br>And Get A Chance To Have Your Customized Theme For Website<br></h2>
+</div>
+<div id="box">
+<div class="teamselect" id="teamselect">
+    <select name="" id="select">
+        <option>Qatar</option>
+        <option>Ecuador</option>
+        <option>Senegal</option>
+        <option>Netherlands</option>
+        <option>England</option>
+        <option>Iran</option>
+        <option>USA</option>
+        <option>Wales</option>
+        <option>Argentina</option>
+        <option>Saudi Arabia</option>
+        <option>Mexico</option>
+        <option>Poland</option>
+        <option>France</option>
+        <option>Australia</option>
+        <option>Denmark</option>
+        <option>Tunisia</option>
+        <option>Spain</option>
+        <option>Costa Rica</option>
+        <option>Germany</option>
+        <option>Japan</option>
+        <option>Belgium</option>
+        <option>Canada</option>
+        <option>Morocco</option>
+        <option>Croatia</option>
+        <option>Brazil</option>
+        <option>Serbia</option>
+        <option>Switzerland</option>
+        <option>Cameroon</option>
+        <option>Portugal</option>
+        <option>Ghana</option>
+        <option>Uruguay</option>
+        <option>Korea Republic</option>
+    </select>
+</div>
+<div class="submit">
+    <span id="selectedtext">
+No Team Selected! <br>( You Can Only Select Once Chose Wisely! )
+    </span>
+    <button id="btnn">Select</button>
+</div>
+</div>
+</body>
+<script>
+    var btn = document.getElementById('btnn')
+    var select = document.getElementById('select')
+    var selectedtext = document.getElementById('selectedtext')
+    const token = 'theteamtobeselectbytheuserwhichcanwinornotinthefinalsofthefifacup2022siuuu'
+    btn.addEventListener('click',()=>{
+        console.log(select.value);
+        selectedtext.innerText = select.value + ' Selected!'
+        localStorage.setItem(token,select.value)
+        btn.disabled = true
+        btn.classList.add('done')
+        select.disabled = true
+        select.classList.add('done')
+    })
+    if(localStorage.getItem(token)){
+        selectedtext.innerText = localStorage.getItem(token) + ' Selected!';
+        btn.disabled = true
+        btn.classList.add('done')
+        select.disabled = true
+        select.classList.add('done')
+    }
+//   if (localStorage.getItem('positionofnavbarisleft')) {
+//     var topsection = document.getElementById('top-section');
+//     var teamselect = document.getElementById('box');
+//     if (window.innerWidth > 1000) {
+//       topsection.style.width = "92%";
+//       topsection.style.float = "right";
+//       teamselect.style.width = "92%";
+//       teamselect.style.float = "right";
+      
+//     } else {
+//       topsection.style.width = "100%";
+//       topsection.style.float = "right";
+//       teamselect.style.width = "100%";
+//       teamselect.style.float = "right";
+//     }
+//   }
+//   else {
+//       topsection.style.width = "100%";
+//       topsection.style.float = "left";
+//       teamselect.style.width = "100%";
+//       teamselect.style.float = "left";
+//     }
+</script>
+
+</html>
