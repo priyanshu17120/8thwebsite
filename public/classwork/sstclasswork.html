@@ -336,9 +336,14 @@
   }
   let html = document.getElementById('html')
   let heading = document.getElementById('heading')
+  let sectionheading = document.getElementsByClassName('section-heading')
   if (localStorage.getItem('thethemetobesettothewebsiteisgoingtobedark')) {
     html.style.background = '#0e1623'
     heading.style.color = 'white'
+    for (let i = 0; i < sectionheading.length; i++) {
+      const e = sectionheading[i];
+      e.style.color = 'white'
+    }
   }
   // let chapternamebox = document.getElementById('Chaptername');
   // function chaptername(name){
