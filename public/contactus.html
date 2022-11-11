@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
 
 <head>
   <meta charset="UTF-8" />
@@ -22,10 +22,12 @@
     body {
       font-family: "Poppins", sans-serif;
       /* background: #e5e1ee79; */
-      background: #85213b;
-
+      
     }
+    html{
 
+      background: #85213b;
+    }
     .container {
       width: 80%;
       padding: 20px;
@@ -152,16 +154,19 @@
       align-items: center;
       min-height: 60vh;
     }
-.nameemail{
-  display: flex;
-}
+
+    .nameemail {
+      display: flex;
+    }
+
     @media (max-width: 1033px) {
       .container {
         width: 100%;
       }
-      .nameemail{
-  display: block;
-}
+
+      .nameemail {
+        display: block;
+      }
     }
 
     #toast {
@@ -330,31 +335,31 @@
 </head>
 
 <body>
-  <script src="/public/navbar-code.js"></script>  
- <form action="https://sheetdb.io/api/v1/rtblr0t9f4aaq" method="POST" id="sheetdb-form">
+  <script src="/public/navbar-code.js"></script>
+  <form action="https://sheetdb.io/api/v1/rtblr0t9f4aaq" method="POST" id="sheetdb-form">
     <div id="form">
       <div class="container">
         <h2>Contact Us</h2>
         <div class="nameemail">
-        <div class="row100">
-          <div class="col">
-            <div class="inputbox">
-              <input type="text" name="data[Name]" required="required" id="name" />
-              <span class="text">Name</span>
-              <span class="line"></span>
+          <div class="row100">
+            <div class="col">
+              <div class="inputbox">
+                <input type="text" name="data[Name]" required="required" id="name" />
+                <span class="text">Name</span>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row100">
+            <div class="col">
+              <div class="inputbox">
+                <input type="email" name="data[E-mail]" required="required" id="email" />
+                <span class="text">E-mail</span>
+                <span class="line"></span>
+              </div>
             </div>
           </div>
         </div>
-        <div class="row100">
-          <div class="col">
-            <div class="inputbox">
-              <input type="email" name="data[E-mail]" required="required" id="email" />
-              <span class="text">E-mail</span>
-              <span class="line"></span>
-            </div>
-          </div>
-        </div>
-      </div>
         <div class="row100">
           <div class="col">
             <div class="inputbox textarea">
@@ -372,7 +377,7 @@
       </div>
     </div>
   </form>
-  
+
   <div id="toast">
     <div id="img"><img src="/public/logo.jfif" alt=""></div>
     <div id="desc">Your Message Has Been Sent !!</div>
@@ -405,7 +410,10 @@
     x.className = "show";
     setTimeout(function () { x.className = x.className.replace("show", ""); }, 5000);
   }
-  
+  if (localStorage.getItem('thethemetobesettothewebsiteisgoingtobedark')) {
+    html.style.background = "#0e1623"
+    
+  }
 </script>
 
 </html>

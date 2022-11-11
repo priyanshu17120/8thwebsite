@@ -129,7 +129,7 @@
     <link rel="shortcut icon" href="ourgroupfavicon.png" type="image/x-icon" />
 </head>
 
-<body>
+<body id="body">
     <script src="/public/navbar-code.js"></script>
     <section>
         <h2 class="text-of-aboutus">About Us</h2>
@@ -148,7 +148,7 @@
             down</b>
     </p>
     <div class="bottom-right">
-        ~version-1.10.0
+        ~version-1.11.0
     </div>
 </body>
 <script src="anime.min.js"></script>
@@ -214,6 +214,11 @@
             duration: 2000,
             delay: anime.stagger(100)
         })
+        // get the elements 
+        let body = document.getElementById('body')
+    if (localStorage.getItem('thethemetobesettothewebsiteisgoingtobedark')) {
+        body.style.background = "#0e1623"
+    }
 </script>
 
 </html>

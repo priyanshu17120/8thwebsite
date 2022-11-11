@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
 
 <head>
   <meta charset="UTF-8" />
@@ -9,6 +9,7 @@
   <link rel="shortcut icon" href="../ourgroupfavicon.png" type="image/x-icon" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+
     #heading {
       text-align: center;
       font-size: 2rem;
@@ -62,7 +63,7 @@
       align-items: center;
       display: flex;
       gap: 20px;
-flex-wrap: wrap;
+      flex-wrap: wrap;
       justify-content: center;
       text-align: center;
       padding: 40px 0px;
@@ -155,44 +156,60 @@ flex-wrap: wrap;
       -webkit-transform: rotate(40deg);
       transform: rotate(40deg);
     }
-    #wrapper{
+
+    #wrapper {
       position: absolute;
       right: 0;
       width: 100%;
     }
-    
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
   </style>
 </head>
 
 <body>
-  <script src="/public/navbar-code.js"></script> 
+  <script src="/public/navbar-code.js"></script>
   <div id="wrapper">
-  <h1 id="heading">Maths Classwork</h1>
-  <div class="buttons" id="buttons">
-    <div class="container">
-      <a href="https://drive.google.com/file/d/146gcQQCKdqkTVgwrxNXwOBcClLFlQCGf/view?usp=sharing"
-        class="btn effect01" target="_blank"><span>Chapter-1</span></a>
-      <a href="https://drive.google.com/file/d/1qCrklwFgfo4PBaXEzRxPRr-79VfJXVZt/view?usp=sharing"
-        class="btn effect01" target="_blank"><span>Chapter-2</span></a>
-      <a href="https://drive.google.com/file/d/1gURwQcDm7XXtkNYIOc6fHGMqRG_mcpWl/view?usp=sharing"
-        class="btn effect01" target="_blank"><span>Chapter-11</span></a>
-      <a href="https://drive.google.com/file/d/1T0WLypX9oQ2L5k80TN2tunNBRQoOOpvz/view?usp=sharing"
-        class="btn effect01" target="_blank"><span>Chapter-3</span></a>
-      <a href="https://drive.google.com/file/d/1HOqfsaNsMALWtnAfVJfKpyCF52xG7r3q/view?usp=sharing"
-        class="btn effect01" target="_blank"><span>Chapter-12</span></a>
-      <a href="https://drive.google.com/file/d/1aoh0ELfVD3icaNtaW9WS8Cd6s5nSSSXL/view?usp=sharing"
-        class="btn effect01" target="_blank"><span>Chapter-7</span></a>
-      <a href="https://drive.google.com/file/d/1SLvUtJsWfUmL3lzTKdLXi11s4Nm7GNbY/view?usp=sharing"
-        class="btn effect01" target="_blank"><span>Chapter-8</span></a>
-      <a href="https://drive.google.com/file/d/1twhYgrJ0ujIiWpaBKCjAyxFroUPKxc7J/view?usp=sharing"
-        class="btn effect01" target="_blank"><span>Chapter-5</span></a>
-      <a href="https://drive.google.com/file/d/1OGyBAx5fNcWJPwILkzZLXUixYv6HQkYY/view?usp=sharing"
-        class="btn effect01" target="_blank"><span>Revision</span></a>
-      <a href="https://drive.google.com/file/d/1YzeHIZP3810AtqoZwEVc0PMAntpyHy_9/view?usp=sharing"
-        class="btn effect01" target="_blank"><span>Worksheet</span></a>
-        </div>
+    <h1 id="heading">Maths Classwork</h1>
+    <div class="buttons" id="buttons">
+      <div class="container">
+        <a href="https://drive.google.com/file/d/146gcQQCKdqkTVgwrxNXwOBcClLFlQCGf/view?usp=sharing"
+          class="btn effect01" target="_blank"><span>Chapter-1</span></a>
+        <a href="https://drive.google.com/file/d/1qCrklwFgfo4PBaXEzRxPRr-79VfJXVZt/view?usp=sharing"
+          class="btn effect01" target="_blank"><span>Chapter-2</span></a>
+        <a href="https://drive.google.com/file/d/1gURwQcDm7XXtkNYIOc6fHGMqRG_mcpWl/view?usp=sharing"
+          class="btn effect01" target="_blank"><span>Chapter-11</span></a>
+        <a href="https://drive.google.com/file/d/1T0WLypX9oQ2L5k80TN2tunNBRQoOOpvz/view?usp=sharing"
+          class="btn effect01" target="_blank"><span>Chapter-3</span></a>
+        <a href="https://drive.google.com/file/d/1HOqfsaNsMALWtnAfVJfKpyCF52xG7r3q/view?usp=sharing"
+          class="btn effect01" target="_blank"><span>Chapter-12</span></a>
+        <a href="https://drive.google.com/file/d/1aoh0ELfVD3icaNtaW9WS8Cd6s5nSSSXL/view?usp=sharing"
+          class="btn effect01" target="_blank"><span>Chapter-7</span></a>
+        <a href="https://drive.google.com/file/d/1SLvUtJsWfUmL3lzTKdLXi11s4Nm7GNbY/view?usp=sharing"
+          class="btn effect01" target="_blank"><span>Chapter-8</span></a>
+        <a href="https://drive.google.com/file/d/1twhYgrJ0ujIiWpaBKCjAyxFroUPKxc7J/view?usp=sharing"
+          class="btn effect01" target="_blank"><span>Chapter-5</span></a>
+        <a href="https://drive.google.com/file/d/1OGyBAx5fNcWJPwILkzZLXUixYv6HQkYY/view?usp=sharing"
+          class="btn effect01" target="_blank"><span>Revision</span></a>
+        <a href="https://drive.google.com/file/d/1YzeHIZP3810AtqoZwEVc0PMAntpyHy_9/view?usp=sharing"
+          class="btn effect01" target="_blank"><span>Worksheet</span></a>
+      </div>
     </div>
-    <!-- done 10/11/22 -->
+    <!-- done 11/11/22 -->
   </div>
 </body>
 <script>
@@ -206,6 +223,13 @@ flex-wrap: wrap;
       wrapper.style.width = "100%";
     }
   }
+  let html = document.getElementById('html')
+  let heading = document.getElementById('heading')
+  if (localStorage.getItem('thethemetobesettothewebsiteisgoingtobedark')) {
+    html.style.background = '#0e1623'
+    heading.style.color = 'white'
+  }
   // window.location = '/';
 </script>
+
 </html>

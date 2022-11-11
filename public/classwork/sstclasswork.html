@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
 
 <head>
   <meta charset="UTF-8" />
@@ -10,6 +10,22 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
     #heading {
       text-align: center;
       font-size: 2rem;
@@ -63,7 +79,7 @@
       align-items: center;
       display: flex;
       gap: 20px;
-flex-wrap: wrap;
+      flex-wrap: wrap;
       justify-content: center;
       text-align: center;
       padding: 40px 0px;
@@ -156,78 +172,90 @@ flex-wrap: wrap;
       -webkit-transform: rotate(40deg);
       transform: rotate(40deg);
     }
+
     #wrapper {
       position: absolute;
       right: 0;
       width: 100%;
     }
-    .sections{
+
+    .sections {
       display: flex;
       justify-content: center;
       align-items: flex-start;
       flex-wrap: wrap;
     }
-    .history{
+
+    .history {
       gap: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 30%;
-    flex-wrap: wrap;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 30%;
+      flex-wrap: wrap;
     }
-    .civics{
+
+    .civics {
       gap: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 30%;
-    flex-wrap: wrap;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 30%;
+      flex-wrap: wrap;
     }
-    .general{
+
+    .general {
       gap: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 30%;
-    flex-wrap: wrap;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 30%;
+      flex-wrap: wrap;
     }
-    .geography{
+
+    .geography {
       gap: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 30%;
-    flex-wrap: wrap;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 30%;
+      flex-wrap: wrap;
     }
-    .section-heading{
+
+    .section-heading {
       display: block;
-    text-align: center;
-    width: 100%;
-    color: black;
+      text-align: center;
+      width: 100%;
+      color: black;
     }
+
     @media (max-width: 1033px) {
-      .sections{
+      .sections {
         flex-direction: column;
       }
-      .history{
+
+      .history {
         width: 100%;
       }
-      .geography{
+
+      .geography {
         width: 100%;
       }
-      .civics{
+
+      .civics {
         width: 100%;
       }
-      .general{
+
+      .general {
         width: 100%;
       }
     }
-    
-    #Chaptername{
+
+    #Chaptername {
       font-size: 2em;
       text-align: center;
       margin-top: 2em;
@@ -237,60 +265,62 @@ flex-wrap: wrap;
 </head>
 
 <body>
-  <script src="/public/navbar-code.js"></script> 
+  <script src="/public/navbar-code.js"></script>
   <div id="wrapper">
-  <h1 id="heading">Social Science Classwork</h1>
-  <div class="buttons">
-    <div class="container sections">
-      <div class="history">
-        <h1 class="section-heading">History</h1>
-        <a href="https://drive.google.com/file/d/1oXfM0Nq1CR_bLhVA1VM5boPzcZjjMSlb/view?usp=sharing"
-        class="btn effect01" target="_blank" onmouseover="chaptername('The Modern Period')" onmouseleave="chaptername('')"><span>Chapter-1</span></a>
-        <a href="https://drive.google.com/file/d/101iQtkgFnDeNhy-NLWw_402WBTYJfI41/view?usp=sharing"
-        class="btn effect01" target="_blank" onmouseover="chaptername('The Expansaion of british power')" onmouseleave="chaptername('')"><span>Chapter-2</span></a>
-        <a href="https://drive.google.com/file/d/1hpYFka9LaeOSRqpXHB4TMONlyKOjTZSW/view?usp=sharing"
-        class="btn effect01" target="_blank" onmouseover="chaptername('Life in rural area')" onmouseleave="chaptername('')"><span>Chapter-3</span></a>
-        <a href="https://drive.google.com/file/d/1l_b8QdU0fxf-sBkjDSl2-RL11E8J7c3X/view?usp=sharing"
-        class="btn effect01" target="_blank" onmouseover="chaptername('The Great Uprising')" onmouseleave="chaptername('')"><span>Chapter-6</span></a>
-        <a href="https://drive.google.com/file/d/177QJGbTHZ0FJhjcBcOQlVqEiO65qGQCV/view?usp=sharing"
-        class="btn effect01" target="_blank" onmouseover="chaptername('Education and British Rule')" onmouseleave="chaptername('')"><span>Chapter-7</span></a>
-        <a href="https://drive.google.com/file/d/1UJ-uTM5gSEtmagPvCWgXNcHwb03JbZ43/view?usp=sharing"
-        class="btn effect01" target="_blank" onmouseover="chaptername('Revision test')" onmouseleave="chaptername('')"><span>Revision Test</span></a>
+    <h1 id="heading">Social Science Classwork</h1>
+    <div class="buttons">
+      <div class="container sections">
+        <div class="history">
+          <h1 class="section-heading">History</h1>
+          <a href="https://drive.google.com/file/d/1oXfM0Nq1CR_bLhVA1VM5boPzcZjjMSlb/view?usp=sharing"
+            class="btn effect01" target="_blank"><span>Chapter-1</span></a>
+          <a href="https://drive.google.com/file/d/101iQtkgFnDeNhy-NLWw_402WBTYJfI41/view?usp=sharing"
+            class="btn effect01" target="_blank"><span>Chapter-2</span></a>
+          <a href="https://drive.google.com/file/d/1hpYFka9LaeOSRqpXHB4TMONlyKOjTZSW/view?usp=sharing"
+            class="btn effect01" target="_blank"><span>Chapter-3</span></a>
+          <a href="https://drive.google.com/file/d/1l_b8QdU0fxf-sBkjDSl2-RL11E8J7c3X/view?usp=sharing"
+            class="btn effect01" target="_blank"><span>Chapter-6</span></a>
+          <a href="https://drive.google.com/file/d/177QJGbTHZ0FJhjcBcOQlVqEiO65qGQCV/view?usp=sharing"
+            class="btn effect01" target="_blank"><span>Chapter-7</span></a>
+          <a href="https://drive.google.com/file/d/1UJ-uTM5gSEtmagPvCWgXNcHwb03JbZ43/view?usp=sharing"
+            class="btn effect01" target="_blank"><span>Revision Test</span></a>
+        </div>
+        <div class="geography">
+          <h1 class="section-heading">Geography</h1>
+          <a href="https://drive.google.com/file/d/1dt6viLB6U6xPcvs29GPSgZkJzDL_tDPD/view?usp=sharing"
+            class="btn effect01" target="_blank"><span>Chapter-1</span></a>
+          <a href="https://drive.google.com/file/d/1C5UWZ9w-uqwVQqlBpEAZGJ_FhCPs-FC3/view?usp=sharing"
+            class="btn effect01" target="_blank"><span>Chapter-2</span></a>
+          <a href="https://drive.google.com/file/d/1xP_-jxCkk9_VzsxgQxWhwZi-bpuuFw6Z/view?usp=sharing"
+            class="btn effect01" target="_blank"><span>Chapter-5</span></a>
+          <a href="https://drive.google.com/file/d/1pkz_iLi4ogRlmXIKoQRATrwyL1oNZV1O/view?usp=sharing"
+            class="btn effect01" target="_blank"><span>Chapter-9</span></a>
+          <a href="https://drive.google.com/file/d/11r_TvHL9NAMYxiJ4LcgYl_T1CkawY5jC/view?usp=sharing"
+            class="btn effect01" target="_blank"><span>Revision Test</span></a>
+        </div>
+        <div class="civics">
+          <h1 class="section-heading">Civics</h1>
+          <a href="https://drive.google.com/file/d/1juRNIosIgrM4pNOJ3X5eyDr4KSHftrIO/view?usp=sharing"
+            class="btn effect01" target="_blank"><span>Chapter-1</span></a>
+          <a href="https://drive.google.com/file/d/1N6yiw8wbnX0s2t9PbY-CLzkQQ8ugdubP/view?usp=sharing"
+            class="btn effect01" target="_blank"><span>Chapter-2</span></a>
+          <a href="https://drive.google.com/file/d/1KKB2P1744jBxJddClGu42bM4jQo0R-ic/view?usp=sharing"
+            class="btn effect01" target="_blank"><span>Chapter-3</span></a>
+          <a href="https://drive.google.com/file/d/1LJBaGvAFzsdpXw1HuOJrB-fpiHUOvAEd/view?usp=sharing"
+            class="btn effect01" target="_blank"><span>Chapter-4</span></a>
+          <a href="https://drive.google.com/file/d/1Xm5sRKg4x2QexC38P-torfZrGs_kkBTf/view?usp=sharing"
+            class="btn effect01" target="_blank"><span>Revision Test</span></a>
+        </div>
+        <div class="general">
+          <a href="https://drive.google.com/file/d/1fEHQeo41z2v44rjPw_JL7OSCnm48r-0E/view?usp=sharing"
+            class="btn effect01" target="_blank"><span>Assignment Booklet</span></a>
+        </div>
       </div>
-      <div class="geography">
-        <h1 class="section-heading">Geography</h1>
-        <a href="https://drive.google.com/file/d/1dt6viLB6U6xPcvs29GPSgZkJzDL_tDPD/view?usp=sharing"
-        class="btn effect01" target="_blank" onmouseover="chaptername('Resources')" onmouseleave="chaptername('')"><span>Chapter-1</span></a>
-        <a href="https://drive.google.com/file/d/1C5UWZ9w-uqwVQqlBpEAZGJ_FhCPs-FC3/view?usp=sharing"
-        class="btn effect01" target="_blank" onmouseover="chaptername('Natural Resources')" onmouseleave="chaptername('')"><span>Chapter-2</span></a>
-        <a href="https://drive.google.com/file/d/1xP_-jxCkk9_VzsxgQxWhwZi-bpuuFw6Z/view?usp=sharing"
-        class="btn effect01" target="_blank" onmouseover="chaptername('Agriculture')" onmouseleave="chaptername('')"><span>Chapter-5</span></a>
-        <a href="https://drive.google.com/file/d/11r_TvHL9NAMYxiJ4LcgYl_T1CkawY5jC/view?usp=sharing"
-        class="btn effect01" target="_blank" onmouseover="chaptername('Revition Test')" onmouseleave="chaptername('')"><span>Revision Test</span></a>
-      </div>
-      <div class="civics">
-        <h1 class="section-heading">Civics</h1>
-        <a href="https://drive.google.com/file/d/1juRNIosIgrM4pNOJ3X5eyDr4KSHftrIO/view?usp=sharing"
-        class="btn effect01" target="_blank" onmouseover="chaptername('The Constitution and Need For Laws')" onmouseleave="chaptername('')"><span>Chapter-1</span></a>
-        <a href="https://drive.google.com/file/d/1N6yiw8wbnX0s2t9PbY-CLzkQQ8ugdubP/view?usp=sharing"
-        class="btn effect01" target="_blank" onmouseover="chaptername('Ideals of Constitution')" onmouseleave="chaptername('')"><span>Chapter-2</span></a>
-        <a href="https://drive.google.com/file/d/1KKB2P1744jBxJddClGu42bM4jQo0R-ic/view?usp=sharing"
-        class="btn effect01" target="_blank" onmouseover="chaptername('The Parliamentry System')" onmouseleave="chaptername('')"><span>Chapter-3</span></a>
-        <a href="https://drive.google.com/file/d/1LJBaGvAFzsdpXw1HuOJrB-fpiHUOvAEd/view?usp=sharing"
-        class="btn effect01" target="_blank" onmouseover="chaptername('The Judiciary')" onmouseleave="chaptername('')"><span>Chapter-4</span></a>
-        <a href="https://drive.google.com/file/d/1Xm5sRKg4x2QexC38P-torfZrGs_kkBTf/view?usp=sharing"
-        class="btn effect01" target="_blank" onmouseover="chaptername('Revision test')" onmouseleave="chaptername('')"><span>Revision Test</span></a>
-      </div>
-      <div class="general">
-        <a href="https://drive.google.com/file/d/1fEHQeo41z2v44rjPw_JL7OSCnm48r-0E/view?usp=sharing"
-        class="btn effect01" target="_blank" onmouseover="chaptername('Assignment Booklet')" onmouseleave="chaptername('')"><span>Assignment Booklet</span></a>
-      </div>
-    </div>
     </div>
     <div id="Chaptername">
-      
+
     </div>
-    <!-- done 10/11/22 -->
+    <!-- done 11/11/22 -->
   </div>
 </body>
 <script>
@@ -303,6 +333,12 @@ flex-wrap: wrap;
       let wrapper = document.getElementById('wrapper');
       wrapper.style.width = "100%";
     }
+  }
+  let html = document.getElementById('html')
+  let heading = document.getElementById('heading')
+  if (localStorage.getItem('thethemetobesettothewebsiteisgoingtobedark')) {
+    html.style.background = '#0e1623'
+    heading.style.color = 'white'
   }
   // let chapternamebox = document.getElementById('Chaptername');
   // function chaptername(name){

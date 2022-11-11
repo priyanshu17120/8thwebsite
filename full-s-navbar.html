@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
         body {
@@ -36,7 +36,8 @@
             display: block;
             transition: 0.3s;
         }
-        .sidenav i{
+
+        .sidenav i {
             margin: 0 15px;
         }
 
@@ -69,7 +70,6 @@
                 font-size: 18px;
             }
         }
-        
     </style>
 </head>
 
@@ -94,20 +94,20 @@
     <script>
         function openNav() {
             let ham = document.getElementById('ham')
-                ham.style.visibility = "hidden";
+            ham.style.visibility = "hidden";
             document.getElementById("mySidenav").style.width = "100%";
 
             setTimeout(() => {
 
                 document.getElementById("mySidenav").style.height = "100%";
-                
+
 
             }, 500);
         }
 
         function closeNav() {
             let ham = document.getElementById('ham')
-                ham.style.visibility = "visible";
+            ham.style.visibility = "visible";
             document.getElementById("mySidenav").style.height = "0%";
             setTimeout(() => {
 
@@ -115,13 +115,14 @@
             }, 500);
         }
         let classwork_of_navbar = document.getElementById('classwork_of_navbar');
-        if(localStorage.getItem('setclassworkdatewise')){
+        if (localStorage.getItem('setclassworkdatewise')) {
             classwork_of_navbar.href = "/public/classwork2.html";
         }
-        else{
+        else {
             classwork_of_navbar.href = "/public/classwork.html";
         }
     </script>
 
 </body>
+
 </html>

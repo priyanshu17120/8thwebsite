@@ -1,8 +1,6 @@
-
-
 <!-- Settings  -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
 
 <head>
     <meta charset="UTF-8">
@@ -13,22 +11,25 @@
     <meta name="theme-color" content="#6957E7">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+
         ::-webkit-scrollbar {
-  width: 5px;
-}
+            width: 5px;
+        }
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
 
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 30px;
-}
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 30px;
+        }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -40,13 +41,15 @@
             /* background: ; */
 
         }
+
         html {
-    background: url(https://e0.365dm.com/22/10/2048x1152/skysports-world-cup-qatar-2022_5921764.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
+            background: url(https://e0.365dm.com/22/10/2048x1152/skysports-world-cup-qatar-2022_5921764.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
         .heading {
             text-align: center;
             font-size: 2.6em;
@@ -84,17 +87,26 @@
             background: rgb(75, 75, 75);
         }
 
-        .navbar {
-            border-top-left-radius: 4px;
-            border-top-right-radius: 4px;
-        }
+
 
         /* .classwork {
             
         } */
-        .suggestion {
-            border-bottom-left-radius: 4px;
-            border-bottom-right-radius: 4px;
+        /* Icons  */
+        .down-drop {
+            display: none;
+        }
+
+        .down-drop.active {
+            display: block;
+        }
+
+        .side-drop {
+            display: none;
+        }
+
+        .side-drop.active {
+            display: block;
         }
 
         .icon {
@@ -106,22 +118,9 @@
             font-size: 20px;
         }
 
-        @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
 
-        #navbar-settings-option {
 
-            border-radius: 5px;
-            background: rgb(59, 59, 59);
-            display: none;
-            width: 100%;
-            flex-direction: column;
-            padding: 15px;
-        }
-
-        #navbar-settings-option.active {
-            display: flex;
-        }
-
+        /* Option Boxes */
         .box {
 
             font-family: 'Quicksand', sans-serif;
@@ -187,33 +186,26 @@
             transition: all 0.25s cubic-bezier(0, 1.05, 0.72, 1.07);
         }
 
-        .down-drop {
+        /* Navbar Settings  */
+        .navbar {
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+
+        #navbar-settings-option {
+            border-radius: 5px;
+            background: rgb(59, 59, 59);
             display: none;
+            width: 100%;
+            flex-direction: column;
+            padding: 15px;
         }
 
-        .down-drop.active {
-            display: block;
-        }
-
-        .side-drop {
-            display: none;
-        }
-
-        .side-drop.active {
-            display: block;
+        #navbar-settings-option.active {
+            display: flex;
         }
 
         #navbar-settings {
-            border-bottom: 1px solid gray;
-        }
-
-        #classwork-settings {
-            border-bottom: 1px solid gray;
-            border-bottom-left-radius: 4px;
-            border-bottom-right-radius: 4px;
-            
-        }
-        #suggestion-settings {
             border-bottom: 1px solid gray;
         }
 
@@ -224,18 +216,24 @@
             border-top-right-radius: 4px;
         }
 
+        #navbar-settings.border-bottom~#navbar-settings-option {
+            border-radius: 0;
+        }
+
+        /* Classwork  */
+        #classwork-settings {
+            border-bottom: 1px solid gray;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+
+        }
+
         #classwork-settings.border-bottom {
             border-bottom: none;
             border-radius: 0;
         }
 
-
-        #navbar-settings.border-bottom~#navbar-settings-option {
-            border-radius: 0;
-        }
-
         #classwork-settings-option {
-
             background: rgb(59, 59, 59);
             display: none;
             width: 100%;
@@ -245,11 +243,31 @@
 
         #classwork-settings-option.active {
             display: flex;
+            
+        }
+
+        /* Theme */
+        #theme-settings-option.active{
+            display: flex;
             border-bottom-left-radius: 4px;
             border-bottom-right-radius: 4px;
         }
-
-
+        #theme-settings{
+            border-bottom: 1px solid gray;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+        #theme-settings.border-bottom {
+            border-bottom: none;
+            border-radius: 0;
+        }
+        #theme-settings-option {
+            background: rgb(59, 59, 59);
+            display: none;
+            width: 100%;
+            flex-direction: column;
+            padding: 15px;
+        }
 
     </style>
 </head>
@@ -257,7 +275,7 @@
 <body>
     <script src="/public/navbar-code.js"></script>
     <!-- <script src="/Modal.js"></script> -->
-    <h1 class="heading">Settings</h1>
+    <h1 class="heading" id="h1">Settings</h1>
 
     <div class="options" id="options">
         <div class="navbar option" id="navbar-settings">
@@ -307,8 +325,29 @@
                 <label for="classwork-date-wise">Date Wise</label>
             </div>
         </div>
-    </div>
-    </div>
+
+
+        <!--Theme-->
+        <div class="theme option" id="theme-settings">
+            Theme
+            <div class="icon">
+                <ion-icon name="chevron-forward-outline" id="side-drop-th" class="active side-drop"></ion-icon>
+                <ion-icon name="chevron-down-outline" id="down-drop-th" class="down-drop"></ion-icon>
+            </div>
+
+        </div>
+        <div id="theme-settings-option">
+            <div class="box" id="Light">
+                <input type="radio" id="theme-Light" class="input">
+                <span class="check"></span>
+                <label for="theme-Light">Light</label>
+            </div>
+            <div class="box" id="Dark">
+                <input type="radio" id="theme-Dark" class="input">
+                <span class="check"></span>
+                <label for="theme-Dark">Dark</label>
+            </div>
+        </div>
     </div>
 
 
@@ -337,6 +376,16 @@
         downdropcl.classList.toggle('active');
         sidedropcl.classList.toggle('active');
         classwork.classList.toggle('border-bottom')
+    })
+    let theme = document.getElementById('theme-settings')
+    let themesettingsoption = document.getElementById('theme-settings-option')
+    let downdropth = document.getElementById('down-drop-th');
+    let sidedropth = document.getElementById('side-drop-th');
+    theme.addEventListener('click', () => {
+        themesettingsoption.classList.toggle('active');
+        downdropth.classList.toggle('active');
+        sidedropth.classList.toggle('active');
+        theme.classList.toggle('border-bottom')
     })
 
     let left_pos = document.getElementById('left-pos');
@@ -424,6 +473,44 @@
         chapinput.checked = true;
         dateinput.checked = false;
     }    
+
+    let themelight = document.getElementById('theme-Light')
+    let themedark = document.getElementById('theme-Dark')
+    let light = document.getElementById('Light')
+    let dark = document.getElementById('Dark')
+
+    light.addEventListener('click',()=>{
+        localStorage.setItem('thethemetobesettothewebsiteisgoingtobelight', true)
+        if (localStorage.getItem('thethemetobesettothewebsiteisgoingtobedark')) {
+            localStorage.removeItem('thethemetobesettothewebsiteisgoingtobedark')
+
+        }
+        location.reload();
+
+    })
+    dark.addEventListener('click', () => {
+        localStorage.setItem('thethemetobesettothewebsiteisgoingtobedark', true)
+        if (localStorage.getItem('thethemetobesettothewebsiteisgoingtobelight')) {
+            localStorage.removeItem('thethemetobesettothewebsiteisgoingtobelight')
+        }
+        location.reload();
+
+    })
+    if (localStorage.getItem('thethemetobesettothewebsiteisgoingtobelight')) {
+        themedark.checked = false;
+        themelight.checked = true;
+    }
+    else {
+        themedark.checked = true;
+        themelight.checked = false;
+    }   
+    let html = document.getElementById('html')
+    let h1 = document.getElementById('h1')
+    if (localStorage.getItem('thethemetobesettothewebsiteisgoingtobedark')) {
+        html.style.background = "#0e1623"
+        h1.style.color = "white"
+        
+    }
 </script>
 
 </html>

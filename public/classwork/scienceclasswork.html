@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
 
 <head>
   <meta charset="UTF-8" />
@@ -9,6 +9,7 @@
   <link rel="shortcut icon" href="../ourgroupfavicon.png" type="image/x-icon" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+
     #heading {
       text-align: center;
       font-size: 2rem;
@@ -161,7 +162,22 @@
       right: 0;
       width: 100%;
     }
-    
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
   </style>
 </head>
 
@@ -192,7 +208,7 @@
         <a href="https://drive.google.com/file/d/1Y4AZDM0VZaD98WViQ1fSCu1yeOfw_u5s/view?usp=sharing"
           class="btn effect01" target="_blank"><span>Revision</span></a>
       </div>
-      <!-- done 10/11/22 -->
+      <!-- done 11/11/22 -->
     </div>
   </div>
 </body>
@@ -206,6 +222,12 @@
       let wrapper = document.getElementById('wrapper');
       wrapper.style.width = "100%";
     }
+  }
+  let html = document.getElementById('html')
+  let heading = document.getElementById('heading')
+  if (localStorage.getItem('thethemetobesettothewebsiteisgoingtobedark')) {
+    html.style.background = '#0e1623'
+    heading.style.color = 'white'
   }
   // window.location = '/';
 </script>

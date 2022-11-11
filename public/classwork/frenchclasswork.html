@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
 
 <head>
   <meta charset="UTF-8" />
@@ -9,6 +9,7 @@
   <link rel="shortcut icon" href="../ourgroupfavicon.png" type="image/x-icon" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+
     #heading {
       text-align: center;
       font-size: 2rem;
@@ -62,7 +63,7 @@
       align-items: center;
       display: flex;
       gap: 20px;
-flex-wrap: wrap;
+      flex-wrap: wrap;
       justify-content: center;
       text-align: center;
       padding: 40px 0px;
@@ -155,41 +156,57 @@ flex-wrap: wrap;
       -webkit-transform: rotate(40deg);
       transform: rotate(40deg);
     }
-    #wrapper{
+
+    #wrapper {
       position: absolute;
       right: 0;
       width: 100%;
     }
-    
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
   </style>
 </head>
 
 <body>
-  <script src="/public/navbar-code.js"></script> 
+  <script src="/public/navbar-code.js"></script>
   <div id="wrapper">
-  <h1 id="heading">French Classwork</h1>
-  <div class="buttons" id="buttons">
-    <div class="container">
-      <a href="https://drive.google.com/file/d/17iaRWcNJoqQuyr8aZs96HSn72WqcLa1A/view?usp=sharing"
-        class="btn effect01" target="_blank"><span>Leçon-1</span></a>
-      <a href="https://drive.google.com/file/d/1b_R1ZuEWHVtidtLfqFzBLnhyWcbdv9g7/view?usp=sharing"
-        class="btn effect01" target="_blank"><span>Leçon-2</span></a>
-      <a href="https://drive.google.com/file/d/1rbdpo41wfs2MTY17Fbqi2fTZ6bjOfcXN/view?usp=sharing"
-        class="btn effect01" target="_blank"><span>Leçon-3</span></a>
-      <a href="https://drive.google.com/file/d/1x7tCJBOU73wFyZYRiKcR9863egpttFXO/view?usp=sharing"
-        class="btn effect01" target="_blank"><span>Leçon-4</span></a>
-      <a href="https://drive.google.com/file/d/1dBWlszLOImhjgqcX1IR1MARCnV1joC7y/view?usp=sharing"
-        class="btn effect01" target="_blank"><span>Leçon-8</span></a>
-      <a href="https://drive.google.com/file/d/1HE6V-7zf1mbKZkMJ3oTJ9C09KuzDmAEs/view?usp=sharing"
-        class="btn effect01" target="_blank"><span>Leçon-10</span></a>
-      <a href="https://drive.google.com/file/d/1lo88m_mnJtx5UeivWf2AT0RF5h4S0Eti/view?usp=sharing"
-        class="btn effect01" target="_blank"><span>Revision</span></a>
-      <!-- <a href="https://drive.google.com/file/d/1fWowseoKU3Vh_MvfqgZIthaK3Z_dHtlt/view?usp=sharing"
+    <h1 id="heading">French Classwork</h1>
+    <div class="buttons" id="buttons">
+      <div class="container">
+        <a href="https://drive.google.com/file/d/17iaRWcNJoqQuyr8aZs96HSn72WqcLa1A/view?usp=sharing"
+          class="btn effect01" target="_blank"><span>Leçon-1</span></a>
+        <a href="https://drive.google.com/file/d/1b_R1ZuEWHVtidtLfqFzBLnhyWcbdv9g7/view?usp=sharing"
+          class="btn effect01" target="_blank"><span>Leçon-2</span></a>
+        <a href="https://drive.google.com/file/d/1rbdpo41wfs2MTY17Fbqi2fTZ6bjOfcXN/view?usp=sharing"
+          class="btn effect01" target="_blank"><span>Leçon-3</span></a>
+        <a href="https://drive.google.com/file/d/1x7tCJBOU73wFyZYRiKcR9863egpttFXO/view?usp=sharing"
+          class="btn effect01" target="_blank"><span>Leçon-4</span></a>
+        <a href="https://drive.google.com/file/d/1dBWlszLOImhjgqcX1IR1MARCnV1joC7y/view?usp=sharing"
+          class="btn effect01" target="_blank"><span>Leçon-8</span></a>
+        <a href="https://drive.google.com/file/d/1HE6V-7zf1mbKZkMJ3oTJ9C09KuzDmAEs/view?usp=sharing"
+          class="btn effect01" target="_blank"><span>Leçon-10</span></a>
+        <a href="https://drive.google.com/file/d/1lo88m_mnJtx5UeivWf2AT0RF5h4S0Eti/view?usp=sharing"
+          class="btn effect01" target="_blank"><span>Revision</span></a>
+        <!-- <a href="https://drive.google.com/file/d/1fWowseoKU3Vh_MvfqgZIthaK3Z_dHtlt/view?usp=sharing"
         class="btn effect01" target="_blank"><span>Holiday homework</span></a> -->
+      </div>
+      <!-- done 11/11/22 -->
     </div>
-   <!-- done 10/11/22 -->
   </div>
-</div>
 
 
 </body>
@@ -203,6 +220,12 @@ flex-wrap: wrap;
       let wrapper = document.getElementById('wrapper');
       wrapper.style.width = "100%";
     }
+  }
+  let html = document.getElementById('html')
+  let heading = document.getElementById('heading')
+  if (localStorage.getItem('thethemetobesettothewebsiteisgoingtobedark')) {
+    html.style.background = '#0e1623'
+    heading.style.color = 'white'
   }
    //   window.location = '/';
 </script>

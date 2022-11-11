@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
 
 <head>
   <meta charset="UTF-8" />
@@ -28,7 +28,8 @@
     -o-background-size: cover;
     background-size: cover;
   }
-  body{
+
+  body {
     overflow: hidden;
   }
 
@@ -62,303 +63,330 @@
   #wrkfgverjfg {
     margin-top: 50px;
   }
-  .img{
+
+  .img {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-.img img{
-  display: block;
-  margin:auto;
-  width:300px;
-  cursor: zoom-in;
-}
-.opened-image{
-  position: absolute;
-  top:0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 8053534;
-  overflow: hidden;
-  background:rgba(0, 0, 0, 0.75);
-}
-.opened-image img{
-  display: block;
-  margin-top: 6px;
-  width: 70%;
-}
-.opened-image ion-icon{
-  position: absolute;
-  right: 0;
-  top: 0;
-  color: white;
-  font-size: 50px;
-  cursor: pointer;
-}
-#icon{
-  transform: rotate(0deg) scale(1);
-  transition: 1s;
-}
-#icon:hover{
-  transform: rotate(360deg) scale(0.7);
-}
 
-#toast {
-      visibility: hidden;
-      max-width: 50px;
-      height: 50px;
-      /*margin-left: -125px;*/
-      margin: auto;
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      border-radius: 2px;
+  .img img {
+    display: block;
+    margin: auto;
+    width: 300px;
+    cursor: zoom-in;
+  }
 
-      position: fixed;
-      z-index: 1;
+  .opened-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 8053534;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  .opened-image img {
+    display: block;
+    margin-top: 6px;
+    width: 70%;
+  }
+
+  .opened-image ion-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+  }
+
+  #icon {
+    transform: rotate(0deg) scale(1);
+    transition: 1s;
+  }
+
+  #icon:hover {
+    transform: rotate(360deg) scale(0.7);
+  }
+
+  #toast {
+    visibility: hidden;
+    max-width: 50px;
+    height: 50px;
+    /*margin-left: -125px;*/
+    margin: auto;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    font-size: 17px;
+    white-space: nowrap;
+  }
+
+  #toast #img {
+    width: 50px;
+    height: 50px;
+
+    float: left;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+
+    background-color: #111;
+    color: #fff;
+  }
+
+  #toast #desc {
+    color: #fff;
+    padding: 16px;
+    overflow: hidden;
+    /* white-space: nowrap; */
+    font-family: cursive;
+
+  }
+
+  #toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+  }
+
+
+  @-webkit-keyframes fadein {
+    from {
+      bottom: 0;
+      opacity: 0;
+    }
+
+    to {
+      bottom: 30px;
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadein {
+    from {
+      bottom: 0;
+      opacity: 0;
+    }
+
+    to {
+      bottom: 30px;
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes expand {
+    from {
+      min-width: 50px
+    }
+
+    to {
+      min-width: 350px
+    }
+  }
+
+  @keyframes expand {
+    from {
+      min-width: 50px
+    }
+
+    to {
+      min-width: 350px
+    }
+  }
+
+  @-webkit-keyframes stay {
+    from {
+      min-width: 350px
+    }
+
+    to {
+      min-width: 350px
+    }
+  }
+
+  @keyframes stay {
+    from {
+      min-width: 350px
+    }
+
+    to {
+      min-width: 350px
+    }
+  }
+
+  @-webkit-keyframes shrink {
+    from {
+      min-width: 350px;
+    }
+
+    to {
+      min-width: 50px;
+    }
+  }
+
+  @keyframes shrink {
+    from {
+      min-width: 350px;
+    }
+
+    to {
+      min-width: 50px;
+    }
+  }
+
+  @-webkit-keyframes fadeout {
+    from {
+      bottom: 30px;
+      opacity: 1;
+    }
+
+    to {
+      bottom: 60px;
+      opacity: 0;
+    }
+  }
+
+  @keyframes fadeout {
+    from {
+      bottom: 30px;
+      opacity: 1;
+    }
+
+    to {
+      bottom: 60px;
+      opacity: 0;
+    }
+  }
+
+  img {
+    width: 50px;
+    border-radius: 3px;
+  }
+#image{
+  border-radius: 20px;
+}
+  @media (max-width: 1033px) {
+    .opened-image {
+      position: absolute;
+      top: 0;
       left: 0;
       right: 0;
-      bottom: 30px;
-      font-size: 17px;
-      white-space: nowrap;
-    }
-
-    #toast #img {
-      width: 50px;
-      height: 50px;
-
-      float: left;
-
-      padding-top: 16px;
-      padding-bottom: 16px;
-      display: flex;
+      bottom: 0;
+      margin: auto;
+      display: none;
       justify-content: center;
       align-items: center;
-      box-sizing: border-box;
-
-
-      background-color: #111;
-      color: #fff;
-    }
-
-    #toast #desc {
-      color: #fff;
-      padding: 16px;
+      z-index: 8053534;
       overflow: hidden;
-      /* white-space: nowrap; */
+      background: rgba(0, 0, 0, 0.75);
     }
 
-    #toast.show {
-      visibility: visible;
-      -webkit-animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
-      animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
-    }
-  
-
-    @-webkit-keyframes fadein {
-      from {
-        bottom: 0;
-        opacity: 0;
-      }
-
-      to {
-        bottom: 30px;
-        opacity: 1;
-      }
+    .opened-image img {
+      display: block;
+      /* margin-top: 35vh; */
+      width: 70%;
     }
 
-    @keyframes fadein {
-      from {
-        bottom: 0;
-        opacity: 0;
-      }
-
-      to {
-        bottom: 30px;
-        opacity: 1;
-      }
+    .opened-image ion-icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: white;
+      font-size: 50px;
+      cursor: pointer;
     }
 
-    @-webkit-keyframes expand {
-      from {
-        min-width: 50px
+    @keyframes crossanimate {
+      0% {
+        transform: scale(0.5);
       }
 
-      to {
-        min-width: 350px
-      }
-    }
-
-    @keyframes expand {
-      from {
-        min-width: 50px
-      }
-
-      to {
-        min-width: 350px
+      100% {
+        transform: scale(1);
       }
     }
-
-    @-webkit-keyframes stay {
-      from {
-        min-width: 350px
-      }
-
-      to {
-        min-width: 350px
-      }
-    }
-
-    @keyframes stay {
-      from {
-        min-width: 350px
-      }
-
-      to {
-        min-width: 350px
-      }
-    }
-
-    @-webkit-keyframes shrink {
-      from {
-        min-width: 350px;
-      }
-
-      to {
-        min-width: 50px;
-      }
-    }
-
-    @keyframes shrink {
-      from {
-        min-width: 350px;
-      }
-
-      to {
-        min-width: 50px;
-      }
-    }
-
-    @-webkit-keyframes fadeout {
-      from {
-        bottom: 30px;
-        opacity: 1;
-      }
-
-      to {
-        bottom: 60px;
-        opacity: 0;
-      }
-    }
-
-    @keyframes fadeout {
-      from {
-        bottom: 30px;
-        opacity: 1;
-      }
-
-      to {
-        bottom: 60px;
-        opacity: 0;
-      }
-    }
-
-    img {
-      width: 50px;
-    }
-  @media (max-width: 1033px) {
-.opened-image{
-  position: absolute;
-  top:0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 8053534;
-  overflow: hidden;
-  background:rgba(0, 0, 0, 0.75);
-}
-.opened-image img{
-  display: block;
-  /* margin-top: 35vh; */
-  width: 70%;
-}
-.opened-image ion-icon{
-  position: absolute;
-  right: 0;
-  top: 0;
-  color: white;
-  font-size: 50px;
-  cursor: pointer;
-}
-@keyframes crossanimate{
-  0%{
-    transform: scale(0.5);
-  }
-  100%{
-    transform: scale(1);
-  }
-}
 
   }
+
   @media (max-width: 633px) {
-    .opened-image img{
-  display: block;
-  /* margin-top: 35vh; */
-  width: 120%;
-  transform: rotate(90deg);
-}
+    .opened-image img {
+      display: block;
+      /* margin-top: 35vh; */
+      width: 120%;
+      transform: rotate(90deg);
+    }
   }
 </style>
 
 <body>
-  <script src="/public/navbar-code.js"></script> 
-  <h1>Time Table</h1>
+  <script src="/public/navbar-code.js"></script>
+  <h1 id="h1">Time Table</h1>
   <div class="img">
-  <img src="/public/timetable.png" alt="" id="image">
-  
-</div>
-<div class="opened-image" id="imagecont">
-  <img src="/public/timetable.png" alt="" id="image">
-  <ion-icon name="close-outline" id="icon" class="cross"></ion-icon>
+    <img src="/public/timetable.png" alt="" id="image">
 
-</div>
-<div id="toast">
-  <div id="img"><img src="/public/logo.jfif" alt=""></div>
-  <div id="desc">Click the image to expand it.</div>
-</div>
+  </div>
+  <div class="opened-image" id="imagecont">
+    <img src="/public/timetable.png" alt="" id="imageopened">
+    <ion-icon name="close-outline" id="icon" class="cross"></ion-icon>
+
+  </div>
+  <div id="toast">
+    <div id="img"><img src="/public/logo.jfif" alt=""></div>
+    <div id="desc">Click the image to expand it.</div>
+  </div>
 </body>
 <script>
   var image = document.getElementById('image');
   var icon = document.getElementById('icon');
   var imagecont = document.getElementById('imagecont');
   var isImageClicked = false;
-  image.addEventListener('click',()=>{
+  image.addEventListener('click', () => {
     isImageClicked = true;
     imagecont.style.display = "flex";
   })
-  icon.addEventListener('click',()=>{
+  icon.addEventListener('click', () => {
     imagecont.style.display = "none";
   })
   function launch_toast() {
     var x = document.getElementById("toast")
     x.className = "show";
-    setTimeout(function () { x.className = x.className.replace("show", ""); },5000);
+    setTimeout(function () { x.className = x.className.replace("show", ""); }, 5000);
   }
   setTimeout(() => {
-  if(isImageClicked == false){
-    launch_toast()
-  }}, 3000)
+    if (isImageClicked == false) {
+      launch_toast()
+    }
+  }, 3000)
+let html = document.getElementById('html')
+let h1 = document.getElementById('h1')
+  if (localStorage.getItem('thethemetobesettothewebsiteisgoingtobedark')) {
+    html.style.background = "#0e1623"
+    h1.style.color = "white"
+
+  }
 </script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </html>

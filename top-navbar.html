@@ -1,10 +1,12 @@
 <style>
-    @import url("https://fonts.googleapis.com/css2?family=Dongle&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-}
-#navbar {
+  @import url("https://fonts.googleapis.com/css2?family=Dongle&display=swap");
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  #navbar {
     background-color: rgba(17, 17, 17, 0.75);
     padding: 5px;
     position: sticky;
@@ -13,21 +15,25 @@
     transition: 0.5s;
     overflow-x: hidden;
   }
+
   #navbar ul {
     display: flex;
     align-items: center;
     transition: 0.5s;
   }
+
   #navbar #ul {
     display: flex;
     align-items: center;
     transition: 0.5s;
   }
+
   #navbar ul li {
     list-style: none;
     transition: 0.5s;
     /* border-bottom: 3px white solid; */
   }
+
   .navbarthings {
     color: white;
     text-decoration: none;
@@ -36,20 +42,24 @@
     font-size: 2rem;
     transition: 0.5s;
   }
+
   /* #navbar li:last-child{
     margin-left: auto;
   } */
-  .right{
+  .right {
     margin-left: auto;
   }
+
   .navbarthings:hover {
     color: rgb(177, 177, 177);
   }
+
   #logo {
     height: 50px;
     border-radius: 50%;
   }
-  #icons{
+
+  #icons {
     display: none;
     color: white;
     font-size: 2.4rem;
@@ -58,21 +68,26 @@
     overflow: hidden;
     cursor: pointer;
   }
-  .show{
+
+  .show {
     display: inline;
   }
-  #cross{
+
+  #cross {
     transform: rotate(45deg);
   }
-  .hide{
+
+  .hide {
     display: none;
   }
-  .settings{
-      font-size: 30px;
-      cursor: pointer;
-      color: white;
+
+  .settings {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
   }
-  #settings-link{
+
+  #settings-link {
     color: white;
     text-decoration: none;
     margin: 15px;
@@ -81,80 +96,89 @@
     transition: 0.5s;
     display: none;
   }
-  a{
+
+  a {
     color: white;
     text-decoration: none;
   }
-@media (max-width: 1033px) { 
-  #about-us{
-    display: inline;
-  }
-  #settings{
-    display: none;
-  }
-  #icons{
-    display: flex;
-  }
-  li{
-    display: none;
-  }
-  #navbar ul {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  #navbar #ul {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  .right{
-    margin-left: 0;
-  }
-}
 
+  @media (max-width: 1033px) {
+    #about-us {
+      display: inline;
+    }
+
+    #settings {
+      display: none;
+    }
+
+    #icons {
+      display: flex;
+    }
+
+    li {
+      display: none;
+    }
+
+    #navbar ul {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #navbar #ul {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .right {
+      margin-left: 0;
+    }
+  }
 </style>
 <nav id="navbar">
   <div id="ul">
-  <img src="/public/logo.jfif" alt="" id="logo"/>
-  <ul>
+    <img src="/public/logo.jfif" alt="" id="logo" />
+    <ul>
 
 
-    <li class="li url-underlined" id="a"><a href="/" class="navbarthings">Home</a></li>
-    <li class="li url-underlined">
-      <a href="/public/classwork.html" id="classwork_of_navbar" class="navbarthings">ClassWork</a>
-    </li>
-    <li class="li url-underlined">
-      <a href="/public/homework.html" class="navbarthings">HomeWork</a>
-    </li>
-    <li class="li url-underlined">
-      <a href="/public/timetable.html" class="navbarthings">Time Table</a>
-    </li>
-    <li class="li url-underlined">
-      <a href="/public/contactus.html" class="navbarthings">Contact Us</a>
-    </li>
-    
-    <li class="li url-underlined" id="rightid">
-      <a href="/public/aboutus.html" class="navbarthings" id="about-us">About Us</a>
-    </li>
-    <!-- <li class="li url-underlined">
+      <li class="li url-underlined" id="a"><a href="/" class="navbarthings">Home</a></li>
+      <li class="li url-underlined">
+        <a href="/public/classwork.html" id="classwork_of_navbar" class="navbarthings">ClassWork</a>
+      </li>
+      <li class="li url-underlined">
+        <a href="/public/homework.html" class="navbarthings">HomeWork</a>
+      </li>
+      <li class="li url-underlined">
+        <a href="/public/timetable.html" class="navbarthings">Time Table</a>
+      </li>
+      <li class="li url-underlined">
+        <a href="/public/contactus.html" class="navbarthings">Contact Us</a>
+      </li>
+
+      <li class="li url-underlined" id="rightid">
+        <a href="/public/aboutus.html" class="navbarthings" id="about-us">About Us</a>
+      </li>
+      <!-- <li class="li url-underlined">
       <a href="/public/holidayhomework.html" class="navbarthings">Holiday Homework</a>
     </li> -->
-    
-  </ul>
-  <div class="settings right">
-    <a href="/public/settings.html"><ion-icon name="settings-outline" id="settings"></ion-icon></a>
-    <a href="/public/settings.html" id="settings-link">Settings</a>
-</div>
-<div id="icons" class="right">
-    <span id="ham" class="show"
-    ><ion-icon name="reorder-three-outline"></ion-icon
-  ></span>
-  <span id="cross" class="hide"
-    ><ion-icon name="add-outline"></ion-icon
-  ></span>
-</div>
-</div>
+
+    </ul>
+    <div class="settings right">
+      <a href="/public/settings.html">
+        <ion-icon name="settings-outline" id="settings"></ion-icon>
+      </a>
+      <a href="/public/settings.html" id="settings-link">Settings</a>
+    </div>
+    <div id="icons" class="right">
+      <span id="ham" class="show">
+        <ion-icon name="reorder-three-outline"></ion-icon>
+      </span>
+      <span id="cross" class="hide">
+        <ion-icon name="add-outline"></ion-icon>
+      </span>
+    </div>
+  </div>
 </nav>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -166,7 +190,7 @@
   let icons = document.getElementById("icons");
   let settings = document.getElementById("settings");
   let settingslink = document.getElementById("settings-link");
-  settings.addEventListener('click',()=>{
+  settings.addEventListener('click', () => {
 
   })
   ham.addEventListener("click", () => {
@@ -190,12 +214,12 @@
     settingslink.style.display = "none";
   });
   let classwork_of_navbar = document.getElementById('classwork_of_navbar');
-        if(localStorage.getItem('setclassworkdatewise')){
-          classwork_of_navbar.href = "/public/classwork2.html";
-        }
-        else{
-          classwork_of_navbar.href = "/public/classwork.html";
-        }
+  if (localStorage.getItem('setclassworkdatewise')) {
+    classwork_of_navbar.href = "/public/classwork2.html";
+  }
+  else {
+    classwork_of_navbar.href = "/public/classwork.html";
+  }
 
-    
+
 </script>

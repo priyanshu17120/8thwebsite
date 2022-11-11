@@ -1,202 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>General Classwork</title>
-    <link
-      rel="shortcut icon"
-      href="../ourgroupfavicon.png"
-      type="image/x-icon"
-    />
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
-      #heading {
-        text-align: center;
-        font-size: 2rem;
-        margin-top: 5px;
-        color: black;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-  
-      }
-  
-      * {
-        margin: 0;
-        padding: 0;
-      }
-  
-      html,
-      body {
-        box-sizing: border-box;
-        height: 100%;
-        width: 100%;
-      }
-  
-      html {
-        /* background: #d7f2f2 no-repeat center center fixed; */
+<html lang="en" id="html">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>General Classwork</title>
+  <link rel="shortcut icon" href="../ourgroupfavicon.png" type="image/x-icon" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+
+    #heading {
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 5px;
+      color: black;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+    }
+
+    html {
+      /* background: #d7f2f2 no-repeat center center fixed; */
       background: #ff788e;
 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-      }
-  
-      body {
-        font-weight: 400;
-        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-        /* overflow: hidden; */
-      }
-  
-      .buttons {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-        /* width: 100%;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    body {
+      font-weight: 400;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      /* overflow: hidden; */
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+      /* width: 100%;
     height: 100%; */
-        margin: 0 auto;
-        /*   padding: 2em 0em; */
-      }
-  
-      .container {
-        align-items: center;
-        display: flex;
-        gap: 20px;
-  flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-        padding: 40px 0px;
-        width: 100%;
-      }
-  
-      h1 {
-        text-align: left;
-        color: #fff;
-        letter-spacing: 0.05em;
-        margin: 0 0 0.4em;
-      }
-  
-      p {
-        text-align: left;
-        color: #444;
-        letter-spacing: 0.05em;
-        font-size: 0.8em;
-        margin: 0 0 2em;
-      }
-  
-      .btn {
-        letter-spacing: 0.1em;
-        cursor: pointer;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 45px;
-        max-width: 250px;
-        position: relative;
-        text-decoration: none;
-        text-transform: uppercase;
-        width: 100%;
-      }
-  
-      .btn:hover {
-        text-decoration: none;
-      }
-  
-      /*btn_background*/
-      .effect01 {
-        color: #fff;
-        border: 4px solid #000;
-        box-shadow: 0px 0px 0px 1px #000 inset;
-        background-color: #000;
-        overflow: hidden;
-        position: relative;
-        transition: all 0.3s ease-in-out;
-      }
-  
-      .effect01:hover {
-        border: 4px solid #666;
-        background-color: #fff;
-        box-shadow: 0px 0px 0px 4px #eee inset;
-      }
-  
-      /*btn_text*/
-      .effect01 span {
-        transition: all 0.2s ease-out;
-        z-index: 2;
-      }
-  
-      .effect01:hover span {
-        letter-spacing: 0.13em;
-        color: #333;
-      }
-  
-      /*highlight*/
-      .effect01:after {
-        background: #fff;
-        border: 0px solid #000;
-        content: "";
-        height: 155px;
-        left: -75px;
-        opacity: 0.8;
-        position: absolute;
-        top: -50px;
-        -webkit-transform: rotate(35deg);
-        transform: rotate(35deg);
-        width: 50px;
-        transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-        /*easeOutCirc*/
-        z-index: 1;
-      }
-  
-      .effect01:hover:after {
-        background: #fff;
-        border: 20px solid #000;
-        opacity: 0;
-        left: 120%;
-        -webkit-transform: rotate(40deg);
-        transform: rotate(40deg);
-      }
-      #wrapper{
+      margin: 0 auto;
+      /*   padding: 2em 0em; */
+    }
+
+    .container {
+      align-items: center;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 0px;
+      width: 100%;
+    }
+
+    h1 {
+      text-align: left;
+      color: #fff;
+      letter-spacing: 0.05em;
+      margin: 0 0 0.4em;
+    }
+
+    p {
+      text-align: left;
+      color: #444;
+      letter-spacing: 0.05em;
+      font-size: 0.8em;
+      margin: 0 0 2em;
+    }
+
+    .btn {
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 45px;
+      max-width: 250px;
+      position: relative;
+      text-decoration: none;
+      text-transform: uppercase;
+      width: 100%;
+    }
+
+    .btn:hover {
+      text-decoration: none;
+    }
+
+    /*btn_background*/
+    .effect01 {
+      color: #fff;
+      border: 4px solid #000;
+      box-shadow: 0px 0px 0px 1px #000 inset;
+      background-color: #000;
+      overflow: hidden;
+      position: relative;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .effect01:hover {
+      border: 4px solid #666;
+      background-color: #fff;
+      box-shadow: 0px 0px 0px 4px #eee inset;
+    }
+
+    /*btn_text*/
+    .effect01 span {
+      transition: all 0.2s ease-out;
+      z-index: 2;
+    }
+
+    .effect01:hover span {
+      letter-spacing: 0.13em;
+      color: #333;
+    }
+
+    /*highlight*/
+    .effect01:after {
+      background: #fff;
+      border: 0px solid #000;
+      content: "";
+      height: 155px;
+      left: -75px;
+      opacity: 0.8;
+      position: absolute;
+      top: -50px;
+      -webkit-transform: rotate(35deg);
+      transform: rotate(35deg);
+      width: 50px;
+      transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+      /*easeOutCirc*/
+      z-index: 1;
+    }
+
+    .effect01:hover:after {
+      background: #fff;
+      border: 20px solid #000;
+      opacity: 0;
+      left: 120%;
+      -webkit-transform: rotate(40deg);
+      transform: rotate(40deg);
+    }
+
+    #wrapper {
       position: absolute;
       right: 0;
       width: 100%;
     }
-    
-    </style>
-  </head>
-  <body>
-    <script src="/public/navbar-code.js"></script> 
-    <div id="wrapper">
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="/public/navbar-code.js"></script>
+  <div id="wrapper">
     <h1 id="heading">General Classwork</h1>
     <div class="buttons" id="buttons">
       <div class="container">
-        <a href="https://drive.google.com/file/d/1yUl1bhITSYFLDrlTUyC5o0ozRb6FZSI0/view?usp=sharing" class="btn effect01" target="_blank"><span>General</span></a>
-        <a href="https://drive.google.com/file/d/1S5BfsblG528lSbzzZERLODNJ3eCQtly2/view?usp=sharing" class="btn effect01" target="_blank"><span>Music</span></a>
-        <a href="https://drive.google.com/file/d/1zfsJ6GwbFlK-3B3vyBQT3-8P6JaIgoXO/view?usp=sharing" class="btn effect01" target="_blank"><span>G.K.</span></a>
-        <a href="https://drive.google.com/file/d/1phrpOspdH6un29GvW7B0f-aMCeHyrbpl/view?usp=sharing" class="btn effect01" target="_blank"><span>M.ed.</span></a>
-        <a href="https://drive.google.com/file/d/1c3gEs4THkwbWKScTF_Bj27bSnJ1QjHIF/view?usp=sharing" class="btn effect01" target="_blank"><span>Dance</span></a>
-        <a href="https://drive.google.com/file/d/1UGBe1GFEy04INPNusjCyx0pf9C7zcVrz/view?usp=sharing" class="btn effect01" target="_blank"><span>Games</span></a>
-        <a href="https://drive.google.com/file/d/1k70lsjbHP_zbcAeOabZAw6x-S7rcgKLx/view?usp=sharing" class="btn effect01" target="_blank"><span>Art/Craft</span></a>
-        <a href="https://drive.google.com/file/d/19d1Qs6Kfr1J6AYjJdBpgtBn_zWV2qu2B/view?usp=sharing" class="btn effect01" target="_blank"><span>UT 1 Datehseet</span></a>
-        <a href="https://drive.google.com/file/d/1_wTBu44MXh0qlezvfkz9r3tu2YN_Ygib/view?usp=sharing" class="btn effect01" target="_blank"><span>Half Yearly Datehseet</span></a>
+        <a href="https://drive.google.com/file/d/1yUl1bhITSYFLDrlTUyC5o0ozRb6FZSI0/view?usp=sharing"
+          class="btn effect01" target="_blank"><span>General</span></a>
+        <a href="https://drive.google.com/file/d/1S5BfsblG528lSbzzZERLODNJ3eCQtly2/view?usp=sharing"
+          class="btn effect01" target="_blank"><span>Music</span></a>
+        <a href="https://drive.google.com/file/d/1zfsJ6GwbFlK-3B3vyBQT3-8P6JaIgoXO/view?usp=sharing"
+          class="btn effect01" target="_blank"><span>G.K.</span></a>
+        <a href="https://drive.google.com/file/d/1phrpOspdH6un29GvW7B0f-aMCeHyrbpl/view?usp=sharing"
+          class="btn effect01" target="_blank"><span>M.ed.</span></a>
+        <a href="https://drive.google.com/file/d/1c3gEs4THkwbWKScTF_Bj27bSnJ1QjHIF/view?usp=sharing"
+          class="btn effect01" target="_blank"><span>Dance</span></a>
+        <a href="https://drive.google.com/file/d/1UGBe1GFEy04INPNusjCyx0pf9C7zcVrz/view?usp=sharing"
+          class="btn effect01" target="_blank"><span>Games</span></a>
+        <a href="https://drive.google.com/file/d/1k70lsjbHP_zbcAeOabZAw6x-S7rcgKLx/view?usp=sharing"
+          class="btn effect01" target="_blank"><span>Art/Craft</span></a>
+        <a href="https://drive.google.com/file/d/19d1Qs6Kfr1J6AYjJdBpgtBn_zWV2qu2B/view?usp=sharing"
+          class="btn effect01" target="_blank"><span>UT 1 Datehseet</span></a>
+        <a href="https://drive.google.com/file/d/1_wTBu44MXh0qlezvfkz9r3tu2YN_Ygib/view?usp=sharing"
+          class="btn effect01" target="_blank"><span>Half Yearly Datehseet</span></a>
       </div>
-      <!-- done 10/11/22 -->
+      <!-- done 11/11/22 -->
     </div>
   </div>
-  </body>
-  <script>
-    if (localStorage.getItem('positionofnavbarisleft')) {
-      let wrapper = document.getElementById('wrapper');
-      if (window.innerWidth > 1000) {
-        wrapper.style.width = "92%";
-      }
-      else {
-        let wrapper = document.getElementById('wrapper');
-        wrapper.style.width = "100%";
-      }
+</body>
+<script>
+  if (localStorage.getItem('positionofnavbarisleft')) {
+    let wrapper = document.getElementById('wrapper');
+    if (window.innerWidth > 1000) {
+      wrapper.style.width = "92%";
     }
+    else {
+      let wrapper = document.getElementById('wrapper');
+      wrapper.style.width = "100%";
+    }
+  }
+  let html = document.getElementById('html')
+  let heading = document.getElementById('heading')
+  if (localStorage.getItem('thethemetobesettothewebsiteisgoingtobedark')) {
+    html.style.background = '#0e1623'
+    heading.style.color = 'white'
+  }
      // window.location = '/';
-  </script>
+</script>
+
 </html>

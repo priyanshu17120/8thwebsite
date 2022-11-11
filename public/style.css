@@ -69,10 +69,12 @@ body {
 }
 
 #home #bookanimation {
-  display: block;/*should be changed to block*/
+  display: none;/*should be changed to block*/
   margin: 5px auto;
   width: 400px;
   height: 300px;
+  border-radius: 30px;
+
 }
 
 
@@ -131,5 +133,10 @@ video{
   /* #background{
     display: none;
   } */
-
+#home #bookanimation {
+  width: 300px;
+  height: auto;
+  margin: 5px auto;
+  
+}
   }

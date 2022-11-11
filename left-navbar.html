@@ -84,7 +84,7 @@
             display: flex;
             animation: move 1s ease-in-out 1 forwards;
         }
-       
+
 
         @keyframes move {
             0% {
@@ -157,10 +157,10 @@
         }
 
         .bottom {
-    vertical-align: bottom;
-    height: 100%;
-    display: flex !important;
-    align-items: end;
+            vertical-align: bottom;
+            height: 100%;
+            display: flex !important;
+            align-items: end;
         }
 
         @media screen and (max-width: 450px) {
@@ -171,9 +171,10 @@
             .sidenav a {
                 font-size: 18px;
             }
-            #ham{
-    display: inline;
-}
+
+            #ham {
+                display: inline;
+            }
         }
 
         @media screen and (max-width: 1000px) {
@@ -249,21 +250,21 @@
                 display: none;
                 animation: none;
             }
-            .bottom {
-    vertical-align: auto;
-    height: 0 !important;
-    display: none;
-    align-items: end;
-    margin: 0 !important;
-    padding: 0 !important;
-        }
-#ham{
-    display: inline;
-}
-            
-        }
 
-        
+            .bottom {
+                vertical-align: auto;
+                height: 0 !important;
+                display: none;
+                align-items: end;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            #ham {
+                display: inline;
+            }
+
+        }
     </style>
 </head>
 
@@ -322,13 +323,13 @@
                 </span>
             </a> -->
             <a class="bottom" href="#" alt="settings" aria-label="Navbar">
-            <a href="/public/settings.html"><span class="text" >Settings</span>
-                <span class="fixed-sidenav-text-icon">
-                    <ion-icon name="settings-outline" class="icon-of-navbar last"></ion-icon><span
-                        class="hover-text pink">Settings</span>
-                </span>
+                <a href="/public/settings.html"><span class="text">Settings</span>
+                    <span class="fixed-sidenav-text-icon">
+                        <ion-icon name="settings-outline" class="icon-of-navbar last"></ion-icon><span
+                            class="hover-text pink">Settings</span>
+                    </span>
+                </a>
             </a>
-        </a>
         </div>
     </div>
 
@@ -339,19 +340,19 @@
         var ham = document.getElementById('ham')
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
-ham.style.visibility = 'hidden'
+            ham.style.visibility = 'hidden'
         }
 
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
-ham.style.visibility = 'visible'
+            ham.style.visibility = 'visible'
 
         }
         let classwork_of_navbar = document.getElementById('classwork_of_navbar');
-        if(localStorage.getItem('setclassworkdatewise')){
+        if (localStorage.getItem('setclassworkdatewise')) {
             classwork_of_navbar.href = "/public/classwork2.html";
         }
-        else{
+        else {
             classwork_of_navbar.href = "/public/classwork.html";
         }
     </script>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
 
 <head>
   <meta charset="UTF-8" />
@@ -11,6 +11,7 @@
 
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap");
+
     ::-webkit-scrollbar {
       width: 8px;
     }
@@ -27,21 +28,23 @@
     ::-webkit-scrollbar-thumb:hover {
       background: #555;
     }
+
     body {
       /* background: #DFFDFF; */
       /* background: #85213b; */
       background-size: cover;
       overflow-x: hidden;
       overflow-y: visible !important;
-      
+
     }
+
     html {
-    background: url(https://assets.khelnow.com/news/uploads/2022/08/FIFA-World-Cup-2022-lead.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
+      background: url(https://assets.khelnow.com/news/uploads/2022/08/FIFA-World-Cup-2022-lead.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
 
     * {
       box-sizing: border-box;
@@ -88,7 +91,7 @@
       transition: 1s ease;
     }
 
-    .subjectimages:hover > button {
+    .subjectimages:hover>button {
       background-position: 500% 100%;
     }
 
@@ -168,12 +171,13 @@
   </style>
 </head>
 
-<body>
+<body id="body">
   <script src="/public/navbar-code.js"></script>
   <div class="parent" id="parent">
     <div class="wrapper" id="wrapper">
       <a href="/public/classwork/scienceclasswork.html" class="subjectimages" id="Science"> <button>Science</button></a>
-      <a href="/public/classwork/computerclasswork.html" class="subjectimages" id="Computer"> <button>Computer</button></a>
+      <a href="/public/classwork/computerclasswork.html" class="subjectimages" id="Computer">
+        <button>Computer</button></a>
       <a href="/public/classwork/mathsclasswork.html" class="subjectimages" id="Maths"> <button>Maths</button></a>
       <a href="/public/classwork/englishclasswork.html" class="subjectimages" id="English"> <button>English</button></a>
       <a href="/public/classwork/sstclasswork.html" class="subjectimages" id="SocialScience"><button>Social
@@ -287,6 +291,75 @@
       wrapper.style.width = "100%";
       wrapper.style.float = "center";
     }
+  }
+  // get the elements 
+  let html = document.getElementById('html')
+  let buttons = document.getElementsByTagName('button')
+
+  if (localStorage.getItem('thethemetobesettothewebsiteisgoingtobedark')) {
+    html.style.background = '#222'
+    for (let i = 0; i < buttons.length; i++) {
+      const e = buttons[i];
+      e.style.color = 'white';
+
+
+    }
+    // science part
+    science.addEventListener("mouseover", () => {
+      scienceimg.style.display = "block";
+    });
+    science.addEventListener("mouseout", () => {
+      scienceimg.style.display = "none";
+    });
+    // computer part
+    computer.addEventListener("mouseover", () => {
+      computerimg.style.display = "block";
+    });
+    computer.addEventListener("mouseout", () => {
+      computerimg.style.display = "none";
+    });
+    // maths part
+    maths.addEventListener("mouseover", () => {
+      mathsimg.style.display = "block";
+    });
+    maths.addEventListener("mouseout", () => {
+      mathsimg.style.display = "none";
+    });
+    // english part
+    english.addEventListener("mouseover", () => {
+      englishimg.style.display = "block";
+    });
+    english.addEventListener("mouseout", () => {
+      englishimg.style.display = "none";
+    });
+    // sst part
+    sst.addEventListener("mouseover", () => {
+      sstimg.style.display = "block";
+    });
+    sst.addEventListener("mouseout", () => {
+      sstimg.style.display = "none";
+    });
+    // hindi part
+    hindi.addEventListener("mouseover", () => {
+      hindiimg.style.display = "block";
+    });
+    hindi.addEventListener("mouseout", () => {
+      hindiimg.style.display = "none";
+    });
+    // french part
+    french.addEventListener("mouseover", () => {
+      frenchimg.style.display = "block";
+    });
+    french.addEventListener("mouseout", () => {
+      frenchimg.style.display = "none";
+    });
+    // general part
+    general.addEventListener("mouseover", () => {
+      generalimg.style.display = "block";
+    });
+    general.addEventListener("mouseout", () => {
+      generalimg.style.display = "none";
+    });
   }
 </script>
 
