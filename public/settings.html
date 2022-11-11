@@ -500,10 +500,14 @@
         themedark.checked = false;
         themelight.checked = true;
     }
-    else {
+    else if(localStorage.getItem('thethemetobesettothewebsiteisgoingtobedark')) {
         themedark.checked = true;
         themelight.checked = false;
-    }   
+    }  
+    else{
+        themedark.checked = false;
+        themelight.checked = true;
+    } 
     let html = document.getElementById('html')
     let h1 = document.getElementById('h1')
     if (localStorage.getItem('thethemetobesettothewebsiteisgoingtobedark')) {
