@@ -28,6 +28,15 @@
     <video src="./public/Bookanimation.webm" alt="" id="bookanimation" autoplay loop muted></vid>
     <!-- <video src="./vid.mp4" alt="" id="worldcup" autoplay loop muted></video> -->
   </section>
+  <div class="predictwon" id="predictwon">
+    <div class="boxforwin">
+<h1>Congratulations !!</h1>
+<h2>You Won The Prediction !</h2>
+<div id="button">
+<button><a href="/ordercustomthemebecausewonthecontest.html">Order Custom Theme</a></button>
+</div>
+</div>
+  </div>
 </body>
 <script>
   var loader = document.getElementById('preloader');
@@ -58,6 +67,9 @@
     background.style.display = 'none'
     bookanimation.style.display = 'block'
   }
+  // if (localStorage.getItem('theteamtobeselectbytheuserwhichcanwinornotinthefinalsofthefifacup2022siuuu')=='Argentina') {
+  //   predictwon.style.display = 'flex';
+  // }
 </script>
 
 </html>

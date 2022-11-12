@@ -347,6 +347,11 @@
                 <span class="check"></span>
                 <label for="theme-Dark">Dark</label>
             </div>
+            <div class="box" id="Custom">
+                <input type="radio" id="theme-Custom" class="input">
+                <span class="check"></span>
+                <label for="theme-Custom">Custom</label>
+            </div>
         </div>
     </div>
 
@@ -476,13 +481,19 @@
 
     let themelight = document.getElementById('theme-Light')
     let themedark = document.getElementById('theme-Dark')
+    let themecustom = document.getElementById('theme-Custom')
     let light = document.getElementById('Light')
     let dark = document.getElementById('Dark')
+    let custom = document.getElementById('Custom')
 
     light.addEventListener('click',()=>{
         localStorage.setItem('thethemetobesettothewebsiteisgoingtobelight', true)
         if (localStorage.getItem('thethemetobesettothewebsiteisgoingtobedark')) {
             localStorage.removeItem('thethemetobesettothewebsiteisgoingtobedark')
+
+        }
+        else if (localStorage.getItem('thethemetobesettothewebsiteisgoingtobecustomasewfhwefweuwigh')) {
+            localStorage.removeItem('thethemetobesettothewebsiteisgoingtobecustomasewfhwefweuwigh')
 
         }
         location.reload();
@@ -493,20 +504,50 @@
         if (localStorage.getItem('thethemetobesettothewebsiteisgoingtobelight')) {
             localStorage.removeItem('thethemetobesettothewebsiteisgoingtobelight')
         }
+        else if (localStorage.getItem('thethemetobesettothewebsiteisgoingtobecustomasewfhwefweuwigh')) {
+            localStorage.removeItem('thethemetobesettothewebsiteisgoingtobecustomasewfhwefweuwigh')
+        }
         location.reload();
 
     })
+    custom.addEventListener('click', () => {
+        localStorage.setItem('thethemetobesettothewebsiteisgoingtobecustomasewfhwefweuwigh', localStorage.getItem('thethemetobesettothewebsiteisgoingtobecustomforever'))
+        if (localStorage.getItem('thethemetobesettothewebsiteisgoingtobelight')) {
+            localStorage.removeItem('thethemetobesettothewebsiteisgoingtobelight')
+        }
+        if (localStorage.getItem('thethemetobesettothewebsiteisgoingtobedark')) {
+            localStorage.removeItem('thethemetobesettothewebsiteisgoingtobedark')
+        }
+        location.reload();
+    })
+    if(localStorage.getItem('thethemetobesettothewebsiteisgoingtobecustomforever')){
+        custom.style.display = 'flex'
+    }
+    else{
+        custom.style.display = 'none'
+
+    }
     if (localStorage.getItem('thethemetobesettothewebsiteisgoingtobelight')) {
         themedark.checked = false;
+        themecustom.checked = false;
         themelight.checked = true;
     }
     else if(localStorage.getItem('thethemetobesettothewebsiteisgoingtobedark')) {
         themedark.checked = true;
         themelight.checked = false;
+        themecustom.checked = false;
+
     }  
+    else if(localStorage.getItem('thethemetobesettothewebsiteisgoingtobecustomasewfhwefweuwigh')){
+        themedark.checked = false;
+        themelight.checked = false;
+        themecustom.checked = true;
+
+    }
     else{
         themedark.checked = false;
         themelight.checked = true;
+        themecustom.checked = false;
     } 
     let html = document.getElementById('html')
     let h1 = document.getElementById('h1')
