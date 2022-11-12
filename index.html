@@ -26,16 +26,16 @@
     <!-- <h1 class="smol-heading">By</h1>
         <h1 class="smol-heading">Shelly Mehra Ma'am</h1> -->
     <video src="./public/Bookanimation.webm" alt="" id="bookanimation" autoplay loop muted></vid>
-    <!-- <video src="./vid.mp4" alt="" id="worldcup" autoplay loop muted></video> -->
+      <!-- <video src="./vid.mp4" alt="" id="worldcup" autoplay loop muted></video> -->
   </section>
-  <div class="predictwon" id="predictwon">
-    <div class="boxforwin">
-<h1>Congratulations !!</h1>
-<h2>You Won The Prediction !</h2>
-<div id="button">
-<button><a href="/ordercustomthemebecausewonthecontest.html">Order Custom Theme</a></button>
-</div>
-</div>
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close-button" id="button-to-close">×</span>
+      <h1 id="headingofbox">Congratulations!! <br> You Won The Prediction !</h1>
+      <button id="buton"><a href="/ordercustomthemebecausewonthecontest.html" id="order">Order Custom
+          Theme</a></button>
+
+    </div>
   </div>
 </body>
 <script>
@@ -67,9 +67,30 @@
     background.style.display = 'none'
     bookanimation.style.display = 'block'
   }
-  // if (localStorage.getItem('theteamtobeselectbytheuserwhichcanwinornotinthefinalsofthefifacup2022siuuu')=='Argentina') {
-  //   predictwon.style.display = 'flex';
+  const modal = document.querySelector(".modal");
+  const trigger = document.querySelector(".trigger");
+  const closeButton = document.querySelector(".close-button");
+
+  function toggleModal() {
+    modal.classList.toggle("show-modal");
+  }
+  // if (localStorage.getItem('theteamtobeselectbytheuserwhichcanwinornotinthefinalsofthefifacup2022siuuuuu') == 'Argentina') {
+  //   if(localStorage.getItem('orderedornot')=='no'){
+  //     toggleModal()
+  //   }
+  //   else if(!localStorage.getItem('orderedornot')){
+  //     toggleModal()
+  //   }
   // }
+
+
+  let buttonclose = document.getElementById('button-to-close');
+  buttonclose.addEventListener('click', () => {
+    toggleModal()
+    localStorage.setItem("orderedornot", "no");
+  })
 </script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </html>
