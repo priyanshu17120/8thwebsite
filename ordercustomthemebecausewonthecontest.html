@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Theme</title>
+    <link rel="shortcut icon" href="./public/ourgroupfavicon.png" type="image/x-icon" />
+
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        body{
+
+        body {
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             flex-direction: column;
             background: url('/public/imgfifa.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  color: white;
-  font-size: 2em;
-  font-family: cursive;
-  text-align: center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            color: white;
+            font-size: 2em;
+            font-family: cursive;
+            text-align: center;
         }
-        .box{
+
+        .box {
             background-color: #fd004cc5;
             width: auto;
             border-radius: 10px;
             height: auto;
         }
-        h2{
+
+        h2 {
             font-size: 1em;
         }
-        a{
+
+        a {
             text-decoration: none;
             color: white;
             background: #fd004c;
@@ -46,21 +53,22 @@
         }
     </style>
 </head>
+
 <body>
     <div class="box">
 
-    
-    <h1>Order Custom Theme</h1>
-    <h2>To Order Your Custom Theme Please Contact <kbd>8throsedis@gmail.com</kbd> by sending a mail.</h2>
-    <a id="sendmail" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=8throsedis@gmail.com">Send Mail !</a>
-</div>
+
+        <h1>Order Custom Theme</h1>
+        <h2>To Order Your Custom Theme Please Contact <kbd>8throsedis@gmail.com</kbd> by sending a mail.</h2>
+        <a id="sendmail" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=8throsedis@gmail.com">Send Mail !</a>
+    </div>
 </body>
 <script>
     let sendmail = document.getElementById('sendmail')
-    sendmail.addEventListener('click',()=>{
+    sendmail.addEventListener('click', () => {
         localStorage.setItem("orderedornot", "yes");
-    
+
     })
 </script>
-</html>
 
+</html>
