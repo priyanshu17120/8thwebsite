@@ -1,17 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cusom Theme</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            background: url('/public/imgfifa.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            color: white;
+            font-size: 2em;
+            font-family: cursive;
+            text-align: center;
+        }
+
+        .box {
+            background-color: #fd004cc5;
+            width: 90%;
+            border-radius: 10px;
+            height: auto;
+            padding: 10px;
+        }
+
+        h2 {
+            font-size: 1em;
+        }
+
+        .a {
+            outline: none;
+            text-decoration: none;
+            color: white;
+            background: #fd004c;
+            border-radius: 12px;
+            padding: 10px;
+            display: block;
+            transform: translateY(50px);
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            font-size: 1.2em;
+            font-family: cursive;
+        }
+
+        input {
+            outline: none;
+            border: none;
+            background: transparent;
+            border-bottom: 2px solid white;
+            font-size: 1.7em;
+            color: white;
+            width: 80%;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="box">
+
+
+        <h1>Enter The Code Given:</h1>
+        <input id="input"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            type="number" maxlength="6" />
+        <button id="submit" class="a">Submit</button>
+    </div>
 </body>
 <script>
-    localStorage.setItem('thethemetobesettothewebsiteisgoingtobecustomforever','custom1')
-    localStorage.removeItem('thethemetobesettothewebsiteisgoingtobelight')
-    localStorage.removeItem('thethemetobesettothewebsiteisgoingtobedark')
-    window.location = ('/')
+
+    let submit = document.getElementById('submit')
+    let input = document.getElementById('input')
+    submit.addEventListener('click', () => {
+        let val = input.value;
+        if (val = "123456") {
+            localStorage.setItem('thethemetobesettothewebsiteisgoingtobecustomforever', 'themename')
+            localStorage.setItem('thethemetobesettothewebsiteisgoingtobecustomasewfhwefweuwigh', 'themename')
+            localStorage.removeItem('thethemetobesettothewebsiteisgoingtobelight')
+            localStorage.removeItem('thethemetobesettothewebsiteisgoingtobedark')
+            window.location = ('/')
+
+        }
+    })
+
 </script>
+
 </html>

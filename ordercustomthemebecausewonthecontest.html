@@ -36,6 +36,7 @@
             width: auto;
             border-radius: 10px;
             height: auto;
+            padding: 10px;
         }
 
         h2 {
@@ -59,8 +60,8 @@
 
 
         <h1>Order Custom Theme</h1>
-        <h2>To Order Your Custom Theme Please Contact <kbd>8throsedis@gmail.com</kbd> by sending a mail.</h2>
-        <a id="sendmail" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=8throsedis@gmail.com">Send Mail !</a>
+        <h2 id="h2">To Order Your Custom Theme Please Contact <kbd>8throsedisfifacup@gmail.com</kbd> by sending a mail.</h2>
+        <a id="sendmail" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=8throsedisfifacup@gmail.com">Send Mail !</a>
     </div>
 </body>
 <script>
@@ -69,6 +70,11 @@
         localStorage.setItem("orderedornot", "yes");
 
     })
+    if (!(localStorage.getItem('theteamtobeselectedwhichcanwinfifaworldcup2022siuuuronaldomessineymarmbappe') == 'Argentina')) {
+        let h2 = document.getElementById('h2')
+        h2.innerText = "Sorry ! You can not order cutom theme maybe because you selected another team."
+        sendmail.style.display = 'none'
+    }
 </script>
 
 </html>
