@@ -140,6 +140,7 @@
     <h1>Classwork</h1>
     <div class="selectingdates">
       <select name="dates" id="datesselectid" onchange="datechanged()">
+        <option value="17nov2022">17/11/2022</option>
         <option value="16nov2022">16/11/2022</option>
         <option value="15nov2022">15/11/2022</option>
         <option value="14nov2022">14/11/2022</option>
@@ -750,6 +751,11 @@
     else if (datesselectid == "16nov2022") {
       cw.innerHTML = `
       <a href="https://drive.google.com/file/d/1XgHajwmNw_6jqEGey1uP7tUFT5zW8dWx/view?usp=sharing" class="button button2">Go to work</a>
+      `;
+    }
+    else if (datesselectid == "17nov2022") {
+      cw.innerHTML = `
+      <a href="https://drive.google.com/file/d/1uyKOaiNVw3shujnZguM9WaIxdeTO-1zj/view?usp=sharing" class="button button2">Go to work</a>
       `;
     }
   }
